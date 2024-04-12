@@ -1,0 +1,22 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://df1vjt7tk8k5y"
+path="res://.godot/imported/rail_road_crossing.obj-4158675b8e456b5496287f87cdb8f491.mesh"
+
+[deps]
+
+files=["res://.godot/imported/rail_road_crossing.obj-4158675b8e456b5496287f87cdb8f491.mesh"]
+
+source_file="res://assets/3D_assets/obj/rail_road_crossing.obj"
+dest_files=["res://.godot/imported/rail_road_crossing.obj-4158675b8e456b5496287f87cdb8f491.mesh", "res://.godot/imported/rail_road_crossing.obj-4158675b8e456b5496287f87cdb8f491.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true
+force_disable_mesh_compression=false

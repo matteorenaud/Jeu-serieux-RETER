@@ -1,0 +1,22 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://drkp48tjdjsof"
+path="res://.godot/imported/wind.obj-1f11b13390652fa42d51a550e0c4a25c.mesh"
+
+[deps]
+
+files=["res://.godot/imported/wind.obj-1f11b13390652fa42d51a550e0c4a25c.mesh"]
+
+source_file="res://assets/3D_assets/obj/wind.obj"
+dest_files=["res://.godot/imported/wind.obj-1f11b13390652fa42d51a550e0c4a25c.mesh", "res://.godot/imported/wind.obj-1f11b13390652fa42d51a550e0c4a25c.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true
+force_disable_mesh_compression=false

@@ -1,0 +1,730 @@
+[gd_scene load_steps=9 format=3 uid="uid://cd1yylwhh6wlv"]
+
+[ext_resource type="Script" path="res://script/HSliderTrainRessources.gd" id="1_m8u1c"]
+[ext_resource type="Script" path="res://script/AnimationTrainMenu.gd" id="1_t8b64"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_gujnj"]
+bg_color = Color(0.988235, 0.639216, 0.14902, 1)
+
+[sub_resource type="GDScript" id="GDScript_p1rth"]
+script/source = "extends CheckButton
+
+
+func _ready():
+	_on_toggled(false)
+		
+func _on_toggled(toggled_on):
+	if toggled_on:
+		$\"../../Import_Export/Export\".visible = true
+		$\"../../Import_Export/Import\".visible = false
+		$\"../LabelImport\".text=\"               \"
+		$\"../LabelExport\".text=\"Export\"
+	else:
+		$\"../../Import_Export/Import\".visible = true
+		$\"../../Import_Export/Export\".visible = false
+		$\"../LabelImport\".text=\"Import\"
+		$\"../LabelExport\".text=\"\"
+
+
+		
+	
+	
+	
+	
+	
+
+
+"
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ismt5"]
+bg_color = Color(0, 0, 0, 0.392157)
+
+[sub_resource type="Animation" id="Animation_g3bsi"]
+resource_name = "HideTrainMenu"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Control:position")
+tracks/0/interp = 2
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.75),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(0, 0), Vector2(0, -1000)]
+}
+
+[sub_resource type="Animation" id="Animation_ae8rx"]
+resource_name = "ShowTrainMenu"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Control:position")
+tracks/0/interp = 2
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.75),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(0, -1000), Vector2(0, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_olxw6"]
+_data = {
+"HideTrainMenu": SubResource("Animation_g3bsi"),
+"ShowTrainMenu": SubResource("Animation_ae8rx")
+}
+
+[node name="TrainMenu" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = -1467.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+
+[node name="Control" type="Control" parent="."]
+anchors_preset = 0
+offset_top = -1000.0
+offset_right = 40.0
+offset_bottom = -960.0
+
+[node name="Panel" type="Panel" parent="Control"]
+layout_mode = 0
+offset_left = 34.0
+offset_right = 421.0
+offset_bottom = 1041.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_gujnj")
+
+[node name="Label" type="Label" parent="Control"]
+layout_mode = 0
+offset_left = 101.0
+offset_right = 308.0
+offset_bottom = 96.0
+size_flags_horizontal = 4
+theme_override_font_sizes/font_size = 70
+text = "TRAIN"
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Control"]
+layout_mode = 0
+offset_left = 44.0
+offset_top = 92.0
+offset_right = 415.0
+offset_bottom = 176.0
+size_flags_horizontal = 4
+
+[node name="LabelImport" type="Label" parent="Control/HBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 40
+text = "Import"
+uppercase = true
+
+[node name="CheckButton" type="CheckButton" parent="Control/HBoxContainer"]
+layout_mode = 2
+script = SubResource("GDScript_p1rth")
+
+[node name="LabelExport" type="Label" parent="Control/HBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 40
+uppercase = true
+
+[node name="Import_Export" type="Control" parent="Control"]
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Import" type="VBoxContainer" parent="Control/Import_Export"]
+layout_mode = 2
+offset_left = 78.0
+offset_top = 167.0
+offset_right = 365.0
+offset_bottom = 827.0
+
+[node name="HSeparator2" type="HSeparator" parent="Control/Import_Export/Import"]
+layout_mode = 2
+
+[node name="Bois" type="VBoxContainer" parent="Control/Import_Export/Import"]
+layout_mode = 2
+size_flags_horizontal = 4
+metadata/name = "wood"
+metadata/french_name = "Bois"
+
+[node name="Label" type="Label" parent="Control/Import_Export/Import/Bois"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 25
+text = "Bois : 4$/U"
+horizontal_alignment = 1
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Control/Import_Export/Import/Bois"]
+layout_mode = 2
+
+[node name="HSlider" type="HSlider" parent="Control/Import_Export/Import/Bois/HBoxContainer"]
+custom_minimum_size = Vector2(200, 0)
+layout_mode = 2
+size_flags_vertical = 1
+script = ExtResource("1_m8u1c")
+metadata/flux = "import"
+metadata/name = "wood"
+
+[node name="SpinBox" type="SpinBox" parent="Control/Import_Export/Import/Bois/HBoxContainer"]
+layout_mode = 2
+script = ExtResource("1_m8u1c")
+metadata/flux = "import"
+metadata/name = "wood"
+
+[node name="HSeparator" type="HSeparator" parent="Control/Import_Export/Import"]
+layout_mode = 2
+
+[node name="Planche" type="VBoxContainer" parent="Control/Import_Export/Import"]
+layout_mode = 2
+size_flags_horizontal = 4
+metadata/name = "planch"
+metadata/french_name = "Planche"
+
+[node name="Label" type="Label" parent="Control/Import_Export/Import/Planche"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 25
+text = "Planche : 4$/U"
+horizontal_alignment = 1
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Control/Import_Export/Import/Planche"]
+layout_mode = 2
+
+[node name="HSlider" type="HSlider" parent="Control/Import_Export/Import/Planche/HBoxContainer"]
+custom_minimum_size = Vector2(200, 0)
+layout_mode = 2
+size_flags_vertical = 1
+script = ExtResource("1_m8u1c")
+metadata/flux = "import"
+metadata/name = "planch"
+
+[node name="SpinBox" type="SpinBox" parent="Control/Import_Export/Import/Planche/HBoxContainer"]
+layout_mode = 2
+script = ExtResource("1_m8u1c")
+metadata/flux = "import"
+metadata/name = "planch"
+
+[node name="HSeparator3" type="HSeparator" parent="Control/Import_Export/Import"]
+layout_mode = 2
+
+[node name="Farine" type="VBoxContainer" parent="Control/Import_Export/Import"]
+layout_mode = 2
+size_flags_horizontal = 4
+metadata/name = "flour"
+metadata/french_name = "Farine"
+
+[node name="Label" type="Label" parent="Control/Import_Export/Import/Farine"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 25
+text = "Farine : 4$/U"
+horizontal_alignment = 1
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Control/Import_Export/Import/Farine"]
+layout_mode = 2
+
+[node name="HSlider" type="HSlider" parent="Control/Import_Export/Import/Farine/HBoxContainer"]
+custom_minimum_size = Vector2(200, 0)
+layout_mode = 2
+size_flags_vertical = 1
+script = ExtResource("1_m8u1c")
+metadata/flux = "import"
+metadata/name = "flour"
+
+[node name="SpinBox" type="SpinBox" parent="Control/Import_Export/Import/Farine/HBoxContainer"]
+layout_mode = 2
+script = ExtResource("1_m8u1c")
+metadata/flux = "import"
+metadata/name = "flour"
+
+[node name="HSeparator4" type="HSeparator" parent="Control/Import_Export/Import"]
+layout_mode = 2
+
+[node name="Houblon" type="VBoxContainer" parent="Control/Import_Export/Import"]
+layout_mode = 2
+size_flags_horizontal = 4
+metadata/name = "hop"
+metadata/french_name = "Houblon"
+
+[node name="Label" type="Label" parent="Control/Import_Export/Import/Houblon"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 25
+text = "Houblon : 4$/U"
+horizontal_alignment = 1
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Control/Import_Export/Import/Houblon"]
+layout_mode = 2
+
+[node name="HSlider" type="HSlider" parent="Control/Import_Export/Import/Houblon/HBoxContainer"]
+custom_minimum_size = Vector2(200, 0)
+layout_mode = 2
+size_flags_vertical = 1
+script = ExtResource("1_m8u1c")
+metadata/flux = "import"
+metadata/name = "hop"
+
+[node name="SpinBox" type="SpinBox" parent="Control/Import_Export/Import/Houblon/HBoxContainer"]
+layout_mode = 2
+script = ExtResource("1_m8u1c")
+metadata/flux = "import"
+metadata/name = "hop"
+
+[node name="HSeparator5" type="HSeparator" parent="Control/Import_Export/Import"]
+layout_mode = 2
+
+[node name="Biere" type="VBoxContainer" parent="Control/Import_Export/Import"]
+layout_mode = 2
+size_flags_horizontal = 4
+metadata/name = "beer"
+metadata/french_name = "Bière"
+
+[node name="Label" type="Label" parent="Control/Import_Export/Import/Biere"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 25
+text = "Biere : 4$/U"
+horizontal_alignment = 1
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Control/Import_Export/Import/Biere"]
+layout_mode = 2
+
+[node name="HSlider" type="HSlider" parent="Control/Import_Export/Import/Biere/HBoxContainer"]
+custom_minimum_size = Vector2(200, 0)
+layout_mode = 2
+size_flags_vertical = 1
+script = ExtResource("1_m8u1c")
+metadata/flux = "import"
+metadata/name = "beer"
+
+[node name="SpinBox" type="SpinBox" parent="Control/Import_Export/Import/Biere/HBoxContainer"]
+layout_mode = 2
+script = ExtResource("1_m8u1c")
+metadata/flux = "import"
+metadata/name = "beer"
+
+[node name="HSeparator6" type="HSeparator" parent="Control/Import_Export/Import"]
+layout_mode = 2
+
+[node name="Pain" type="VBoxContainer" parent="Control/Import_Export/Import"]
+layout_mode = 2
+size_flags_horizontal = 4
+metadata/name = "bread"
+metadata/french_name = "Pain"
+
+[node name="Label" type="Label" parent="Control/Import_Export/Import/Pain"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 25
+text = "Pain : 4$/U"
+horizontal_alignment = 1
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Control/Import_Export/Import/Pain"]
+layout_mode = 2
+
+[node name="HSlider" type="HSlider" parent="Control/Import_Export/Import/Pain/HBoxContainer"]
+custom_minimum_size = Vector2(200, 0)
+layout_mode = 2
+size_flags_vertical = 1
+script = ExtResource("1_m8u1c")
+metadata/flux = "import"
+metadata/name = "bread"
+
+[node name="SpinBox" type="SpinBox" parent="Control/Import_Export/Import/Pain/HBoxContainer"]
+layout_mode = 2
+script = ExtResource("1_m8u1c")
+metadata/flux = "import"
+metadata/name = "bread"
+
+[node name="HSeparator7" type="HSeparator" parent="Control/Import_Export/Import"]
+layout_mode = 2
+
+[node name="Metal" type="VBoxContainer" parent="Control/Import_Export/Import"]
+layout_mode = 2
+size_flags_horizontal = 4
+metadata/name = "metal"
+metadata/french_name = "Métal"
+
+[node name="Label" type="Label" parent="Control/Import_Export/Import/Metal"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 25
+text = "Metal : 4$/U"
+horizontal_alignment = 1
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Control/Import_Export/Import/Metal"]
+layout_mode = 2
+
+[node name="HSlider" type="HSlider" parent="Control/Import_Export/Import/Metal/HBoxContainer"]
+custom_minimum_size = Vector2(200, 0)
+layout_mode = 2
+size_flags_vertical = 1
+script = ExtResource("1_m8u1c")
+metadata/flux = "import"
+metadata/name = "metal"
+
+[node name="SpinBox" type="SpinBox" parent="Control/Import_Export/Import/Metal/HBoxContainer"]
+layout_mode = 2
+script = ExtResource("1_m8u1c")
+metadata/flux = "import"
+metadata/name = "metal"
+
+[node name="HSeparator8" type="HSeparator" parent="Control/Import_Export/Import"]
+layout_mode = 2
+
+[node name="Plat" type="VBoxContainer" parent="Control/Import_Export/Import"]
+layout_mode = 2
+size_flags_horizontal = 4
+metadata/name = "food"
+metadata/french_name = "Plat"
+
+[node name="Label" type="Label" parent="Control/Import_Export/Import/Plat"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 25
+text = "Plat : 4$/U"
+horizontal_alignment = 1
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Control/Import_Export/Import/Plat"]
+layout_mode = 2
+
+[node name="HSlider" type="HSlider" parent="Control/Import_Export/Import/Plat/HBoxContainer"]
+custom_minimum_size = Vector2(200, 0)
+layout_mode = 2
+size_flags_vertical = 1
+script = ExtResource("1_m8u1c")
+metadata/flux = "import"
+metadata/name = "food"
+
+[node name="SpinBox" type="SpinBox" parent="Control/Import_Export/Import/Plat/HBoxContainer"]
+layout_mode = 2
+script = ExtResource("1_m8u1c")
+metadata/flux = "import"
+metadata/name = "food"
+
+[node name="HSeparator9" type="HSeparator" parent="Control/Import_Export/Import"]
+layout_mode = 2
+
+[node name="Export" type="VBoxContainer" parent="Control/Import_Export"]
+visible = false
+layout_mode = 2
+offset_left = 78.0
+offset_top = 167.0
+offset_right = 365.0
+offset_bottom = 827.0
+
+[node name="HSeparator2" type="HSeparator" parent="Control/Import_Export/Export"]
+layout_mode = 2
+
+[node name="Bois" type="VBoxContainer" parent="Control/Import_Export/Export"]
+layout_mode = 2
+size_flags_horizontal = 4
+metadata/name = "wood"
+metadata/french_name = "Bois"
+
+[node name="Label" type="Label" parent="Control/Import_Export/Export/Bois"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 25
+text = "Bois : 4$/U"
+horizontal_alignment = 1
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Control/Import_Export/Export/Bois"]
+layout_mode = 2
+
+[node name="HSlider" type="HSlider" parent="Control/Import_Export/Export/Bois/HBoxContainer"]
+custom_minimum_size = Vector2(200, 0)
+layout_mode = 2
+size_flags_vertical = 1
+script = ExtResource("1_m8u1c")
+metadata/flux = "export"
+metadata/name = "wood"
+
+[node name="SpinBox" type="SpinBox" parent="Control/Import_Export/Export/Bois/HBoxContainer"]
+layout_mode = 2
+script = ExtResource("1_m8u1c")
+metadata/flux = "export"
+metadata/name = "wood"
+
+[node name="HSeparator" type="HSeparator" parent="Control/Import_Export/Export"]
+layout_mode = 2
+
+[node name="Planche" type="VBoxContainer" parent="Control/Import_Export/Export"]
+layout_mode = 2
+size_flags_horizontal = 4
+metadata/name = "planch"
+metadata/french_name = "Planche"
+
+[node name="Label" type="Label" parent="Control/Import_Export/Export/Planche"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 25
+text = "Planche : 4$/U"
+horizontal_alignment = 1
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Control/Import_Export/Export/Planche"]
+layout_mode = 2
+
+[node name="HSlider" type="HSlider" parent="Control/Import_Export/Export/Planche/HBoxContainer"]
+custom_minimum_size = Vector2(200, 0)
+layout_mode = 2
+size_flags_vertical = 1
+script = ExtResource("1_m8u1c")
+metadata/flux = "export"
+metadata/name = "planch"
+
+[node name="SpinBox" type="SpinBox" parent="Control/Import_Export/Export/Planche/HBoxContainer"]
+layout_mode = 2
+script = ExtResource("1_m8u1c")
+metadata/flux = "export"
+metadata/name = "planch"
+
+[node name="HSeparator3" type="HSeparator" parent="Control/Import_Export/Export"]
+layout_mode = 2
+
+[node name="Farine" type="VBoxContainer" parent="Control/Import_Export/Export"]
+layout_mode = 2
+size_flags_horizontal = 4
+metadata/name = "flour"
+metadata/french_name = "Farine"
+
+[node name="Label" type="Label" parent="Control/Import_Export/Export/Farine"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 25
+text = "Farine : 4$/U"
+horizontal_alignment = 1
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Control/Import_Export/Export/Farine"]
+layout_mode = 2
+
+[node name="HSlider" type="HSlider" parent="Control/Import_Export/Export/Farine/HBoxContainer"]
+custom_minimum_size = Vector2(200, 0)
+layout_mode = 2
+size_flags_vertical = 1
+script = ExtResource("1_m8u1c")
+metadata/flux = "export"
+metadata/name = "flour"
+
+[node name="SpinBox" type="SpinBox" parent="Control/Import_Export/Export/Farine/HBoxContainer"]
+layout_mode = 2
+script = ExtResource("1_m8u1c")
+metadata/flux = "export"
+metadata/name = "flour"
+
+[node name="HSeparator4" type="HSeparator" parent="Control/Import_Export/Export"]
+layout_mode = 2
+
+[node name="Houblon" type="VBoxContainer" parent="Control/Import_Export/Export"]
+layout_mode = 2
+size_flags_horizontal = 4
+metadata/name = "hop"
+metadata/french_name = "Houblon"
+
+[node name="Label" type="Label" parent="Control/Import_Export/Export/Houblon"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 25
+text = "Houblon : 4$/U"
+horizontal_alignment = 1
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Control/Import_Export/Export/Houblon"]
+layout_mode = 2
+
+[node name="HSlider" type="HSlider" parent="Control/Import_Export/Export/Houblon/HBoxContainer"]
+custom_minimum_size = Vector2(200, 0)
+layout_mode = 2
+size_flags_vertical = 1
+script = ExtResource("1_m8u1c")
+metadata/flux = "export"
+metadata/name = "hop"
+
+[node name="SpinBox" type="SpinBox" parent="Control/Import_Export/Export/Houblon/HBoxContainer"]
+layout_mode = 2
+script = ExtResource("1_m8u1c")
+metadata/flux = "export"
+metadata/name = "hop"
+
+[node name="HSeparator5" type="HSeparator" parent="Control/Import_Export/Export"]
+layout_mode = 2
+
+[node name="Biere" type="VBoxContainer" parent="Control/Import_Export/Export"]
+layout_mode = 2
+size_flags_horizontal = 4
+metadata/name = "beer"
+metadata/french_name = "Bière"
+
+[node name="Label" type="Label" parent="Control/Import_Export/Export/Biere"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 25
+text = "Biere : 4$/U"
+horizontal_alignment = 1
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Control/Import_Export/Export/Biere"]
+layout_mode = 2
+
+[node name="HSlider" type="HSlider" parent="Control/Import_Export/Export/Biere/HBoxContainer"]
+custom_minimum_size = Vector2(200, 0)
+layout_mode = 2
+size_flags_vertical = 1
+script = ExtResource("1_m8u1c")
+metadata/flux = "export"
+metadata/name = "beer"
+
+[node name="SpinBox" type="SpinBox" parent="Control/Import_Export/Export/Biere/HBoxContainer"]
+layout_mode = 2
+script = ExtResource("1_m8u1c")
+metadata/flux = "export"
+metadata/name = "beer"
+
+[node name="HSeparator6" type="HSeparator" parent="Control/Import_Export/Export"]
+layout_mode = 2
+
+[node name="Pain" type="VBoxContainer" parent="Control/Import_Export/Export"]
+layout_mode = 2
+size_flags_horizontal = 4
+metadata/name = "bread"
+metadata/french_name = "Pain"
+
+[node name="Label" type="Label" parent="Control/Import_Export/Export/Pain"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 25
+text = "Pain : 4$/U"
+horizontal_alignment = 1
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Control/Import_Export/Export/Pain"]
+layout_mode = 2
+
+[node name="HSlider" type="HSlider" parent="Control/Import_Export/Export/Pain/HBoxContainer"]
+custom_minimum_size = Vector2(200, 0)
+layout_mode = 2
+size_flags_vertical = 1
+script = ExtResource("1_m8u1c")
+metadata/flux = "export"
+metadata/name = "bread"
+
+[node name="SpinBox" type="SpinBox" parent="Control/Import_Export/Export/Pain/HBoxContainer"]
+layout_mode = 2
+script = ExtResource("1_m8u1c")
+metadata/flux = "export"
+metadata/name = "bread"
+
+[node name="HSeparator7" type="HSeparator" parent="Control/Import_Export/Export"]
+layout_mode = 2
+
+[node name="Metal" type="VBoxContainer" parent="Control/Import_Export/Export"]
+layout_mode = 2
+size_flags_horizontal = 4
+metadata/name = "metal"
+metadata/french_name = "Métal"
+
+[node name="Label" type="Label" parent="Control/Import_Export/Export/Metal"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 25
+text = "Metal : 4$/U"
+horizontal_alignment = 1
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Control/Import_Export/Export/Metal"]
+layout_mode = 2
+
+[node name="HSlider" type="HSlider" parent="Control/Import_Export/Export/Metal/HBoxContainer"]
+custom_minimum_size = Vector2(200, 0)
+layout_mode = 2
+size_flags_vertical = 1
+script = ExtResource("1_m8u1c")
+metadata/flux = "export"
+metadata/name = "metal"
+
+[node name="SpinBox" type="SpinBox" parent="Control/Import_Export/Export/Metal/HBoxContainer"]
+layout_mode = 2
+script = ExtResource("1_m8u1c")
+metadata/flux = "export"
+metadata/name = "metal"
+
+[node name="HSeparator8" type="HSeparator" parent="Control/Import_Export/Export"]
+layout_mode = 2
+
+[node name="Plat" type="VBoxContainer" parent="Control/Import_Export/Export"]
+layout_mode = 2
+size_flags_horizontal = 4
+metadata/name = "food"
+metadata/french_name = "Plat"
+
+[node name="Label" type="Label" parent="Control/Import_Export/Export/Plat"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 25
+text = "Plat : 4$/U"
+horizontal_alignment = 1
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Control/Import_Export/Export/Plat"]
+layout_mode = 2
+
+[node name="HSlider" type="HSlider" parent="Control/Import_Export/Export/Plat/HBoxContainer"]
+custom_minimum_size = Vector2(200, 0)
+layout_mode = 2
+size_flags_vertical = 1
+script = ExtResource("1_m8u1c")
+metadata/flux = "export"
+metadata/name = "food"
+
+[node name="SpinBox" type="SpinBox" parent="Control/Import_Export/Export/Plat/HBoxContainer"]
+layout_mode = 2
+script = ExtResource("1_m8u1c")
+metadata/flux = "export"
+metadata/name = "food"
+
+[node name="HSeparator9" type="HSeparator" parent="Control/Import_Export/Export"]
+layout_mode = 2
+
+[node name="Label2" type="Label" parent="Control"]
+layout_mode = 0
+offset_left = 129.0
+offset_top = 841.0
+offset_right = 302.0
+offset_bottom = 916.0
+text = "Coût des importations 
+(gare et port) :
+ 0"
+horizontal_alignment = 1
+
+[node name="Button2" type="Button" parent="Control"]
+layout_mode = 0
+offset_left = 34.0
+offset_top = 981.0
+offset_right = 421.0
+offset_bottom = 1041.0
+focus_mode = 0
+theme_override_styles/normal = SubResource("StyleBoxFlat_ismt5")
+
+[node name="Animation" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_olxw6")
+}
+script = ExtResource("1_t8b64")
+
+[connection signal="toggled" from="Control/HBoxContainer/CheckButton" to="Control/HBoxContainer/CheckButton" method="_on_toggled"]
+[connection signal="value_changed" from="Control/Import_Export/Import/Bois/HBoxContainer/HSlider" to="Control/Import_Export/Import/Bois/HBoxContainer/HSlider" method="_on_value_changed"]
+[connection signal="value_changed" from="Control/Import_Export/Import/Bois/HBoxContainer/SpinBox" to="Control/Import_Export/Import/Bois/HBoxContainer/SpinBox" method="_on_value_changed"]
+[connection signal="value_changed" from="Control/Import_Export/Import/Planche/HBoxContainer/HSlider" to="Control/Import_Export/Import/Planche/HBoxContainer/HSlider" method="_on_value_changed"]
+[connection signal="value_changed" from="Control/Import_Export/Import/Planche/HBoxContainer/SpinBox" to="Control/Import_Export/Import/Planche/HBoxContainer/SpinBox" method="_on_value_changed"]
+[connection signal="value_changed" from="Control/Import_Export/Import/Farine/HBoxContainer/HSlider" to="Control/Import_Export/Import/Farine/HBoxContainer/HSlider" method="_on_value_changed"]
+[connection signal="value_changed" from="Control/Import_Export/Import/Farine/HBoxContainer/SpinBox" to="Control/Import_Export/Import/Farine/HBoxContainer/SpinBox" method="_on_value_changed"]
+[connection signal="value_changed" from="Control/Import_Export/Import/Houblon/HBoxContainer/HSlider" to="Control/Import_Export/Import/Houblon/HBoxContainer/HSlider" method="_on_value_changed"]
+[connection signal="value_changed" from="Control/Import_Export/Import/Houblon/HBoxContainer/SpinBox" to="Control/Import_Export/Import/Houblon/HBoxContainer/SpinBox" method="_on_value_changed"]
+[connection signal="value_changed" from="Control/Import_Export/Import/Biere/HBoxContainer/HSlider" to="Control/Import_Export/Import/Biere/HBoxContainer/HSlider" method="_on_value_changed"]
+[connection signal="value_changed" from="Control/Import_Export/Import/Biere/HBoxContainer/SpinBox" to="Control/Import_Export/Import/Biere/HBoxContainer/SpinBox" method="_on_value_changed"]
+[connection signal="value_changed" from="Control/Import_Export/Import/Pain/HBoxContainer/HSlider" to="Control/Import_Export/Import/Pain/HBoxContainer/HSlider" method="_on_value_changed"]
+[connection signal="value_changed" from="Control/Import_Export/Import/Pain/HBoxContainer/SpinBox" to="Control/Import_Export/Import/Pain/HBoxContainer/SpinBox" method="_on_value_changed"]
+[connection signal="value_changed" from="Control/Import_Export/Import/Metal/HBoxContainer/HSlider" to="Control/Import_Export/Import/Metal/HBoxContainer/HSlider" method="_on_value_changed"]
+[connection signal="value_changed" from="Control/Import_Export/Import/Metal/HBoxContainer/SpinBox" to="Control/Import_Export/Import/Metal/HBoxContainer/SpinBox" method="_on_value_changed"]
+[connection signal="value_changed" from="Control/Import_Export/Import/Plat/HBoxContainer/HSlider" to="Control/Import_Export/Import/Plat/HBoxContainer/HSlider" method="_on_value_changed"]
+[connection signal="value_changed" from="Control/Import_Export/Import/Plat/HBoxContainer/SpinBox" to="Control/Import_Export/Import/Plat/HBoxContainer/SpinBox" method="_on_value_changed"]
+[connection signal="value_changed" from="Control/Import_Export/Export/Bois/HBoxContainer/HSlider" to="Control/Import_Export/Export/Bois/HBoxContainer/HSlider" method="_on_value_changed"]
+[connection signal="value_changed" from="Control/Import_Export/Export/Bois/HBoxContainer/SpinBox" to="Control/Import_Export/Export/Bois/HBoxContainer/SpinBox" method="_on_value_changed"]
+[connection signal="value_changed" from="Control/Import_Export/Export/Planche/HBoxContainer/HSlider" to="Control/Import_Export/Export/Planche/HBoxContainer/HSlider" method="_on_value_changed"]
+[connection signal="value_changed" from="Control/Import_Export/Export/Planche/HBoxContainer/SpinBox" to="Control/Import_Export/Export/Planche/HBoxContainer/SpinBox" method="_on_value_changed"]
+[connection signal="value_changed" from="Control/Import_Export/Export/Farine/HBoxContainer/HSlider" to="Control/Import_Export/Export/Farine/HBoxContainer/HSlider" method="_on_value_changed"]
+[connection signal="value_changed" from="Control/Import_Export/Export/Farine/HBoxContainer/SpinBox" to="Control/Import_Export/Export/Farine/HBoxContainer/SpinBox" method="_on_value_changed"]
+[connection signal="value_changed" from="Control/Import_Export/Export/Houblon/HBoxContainer/HSlider" to="Control/Import_Export/Export/Houblon/HBoxContainer/HSlider" method="_on_value_changed"]
+[connection signal="value_changed" from="Control/Import_Export/Export/Houblon/HBoxContainer/SpinBox" to="Control/Import_Export/Export/Houblon/HBoxContainer/SpinBox" method="_on_value_changed"]
+[connection signal="value_changed" from="Control/Import_Export/Export/Biere/HBoxContainer/HSlider" to="Control/Import_Export/Export/Biere/HBoxContainer/HSlider" method="_on_value_changed"]
+[connection signal="value_changed" from="Control/Import_Export/Export/Biere/HBoxContainer/SpinBox" to="Control/Import_Export/Export/Biere/HBoxContainer/SpinBox" method="_on_value_changed"]
+[connection signal="value_changed" from="Control/Import_Export/Export/Pain/HBoxContainer/HSlider" to="Control/Import_Export/Export/Pain/HBoxContainer/HSlider" method="_on_value_changed"]
+[connection signal="value_changed" from="Control/Import_Export/Export/Pain/HBoxContainer/SpinBox" to="Control/Import_Export/Export/Pain/HBoxContainer/SpinBox" method="_on_value_changed"]
+[connection signal="value_changed" from="Control/Import_Export/Export/Metal/HBoxContainer/HSlider" to="Control/Import_Export/Export/Metal/HBoxContainer/HSlider" method="_on_value_changed"]
+[connection signal="value_changed" from="Control/Import_Export/Export/Metal/HBoxContainer/SpinBox" to="Control/Import_Export/Export/Metal/HBoxContainer/SpinBox" method="_on_value_changed"]
+[connection signal="value_changed" from="Control/Import_Export/Export/Plat/HBoxContainer/HSlider" to="Control/Import_Export/Export/Plat/HBoxContainer/HSlider" method="_on_value_changed"]
+[connection signal="value_changed" from="Control/Import_Export/Export/Plat/HBoxContainer/SpinBox" to="Control/Import_Export/Export/Plat/HBoxContainer/SpinBox" method="_on_value_changed"]
+[connection signal="pressed" from="Control/Button2" to="Animation" method="_on_button_2_pressed"]

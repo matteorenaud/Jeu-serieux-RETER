@@ -1,0 +1,85 @@
+[gd_scene load_steps=11 format=3 uid="uid://7p0efp058loh"]
+
+[ext_resource type="Script" path="res://script/Cloud.gd" id="1_8sfaf"]
+[ext_resource type="ArrayMesh" uid="uid://cxlehak2gm6to" path="res://assets/3D_assets/obj/Clouds/cloud1.obj" id="1_w4hx3"]
+[ext_resource type="ArrayMesh" uid="uid://x4sbgpa15w26" path="res://assets/3D_assets/obj/Clouds/Cloud2.obj" id="2_h2n1l"]
+[ext_resource type="ArrayMesh" uid="uid://waqsohojey3a" path="res://assets/3D_assets/obj/Clouds/cloud3.obj" id="3_gei4g"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_aouka"]
+albedo_color = Color(0.498039, 0.498039, 0.498039, 1)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_bnqpx"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_wrvtw"]
+albedo_color = Color(0.294118, 0.294118, 0.294118, 1)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_qsyxh"]
+albedo_color = Color(0.368627, 0.368627, 0.368627, 1)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_1vmxu"]
+albedo_color = Color(0.368627, 0.368627, 0.368627, 1)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_gr5i0"]
+
+[node name="Cloud" type="Node3D"]
+script = ExtResource("1_8sfaf")
+
+[node name="Cloud1" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, -1.74538, 86.496, -0.698855)
+material_override = SubResource("StandardMaterial3D_aouka")
+mesh = ExtResource("1_w4hx3")
+
+[node name="Cloud2" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 65.3413, 109.554, 81.2275)
+material_override = SubResource("StandardMaterial3D_bnqpx")
+mesh = ExtResource("2_h2n1l")
+
+[node name="Cloud3" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -14.65, 55.1451, 34.7353)
+material_override = SubResource("StandardMaterial3D_wrvtw")
+mesh = ExtResource("3_gei4g")
+
+[node name="Cloud4" type="MeshInstance3D" parent="."]
+transform = Transform3D(-4.37114e-08, 1, -4.37114e-08, 0, -4.37114e-08, -1, -1, -4.37114e-08, 1.91069e-15, -218.228, 86.496, 66.2724)
+material_override = SubResource("StandardMaterial3D_qsyxh")
+mesh = ExtResource("1_w4hx3")
+
+[node name="Cloud5" type="MeshInstance3D" parent="."]
+transform = Transform3D(-4.37114e-08, 1, -4.37114e-08, 0, -4.37114e-08, -1, -1, -4.37114e-08, 1.91069e-15, -141.064, 109.554, -6.2406)
+material_override = SubResource("StandardMaterial3D_1vmxu")
+mesh = ExtResource("2_h2n1l")
+
+[node name="Cloud6" type="MeshInstance3D" parent="."]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -181.997, 55.1451, 76.7327)
+material_override = SubResource("StandardMaterial3D_gr5i0")
+mesh = ExtResource("3_gei4g")
+
+[node name="Cloud7" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, -1.74538, 86.496, -182.324)
+material_override = SubResource("StandardMaterial3D_aouka")
+mesh = ExtResource("1_w4hx3")
+
+[node name="Cloud8" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 65.3413, 109.554, -100.398)
+material_override = SubResource("StandardMaterial3D_bnqpx")
+mesh = ExtResource("2_h2n1l")
+
+[node name="Cloud9" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -14.65, 55.1451, -146.89)
+material_override = SubResource("StandardMaterial3D_wrvtw")
+mesh = ExtResource("3_gei4g")
+
+[node name="Cloud10" type="MeshInstance3D" parent="."]
+transform = Transform3D(-4.37114e-08, 1, -4.37114e-08, 0, -4.37114e-08, -1, -1, -4.37114e-08, 1.91069e-15, -218.228, 86.496, -115.353)
+material_override = SubResource("StandardMaterial3D_qsyxh")
+mesh = ExtResource("1_w4hx3")
+
+[node name="Cloud11" type="MeshInstance3D" parent="."]
+transform = Transform3D(-4.37114e-08, 1, -4.37114e-08, 0, -4.37114e-08, -1, -1, -4.37114e-08, 1.91069e-15, -141.064, 109.554, -187.866)
+material_override = SubResource("StandardMaterial3D_1vmxu")
+mesh = ExtResource("2_h2n1l")
+
+[node name="Cloud12" type="MeshInstance3D" parent="."]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -181.997, 55.1451, -104.892)
+material_override = SubResource("StandardMaterial3D_gr5i0")
+mesh = ExtResource("3_gei4g")

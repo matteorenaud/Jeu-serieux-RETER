@@ -1,0 +1,22 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://o1f28w3wxmd2"
+path="res://.godot/imported/tour_de_refroidissement.obj-7f0fcee167e6d24d47596f34053f5caa.mesh"
+
+[deps]
+
+files=["res://.godot/imported/tour_de_refroidissement.obj-7f0fcee167e6d24d47596f34053f5caa.mesh"]
+
+source_file="res://assets/3D_assets/obj/tour_de_refroidissement.obj"
+dest_files=["res://.godot/imported/tour_de_refroidissement.obj-7f0fcee167e6d24d47596f34053f5caa.mesh", "res://.godot/imported/tour_de_refroidissement.obj-7f0fcee167e6d24d47596f34053f5caa.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true
+force_disable_mesh_compression=false

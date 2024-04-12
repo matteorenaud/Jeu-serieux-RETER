@@ -1,0 +1,157 @@
+[gd_scene load_steps=12 format=3 uid="uid://b0aph76fhfll2"]
+
+[ext_resource type="Texture2D" uid="uid://clnu5myd70n2f" path="res://assets/images/UI/PhoneButton.png" id="1_ajpvh"]
+[ext_resource type="Script" path="res://script/Phone.gd" id="1_j5r25"]
+[ext_resource type="Script" path="res://script/OpenPhone.gd" id="2_15h8m"]
+[ext_resource type="Texture2D" uid="uid://bly441r0s6ps" path="res://assets/images/UI/Notification.png" id="2_ya0sy"]
+[ext_resource type="Texture2D" uid="uid://cyysgu3awsnqv" path="res://assets/images/UI/phone.png" id="2_yvbui"]
+[ext_resource type="Script" path="res://script/ClosePhoneButton.gd" id="4_367rr"]
+[ext_resource type="Texture2D" uid="uid://btc5tw5hiajd0" path="res://assets/images/UI/Close.png" id="4_hvjrf"]
+[ext_resource type="Script" path="res://script/AnimationPhone.gd" id="7_fpy1i"]
+
+[sub_resource type="Animation" id="Animation_uayii"]
+resource_name = "DispawnPhone"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("TextureRect2:scale")
+tracks/0/interp = 2
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.25),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(1, 1), Vector2(0, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("TextureRect2:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.25),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(0, 0), Vector2(250, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_jhblt"]
+resource_name = "SpawnPhone"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("TextureRect2:scale")
+tracks/0/interp = 2
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.25),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(0, 0), Vector2(1, 1)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("TextureRect2:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.25),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(250, 75), Vector2(0, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_0viq1"]
+_data = {
+"DispawnPhone": SubResource("Animation_uayii"),
+"SpawnPhone": SubResource("Animation_jhblt")
+}
+
+[node name="Phone" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 2.0
+offset_top = -2.0
+offset_right = -1654.0
+offset_bottom = -623.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+script = ExtResource("1_j5r25")
+
+[node name="OpenPhone" type="TextureButton" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = -0.05
+anchor_top = -0.098
+anchor_right = -0.05
+anchor_bottom = -0.098
+offset_left = 169.2
+offset_top = 61.982
+offset_right = 270.2
+offset_bottom = 163.982
+texture_normal = ExtResource("1_ajpvh")
+ignore_texture_size = true
+stretch_mode = 0
+script = ExtResource("2_15h8m")
+
+[node name="TextureRect" type="TextureRect" parent="OpenPhone"]
+visible = false
+layout_mode = 0
+offset_left = 66.0
+offset_top = -7.0
+offset_right = 100.0
+offset_bottom = 27.0
+texture = ExtResource("2_ya0sy")
+expand_mode = 1
+
+[node name="TextureRect2" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 250.0
+offset_right = 251.0
+offset_bottom = -4.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(1e-05, 1e-05)
+texture = ExtResource("2_yvbui")
+expand_mode = 1
+
+[node name="ScrollContainer" type="ScrollContainer" parent="TextureRect2"]
+layout_mode = 0
+offset_left = 23.0
+offset_top = 27.0
+offset_right = 244.0
+offset_bottom = 378.0
+
+[node name="Label" type="Label" parent="TextureRect2/ScrollContainer"]
+custom_minimum_size = Vector2(210, 350)
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+autowrap_mode = 3
+
+[node name="ClosePhone" type="TextureButton" parent="TextureRect2"]
+layout_mode = 0
+offset_left = 113.0
+offset_top = 395.0
+offset_right = 157.0
+offset_bottom = 438.0
+texture_normal = ExtResource("4_hvjrf")
+ignore_texture_size = true
+stretch_mode = 0
+script = ExtResource("4_367rr")
+
+[node name="Animation" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_0viq1")
+}
+script = ExtResource("7_fpy1i")
+
+[connection signal="pressed" from="OpenPhone" to="." method="_on_open_phone_pressed"]
+[connection signal="pressed" from="TextureRect2/ClosePhone" to="." method="_on_close_phone_pressed"]

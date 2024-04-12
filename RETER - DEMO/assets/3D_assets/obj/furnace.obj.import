@@ -1,0 +1,22 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://ba4217giflgeo"
+path="res://.godot/imported/furnace.obj-c0588b98cfc97e858368bc7b457d5218.mesh"
+
+[deps]
+
+files=["res://.godot/imported/furnace.obj-c0588b98cfc97e858368bc7b457d5218.mesh"]
+
+source_file="res://assets/3D_assets/obj/furnace.obj"
+dest_files=["res://.godot/imported/furnace.obj-c0588b98cfc97e858368bc7b457d5218.mesh", "res://.godot/imported/furnace.obj-c0588b98cfc97e858368bc7b457d5218.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true
+force_disable_mesh_compression=false

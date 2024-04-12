@@ -1,0 +1,120 @@
+[gd_scene load_steps=10 format=3 uid="uid://dpwpwy3723rb"]
+
+[ext_resource type="Script" path="res://script/Gauges.gd" id="1_76ua3"]
+[ext_resource type="Texture2D" uid="uid://w61t82q4noce" path="res://assets/images/UI/empty_gauge.png" id="2_gf2ox"]
+[ext_resource type="Texture2D" uid="uid://cbu2e4y82oorb" path="res://assets/images/UI/full_gauge_money.png" id="3_viv1h"]
+[ext_resource type="Texture2D" uid="uid://cah3vt1hgbue3" path="res://assets/images/Piece.png" id="4_7l3c3"]
+[ext_resource type="Texture2D" uid="uid://dq36u4apoa5a6" path="res://assets/images/UI/full_gauge_people.png" id="5_cbn6j"]
+[ext_resource type="Texture2D" uid="uid://dpahqh42laf7" path="res://assets/images/UI/people_icone.png" id="6_drq2k"]
+[ext_resource type="Texture2D" uid="uid://6s7fkqku8s87" path="res://assets/images/UI/full_gauge_ecology.png" id="7_w1vv6"]
+[ext_resource type="Texture2D" uid="uid://dk26pwdd83yo0" path="res://assets/images/UI/ecology_icone.png" id="8_wv065"]
+[ext_resource type="Texture2D" uid="uid://dfxxudppmufup" path="res://assets/images/UI/FondMenu/TopMenu.png" id="12_jq5um"]
+
+[node name="GaugesUI" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 1634.0
+offset_bottom = -733.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+
+[node name="Gauges" type="MarginContainer" parent="."]
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -320.0
+offset_top = 5.0
+offset_bottom = 340.0
+grow_horizontal = 0
+mouse_filter = 2
+script = ExtResource("1_76ua3")
+
+[node name="Background" type="NinePatchRect" parent="Gauges"]
+layout_mode = 2
+
+[node name="BoxContainer" type="BoxContainer" parent="Gauges"]
+layout_mode = 2
+theme_override_constants/separation = 30
+alignment = 1
+
+[node name="MoneyContainer" type="VBoxContainer" parent="Gauges/BoxContainer"]
+layout_mode = 2
+
+[node name="MoneyLabel" type="Label" parent="Gauges/BoxContainer/MoneyContainer"]
+layout_mode = 2
+text = "100"
+horizontal_alignment = 1
+
+[node name="MoneyPicture" type="TextureRect" parent="Gauges/BoxContainer/MoneyContainer"]
+layout_mode = 2
+texture = ExtResource("4_7l3c3")
+expand_mode = 5
+
+[node name="MoneyBar" type="TextureProgressBar" parent="Gauges/BoxContainer/MoneyContainer"]
+layout_mode = 2
+value = 100.0
+fill_mode = 3
+texture_under = ExtResource("2_gf2ox")
+texture_progress = ExtResource("3_viv1h")
+
+[node name="PeopleContainer" type="VBoxContainer" parent="Gauges/BoxContainer"]
+layout_mode = 2
+
+[node name="PeopleLabel" type="Label" parent="Gauges/BoxContainer/PeopleContainer"]
+layout_mode = 2
+text = "100"
+horizontal_alignment = 1
+
+[node name="PeoplePicture" type="TextureRect" parent="Gauges/BoxContainer/PeopleContainer"]
+layout_mode = 2
+texture = ExtResource("6_drq2k")
+expand_mode = 5
+
+[node name="PeopleBar" type="TextureProgressBar" parent="Gauges/BoxContainer/PeopleContainer"]
+layout_mode = 2
+value = 100.0
+fill_mode = 3
+texture_under = ExtResource("2_gf2ox")
+texture_progress = ExtResource("5_cbn6j")
+
+[node name="EcologyContainer" type="VBoxContainer" parent="Gauges/BoxContainer"]
+layout_mode = 2
+
+[node name="EcologyLabel" type="Label" parent="Gauges/BoxContainer/EcologyContainer"]
+layout_mode = 2
+text = "100"
+horizontal_alignment = 1
+
+[node name="EcologyPicture" type="TextureRect" parent="Gauges/BoxContainer/EcologyContainer"]
+layout_mode = 2
+texture = ExtResource("8_wv065")
+expand_mode = 5
+
+[node name="EcolyBar" type="TextureProgressBar" parent="Gauges/BoxContainer/EcologyContainer"]
+layout_mode = 2
+value = 50.0
+fill_mode = 3
+texture_under = ExtResource("2_gf2ox")
+texture_progress = ExtResource("7_w1vv6")
+
+[node name="Background" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_left = -1634.0
+offset_right = 286.0
+offset_bottom = 362.0
+mouse_filter = 2
+
+[node name="TopMenu" type="TextureRect" parent="Background"]
+z_index = -1
+layout_mode = 0
+offset_top = -5.0
+offset_right = 1920.0
+offset_bottom = 370.0
+mouse_filter = 2
+texture = ExtResource("12_jq5um")
+expand_mode = 1

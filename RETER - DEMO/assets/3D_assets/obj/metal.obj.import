@@ -1,0 +1,22 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://3yo2v23wr2vj"
+path="res://.godot/imported/metal.obj-a561054cda2dc0d91a7fba427b13005a.mesh"
+
+[deps]
+
+files=["res://.godot/imported/metal.obj-a561054cda2dc0d91a7fba427b13005a.mesh"]
+
+source_file="res://assets/3D_assets/obj/metal.obj"
+dest_files=["res://.godot/imported/metal.obj-a561054cda2dc0d91a7fba427b13005a.mesh", "res://.godot/imported/metal.obj-a561054cda2dc0d91a7fba427b13005a.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true
+force_disable_mesh_compression=false

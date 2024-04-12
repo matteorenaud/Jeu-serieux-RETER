@@ -1,0 +1,22 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://d313j6qkq2jts"
+path="res://.godot/imported/field_hop.obj-6d78aef9558ad5e2db8aa7413e7591ea.mesh"
+
+[deps]
+
+files=["res://.godot/imported/field_hop.obj-6d78aef9558ad5e2db8aa7413e7591ea.mesh"]
+
+source_file="res://assets/3D_assets/obj/field_hop.obj"
+dest_files=["res://.godot/imported/field_hop.obj-6d78aef9558ad5e2db8aa7413e7591ea.mesh", "res://.godot/imported/field_hop.obj-6d78aef9558ad5e2db8aa7413e7591ea.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true
+force_disable_mesh_compression=false

@@ -1,0 +1,22 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://2swjcnfyc35i"
+path="res://.godot/imported/grocery_store.obj-66d944e0b38a92156a76255c171b2c8b.mesh"
+
+[deps]
+
+files=["res://.godot/imported/grocery_store.obj-66d944e0b38a92156a76255c171b2c8b.mesh"]
+
+source_file="res://assets/3D_assets/obj/grocery_store.obj"
+dest_files=["res://.godot/imported/grocery_store.obj-66d944e0b38a92156a76255c171b2c8b.mesh", "res://.godot/imported/grocery_store.obj-66d944e0b38a92156a76255c171b2c8b.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true
+force_disable_mesh_compression=false

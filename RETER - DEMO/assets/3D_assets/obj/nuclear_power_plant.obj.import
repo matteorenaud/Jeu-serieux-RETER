@@ -1,0 +1,22 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://cwrp7hkqy3322"
+path="res://.godot/imported/nuclear_power_plant.obj-f3f48518370e28238c4d4b0db0706161.mesh"
+
+[deps]
+
+files=["res://.godot/imported/nuclear_power_plant.obj-f3f48518370e28238c4d4b0db0706161.mesh"]
+
+source_file="res://assets/3D_assets/obj/nuclear_power_plant.obj"
+dest_files=["res://.godot/imported/nuclear_power_plant.obj-f3f48518370e28238c4d4b0db0706161.mesh", "res://.godot/imported/nuclear_power_plant.obj-f3f48518370e28238c4d4b0db0706161.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true
+force_disable_mesh_compression=false

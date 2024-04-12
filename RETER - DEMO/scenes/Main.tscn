@@ -1,0 +1,3523 @@
+[gd_scene load_steps=130 format=3 uid="uid://cifspwsgpk0fk"]
+
+[ext_resource type="Script" path="res://script/Main.gd" id="1_fmouc"]
+[ext_resource type="Script" path="res://script/CameraControl.gd" id="2_b74gc"]
+[ext_resource type="MeshLibrary" uid="uid://djh0mrq43n61q" path="res://assets/3D_assets/reter_meshes.tres" id="3_5stp2"]
+[ext_resource type="Script" path="res://script/CSGBox3D.gd" id="3_f5822"]
+[ext_resource type="PackedScene" uid="uid://d0tucliegltsi" path="res://assets/3D_assets/fbx/ancre.fbx" id="4_knja3"]
+[ext_resource type="ArrayMesh" uid="uid://cm7uhyodbn475" path="res://assets/3D_assets/obj/conteneur_assemble.obj" id="5_lhw7r"]
+[ext_resource type="PackedScene" uid="uid://wnmnvcv6r7u4" path="res://assets/3D_assets/fbx/citerne_conteneur.fbx" id="6_mphlc"]
+[ext_resource type="PackedScene" uid="uid://db2cufutsjegw" path="res://assets/3D_assets/fbx/grue_portuaire.fbx" id="7_ivhoj"]
+[ext_resource type="PackedScene" uid="uid://crpdn70xr5e68" path="res://assets/3D_assets/fbx/fleuve_droit.fbx" id="8_7jfkl"]
+[ext_resource type="Script" path="res://script/Ship.gd" id="9_4oska"]
+[ext_resource type="PackedScene" uid="uid://dy68xvlr4qvov" path="res://assets/3D_assets/fbx/bateau_transport.fbx" id="10_6lu33"]
+[ext_resource type="ArrayMesh" uid="uid://bf473jrj7y6lq" path="res://assets/3D_assets/obj/char-b1-bis.obj" id="11_2rli5"]
+[ext_resource type="PackedScene" uid="uid://cfeqh0fny83x7" path="res://assets/3D_assets/fbx/train_fret.fbx" id="12_wpetr"]
+[ext_resource type="Script" path="res://script/BuldingTrainStation.gd" id="13_km7px"]
+[ext_resource type="Script" path="res://script/Train.gd" id="13_rwn6p"]
+[ext_resource type="Texture2D" uid="uid://dc1aorqjifcph" path="res://assets/images/Fret.png" id="14_3q7w7"]
+[ext_resource type="PackedScene" uid="uid://dudncrhyx84wx" path="res://assets/3D_assets/fbx/wagon_couvert.fbx" id="15_te7jc"]
+[ext_resource type="AudioStream" uid="uid://8ci1hdfuqwco" path="res://audio/trainSound.mp3" id="16_pewfp"]
+[ext_resource type="PackedScene" uid="uid://exe1tfrwiiky" path="res://assets/3D_assets/fbx/cathdrale_de_strasbourg.fbx" id="17_sq121"]
+[ext_resource type="Script" path="res://script/MenuBuild.gd" id="18_f3q7j"]
+[ext_resource type="Theme" uid="uid://bot8iiqtbbp65" path="res://PanelTheme.tres" id="19_3jmat"]
+[ext_resource type="PackedScene" uid="uid://dxu35iw11i8xx" path="res://scenes/BoatMenu.tscn" id="19_fkd3u"]
+[ext_resource type="PackedScene" uid="uid://7p0efp058loh" path="res://scenes/Cloud.tscn" id="19_hxjx1"]
+[ext_resource type="PackedScene" uid="uid://cd1yylwhh6wlv" path="res://scenes/TrainMenu.tscn" id="20_2fjkj"]
+[ext_resource type="Texture2D" uid="uid://d06iype136j0v" path="res://assets/images/UI/Building/lumberjack.png" id="20_er72a"]
+[ext_resource type="Script" path="res://script/TextureButton.gd" id="21_eh7vb"]
+[ext_resource type="PackedScene" uid="uid://b0aph76fhfll2" path="res://scenes/Phone.tscn" id="21_qn0pu"]
+[ext_resource type="Texture2D" uid="uid://cah3vt1hgbue3" path="res://assets/images/Piece.png" id="22_b5bfd"]
+[ext_resource type="Texture2D" uid="uid://cmvv2yer1m0eg" path="res://assets/images/UI/vide.png" id="23_7ldvi"]
+[ext_resource type="Texture2D" uid="uid://bv24361l1ho6e" path="res://assets/images/UI/fleche.png" id="24_qjav0"]
+[ext_resource type="Texture2D" uid="uid://ccjqndnkw84wq" path="res://assets/images/UI/Ressources/Bois.png" id="25_crl3b"]
+[ext_resource type="Texture2D" uid="uid://rf6s2nbjyxpt" path="res://assets/images/UI/Building/sawmill.png" id="26_krobq"]
+[ext_resource type="Texture2D" uid="uid://bmbd1ml3s5ctw" path="res://assets/images/UI/Ressources/Planche.png" id="27_ox57o"]
+[ext_resource type="Texture2D" uid="uid://cgycdeox7gq1i" path="res://assets/images/UI/Building/mine.png" id="28_ltwcb"]
+[ext_resource type="Texture2D" uid="uid://ckelimh6yllvi" path="res://assets/images/UI/Ressources/Pierre.png" id="29_h7ldo"]
+[ext_resource type="Texture2D" uid="uid://dwdxnqw4bxn71" path="res://assets/images/UI/Building/brick.png" id="30_lys4e"]
+[ext_resource type="Texture2D" uid="uid://ck2bldoq8xetu" path="res://assets/images/UI/Ressources/brique.png" id="31_jl6op"]
+[ext_resource type="Texture2D" uid="uid://brwywt5v00y35" path="res://assets/images/UI/Building/pump.png" id="32_56t2e"]
+[ext_resource type="Texture2D" uid="uid://qrkwktuweb5t" path="res://assets/images/UI/Ressources/Eau.png" id="33_uktes"]
+[ext_resource type="Texture2D" uid="uid://bvogt4xn3fnkt" path="res://assets/images/UI/Building/houblon.png" id="34_70nww"]
+[ext_resource type="Texture2D" uid="uid://d2foveyb6ubr3" path="res://assets/images/UI/Ressources/Houblon.png" id="35_f5b5k"]
+[ext_resource type="Texture2D" uid="uid://dtavs0gkvanyx" path="res://assets/images/UI/Building/field.png" id="36_rajhf"]
+[ext_resource type="Texture2D" uid="uid://dcbxuvfu6y40w" path="res://assets/images/UI/Ressources/Ble.png" id="37_l7wo2"]
+[ext_resource type="Texture2D" uid="uid://doxhq6y0duf4k" path="res://assets/images/UI/Building/mill.png" id="38_mdv6q"]
+[ext_resource type="Texture2D" uid="uid://brw74kjots03o" path="res://assets/images/UI/Ressources/Farine.png" id="39_sag3b"]
+[ext_resource type="Texture2D" uid="uid://ditoskncpjwb5" path="res://assets/images/UI/Building/furnace.png" id="40_k268w"]
+[ext_resource type="Texture2D" uid="uid://bst0dcm6sc6lv" path="res://assets/images/UI/Ressources/Charbon.png" id="41_2seg2"]
+[ext_resource type="Texture2D" uid="uid://0blxko5k5h3q" path="res://assets/images/UI/Ressources/Pain.png" id="43_6ibne"]
+[ext_resource type="Texture2D" uid="uid://uwjqpa1l8skt" path="res://assets/images/UI/Building/brewery.png" id="44_y0enj"]
+[ext_resource type="Texture2D" uid="uid://cuylsmyh24x5u" path="res://assets/images/UI/Ressources/Biere.png" id="45_kcm52"]
+[ext_resource type="Texture2D" uid="uid://dfi5mhh7fxwaj" path="res://assets/images/UI/Building/bar.png" id="46_j4vja"]
+[ext_resource type="Texture2D" uid="uid://cnyxc0fqgjpv6" path="res://assets/images/UI/Building/house.png" id="47_3u5wp"]
+[ext_resource type="Texture2D" uid="uid://dpahqh42laf7" path="res://assets/images/UI/people_icone.png" id="48_6bn2n"]
+[ext_resource type="Texture2D" uid="uid://dcuqa82tx4haf" path="res://assets/images/UI/Building/farm.png" id="49_f60d4"]
+[ext_resource type="Texture2D" uid="uid://bmbtl0ify2qsv" path="res://assets/images/UI/Ressources/Viande.png" id="50_ytfwa"]
+[ext_resource type="Texture2D" uid="uid://cyot1mtd1etua" path="res://assets/images/UI/Building/food.png" id="51_nmv6y"]
+[ext_resource type="Texture2D" uid="uid://dukm4t0whu5ot" path="res://assets/images/UI/Ressources/Plat.png" id="52_jvhnx"]
+[ext_resource type="Texture2D" uid="uid://cv8nr8roj0w4b" path="res://assets/images/UI/Building/market.png" id="53_xff6a"]
+[ext_resource type="Texture2D" uid="uid://bre4iqash11yt" path="res://assets/images/UI/Building/metal.png" id="54_aglfe"]
+[ext_resource type="Texture2D" uid="uid://l4b1p1mgngu7" path="res://assets/images/UI/Ressources/MineraisFer.png" id="55_oi0p3"]
+[ext_resource type="Texture2D" uid="uid://b5p7p25jna6qw" path="res://assets/images/UI/Ressources/LingotMetal.png" id="56_h2383"]
+[ext_resource type="Texture2D" uid="uid://dqhyytom027wn" path="res://assets/images/UI/Building/office.png" id="57_bjuet"]
+[ext_resource type="Texture2D" uid="uid://benodavxg51bv" path="res://assets/images/UI/Building/building.png" id="58_75elu"]
+[ext_resource type="Texture2D" uid="uid://chbmbe62q3whd" path="res://assets/images/UI/Building/park.png" id="59_i4g71"]
+[ext_resource type="Texture2D" uid="uid://dk26pwdd83yo0" path="res://assets/images/UI/ecology_icone.png" id="60_g8uqq"]
+[ext_resource type="Texture2D" uid="uid://dcfl036rk3td7" path="res://assets/images/UI/Building/coal.png" id="61_fnjav"]
+[ext_resource type="Texture2D" uid="uid://bjs4t4tu11k4y" path="res://assets/images/UI/Ressources/electricite.png" id="62_g8wh7"]
+[ext_resource type="Texture2D" uid="uid://b5t8m68ns2yju" path="res://assets/images/UI/Building/solar.png" id="63_p3www"]
+[ext_resource type="Texture2D" uid="uid://cmcy854wd0xy5" path="res://assets/images/UI/Building/wind.png" id="64_ke146"]
+[ext_resource type="Texture2D" uid="uid://lpwinp2h7dxt" path="res://assets/images/UI/Building/nuke.png" id="65_xvigl"]
+[ext_resource type="Texture2D" uid="uid://cn27pt5ttahnf" path="res://assets/images/UI/Ressources/Uranium.png" id="66_xmjwj"]
+[ext_resource type="Script" path="res://script/AnimationIntro.gd" id="67_evhq7"]
+[ext_resource type="Script" path="res://script/BuildingInfoWindow.gd" id="69_efvt0"]
+[ext_resource type="Script" path="res://script/NotEnoughMoneyWindow.gd" id="70_5h8ti"]
+[ext_resource type="Script" path="res://script/NextTurn.gd" id="71_gfn7n"]
+[ext_resource type="Texture2D" uid="uid://bg5c34rk6iecn" path="res://assets/images/UI/FondMenu/NextRoundBackground.png" id="72_2jnwm"]
+[ext_resource type="PackedScene" uid="uid://dpwpwy3723rb" path="res://scenes/GaugesUI.tscn" id="73_elcf7"]
+[ext_resource type="PackedScene" uid="uid://0hki0d6uyrx6" path="res://scenes/RessourceNode.tscn" id="76_6p55d"]
+[ext_resource type="PackedScene" uid="uid://c871fpq28e4kk" path="res://scenes/NextTurnRecap.tscn" id="77_1pagg"]
+[ext_resource type="PackedScene" uid="uid://ymsndtqwv2f3" path="res://scenes/ExitConfirmation.tscn" id="78_3jj8n"]
+[ext_resource type="Texture2D" uid="uid://bkxpvoaoqad4v" path="res://assets/images/UNGO.png" id="79_tbpps"]
+[ext_resource type="Texture2D" uid="uid://l3dbd7pumuut" path="res://assets/images/RETER.png" id="80_006sb"]
+[ext_resource type="PackedScene" uid="uid://bg35gaxwq0gto" path="res://scenes/Ending.tscn" id="81_0ev32"]
+[ext_resource type="PackedScene" uid="uid://bcn000t773tj3" path="res://scenes/NextTurnTransition.tscn" id="81_1uw6u"]
+[ext_resource type="Script" path="res://script/EndGame.gd" id="82_aq4ad"]
+[ext_resource type="PackedScene" uid="uid://o45mgs0stnnr" path="res://scenes/IntroDialogue.tscn" id="82_feyrv"]
+[ext_resource type="AudioStream" uid="uid://bemi4jxjj2hly" path="res://audio/constructionSound.mp3" id="83_srkrc"]
+[ext_resource type="AudioStream" uid="uid://d53ulffdx5em" path="res://audio/destructionSound.mp3" id="84_hwqrs"]
+[ext_resource type="AudioStream" uid="uid://30oplk7j83dd" path="res://audio/gameSound.mp3" id="89_4hf02"]
+
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_i2umh"]
+sky_horizon_color = Color(0.64625, 0.65575, 0.67075, 1)
+ground_horizon_color = Color(0.64625, 0.65575, 0.67075, 1)
+
+[sub_resource type="Sky" id="Sky_562ir"]
+sky_material = SubResource("ProceduralSkyMaterial_i2umh")
+
+[sub_resource type="Environment" id="Environment_rjrri"]
+background_mode = 2
+sky = SubResource("Sky_562ir")
+tonemap_mode = 2
+ssao_enabled = true
+glow_enabled = true
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_30b21"]
+albedo_color = Color(0.262745, 0.643137, 1, 1)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ltt14"]
+albedo_color = Color(0.207843, 0.529412, 0, 1)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_i80c1"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_4o8pw"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_2w6o5"]
+albedo_color = Color(0.25098, 0.239216, 0.211765, 1)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_niqhr"]
+albedo_color = Color(0.0705882, 0.368627, 0, 1)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_mjk48"]
+size = Vector3(1.154, 1, 1)
+
+[sub_resource type="Animation" id="Animation_c1dnm"]
+resource_name = "ship_animation"
+length = 2.0
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5, 1.1, 1.6),
+"transitions": PackedFloat32Array(0.732043, 0.732043, 0.732043, 0.732043),
+"update": 0,
+"values": [Vector3(0, 0, 0), Vector3(0, 0.1, 0), Vector3(0, 0, 0), Vector3(0, -0.1, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0.2, 0.9, 1.3, 1.8),
+"transitions": PackedFloat32Array(0.732043, 0.732043, 0.732043, 0.732043),
+"update": 0,
+"values": [Vector3(0, 0, 0), Vector3(0.00523599, 0, 0), Vector3(0.00872665, 0, 0), Vector3(0, 0, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_ym6pj"]
+_data = {
+"ship_animation": SubResource("Animation_c1dnm")
+}
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_mcu7y"]
+albedo_texture = ExtResource("14_3q7w7")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_muwu8"]
+albedo_texture = ExtResource("14_3q7w7")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_e6rni"]
+albedo_color = Color(0.37, 0.8, 0.1, 1)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_0stvd"]
+size = Vector3(58.282, 1, 58.9565)
+
+[sub_resource type="BoxMesh" id="BoxMesh_tgik5"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_e0x6w"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_3qgnb"]
+albedo_color = Color(0.396078, 0.431373, 1, 1)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_shurb"]
+albedo_color = Color(1, 0.45098, 0.258824, 1)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_01bgd"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_o3aai"]
+content_margin_left = 10.0
+content_margin_top = 0.0
+content_margin_right = 10.0
+bg_color = Color(1, 1, 1, 0.705882)
+border_color = Color(0.8, 0.8, 0.8, 0)
+corner_radius_top_left = 15
+corner_radius_top_right = 15
+expand_margin_top = 10.0
+anti_aliasing = false
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_tl18s"]
+content_margin_left = 10.0
+content_margin_right = 10.0
+bg_color = Color(0.235294, 0.235294, 0.235294, 0.705882)
+border_color = Color(0.8, 0.8, 0.8, 0)
+corner_radius_top_left = 15
+corner_radius_top_right = 15
+anti_aliasing = false
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_darpg"]
+content_margin_left = 10.0
+content_margin_right = 10.0
+bg_color = Color(0, 0, 0, 0.705882)
+border_color = Color(0.8, 0.8, 0.8, 0)
+corner_radius_top_left = 15
+corner_radius_top_right = 15
+anti_aliasing = false
+
+[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_nunyr"]
+
+[sub_resource type="Animation" id="Animation_0jru7"]
+resource_name = "MenuAnimation"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 2
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.15, 0.75),
+"transitions": PackedFloat32Array(2, 1, 3),
+"update": 0,
+"values": [Vector2(0, 809), Vector2(0, 780), Vector2(0, 1044)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = false
+tracks/1/path = NodePath(".:rotation")
+tracks/1/interp = 2
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+
+[sub_resource type="Animation" id="Animation_h5oal"]
+resource_name = "MenuAnimation_Ouvrir"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 2
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.6, 0.75),
+"transitions": PackedFloat32Array(1, 1, 3),
+"update": 0,
+"values": [Vector2(0, 1044), Vector2(0, 780), Vector2(0, 810)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = false
+tracks/1/path = NodePath(".:rotation")
+tracks/1/interp = 2
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+
+[sub_resource type="Animation" id="Animation_f32xi"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0, 809)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_7tmuf"]
+_data = {
+"MenuAnimation": SubResource("Animation_0jru7"),
+"MenuAnimation_Ouvrir": SubResource("Animation_h5oal"),
+"RESET": SubResource("Animation_f32xi")
+}
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_2qg3n"]
+bg_color = Color(0, 0, 0, 0.705882)
+corner_radius_top_left = 15
+corner_radius_top_right = 15
+corner_radius_bottom_right = 15
+corner_radius_bottom_left = 15
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_wvo1u"]
+bg_color = Color(0.235294, 0.235294, 0.235294, 0.705882)
+corner_radius_top_left = 15
+corner_radius_top_right = 15
+corner_radius_bottom_right = 15
+corner_radius_bottom_left = 15
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_1ivxg"]
+bg_color = Color(0.686275, 0, 0, 0.705882)
+corner_radius_top_left = 15
+corner_radius_top_right = 15
+corner_radius_bottom_right = 15
+corner_radius_bottom_left = 15
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_e4nb0"]
+bg_color = Color(0.235294, 0.235294, 0.235294, 0.705882)
+corner_radius_top_left = 15
+corner_radius_top_right = 15
+corner_radius_bottom_right = 15
+corner_radius_bottom_left = 15
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_yg3fa"]
+bg_color = Color(0.729412, 0.756863, 0.223529, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_8nti8"]
+bg_color = Color(0, 0, 0, 0.705882)
+corner_radius_top_left = 15
+corner_radius_top_right = 15
+corner_radius_bottom_right = 15
+corner_radius_bottom_left = 15
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ry16c"]
+bg_color = Color(0.235294, 0.235294, 0.235294, 0.705882)
+corner_radius_top_left = 15
+corner_radius_top_right = 15
+corner_radius_bottom_right = 15
+corner_radius_bottom_left = 15
+
+[sub_resource type="Animation" id="Animation_2dpk1"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("TopRecangle:color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(0, 0, 0, 1)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("BottomRectangle:color")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(0, 0, 0, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_afypu"]
+resource_name = "credits"
+length = 3.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("TopRecangle:color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(0, 0, 0, 1), Color(0, 0, 0, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("BottomRectangle:color")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 1, 1.6),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Color(0, 0, 0, 1), Color(0, 0, 0, 1), Color(0, 0, 0, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_38b2v"]
+_data = {
+"RESET": SubResource("Animation_2dpk1"),
+"credits": SubResource("Animation_afypu")
+}
+
+[sub_resource type="GDScript" id="GDScript_cqcfy"]
+script/source = "extends AudioStreamPlayer
+
+
+func _on_finished():
+	play(0)
+"
+
+[node name="main" type="Node3D"]
+script = ExtResource("1_fmouc")
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_rjrri")
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 0.866025, 0.5, 0, -0.5, 0.866025, 0, 0, 0)
+light_energy = 1.5
+shadow_enabled = true
+
+[node name="SkyBox" type="CSGSphere3D" parent="."]
+transform = Transform3D(1.38963, 0, 0, 0, 1.29597, 0, 0, 0, 1.3294, 0, 0, 0)
+cast_shadow = 0
+lod_bias = 0.001
+gi_mode = 0
+flip_faces = true
+radius = 100.0
+radial_segments = 64
+rings = 64
+material = SubResource("StandardMaterial3D_30b21")
+
+[node name="Decor" type="CSGBox3D" parent="."]
+transform = Transform3D(520.615, 0, 0, 0, 1.9356, 0, 0, 0, 590.365, 0, -0.5, 3.584)
+material = SubResource("StandardMaterial3D_ltt14")
+
+[node name="River" parent="Decor" instance=ExtResource("8_7jfkl")]
+transform = Transform3D(-5.02796e-10, 0, 0.00480151, 0, 0.683824, 0, -0.0101436, 0, -1.85084e-10, -0.0758501, -0.154991, 0.0388929)
+
+[node name="River2" parent="Decor/River" instance=ExtResource("8_7jfkl")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -19.8828, 0, -1.90735e-06)
+
+[node name="River3" parent="Decor/River" instance=ExtResource("8_7jfkl")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 19.8021, 0, 0)
+
+[node name="Cargo" type="CharacterBody3D" parent="Decor"]
+transform = Transform3D(0.00192081, 0, 0, 0, 0.516636, 0, 0, 0, 0.00169387, 0.0258237, 0.258318, 0.143897)
+motion_mode = 1
+script = ExtResource("9_4oska")
+
+[node name="Boat" parent="Decor/Cargo" instance=ExtResource("10_6lu33")]
+transform = Transform3D(-4.37114e-09, 0, -0.1, 0.000730892, 0.0999973, -3.19483e-11, 0.0999973, -0.000730892, -4.37102e-09, -65.5317, -0.518136, 56.3173)
+
+[node name="bateau_transport" parent="Decor/Cargo/Boat/RootNode" index="0"]
+transform = Transform3D(1, -3.55271e-15, 9.31323e-10, -4.65661e-10, -1.19209e-07, 1, 1.06581e-14, -1, -1.19209e-07, 0, 0, 0)
+
+[node name="PontBateau" parent="Decor/Cargo/Boat/RootNode" index="1"]
+transform = Transform3D(6200, -7.27596e-12, 3.57628e-07, 0, -0.000280142, 266.151, 1.45519e-10, -2350, -3.17276e-05, 88.1758, 27.2717, -26.8518)
+
+[node name="PontAvant" parent="Decor/Cargo/Boat/RootNode" index="2"]
+transform = Transform3D(2350, 0, 1.19209e-07, -3.8147e-06, -0.000280142, 100, 2.18279e-11, -2350, -1.19209e-05, 2.9021, 29.5223, -27.9824)
+
+[node name="VitreAvant" parent="Decor/Cargo/Boat/RootNode" index="3"]
+transform = Transform3D(-0.000180244, -0.000155568, -100, -1500, 0, 6.13928e-06, 8.9407e-05, 2610, -1.19209e-05, 116.123, 40.9285, -27.3721)
+
+[node name="VitreDroite" parent="Decor/Cargo/Boat/RootNode" index="4"]
+transform = Transform3D(1150, 1.90735e-06, 9.09495e-13, -1.90735e-06, 1500, -4.37114e-06, 3.63798e-12, 6.55671e-05, 100, 128.643, 41.4006, -10.1099)
+
+[node name="VitreGauche" parent="Decor/Cargo/Boat/RootNode" index="5"]
+transform = Transform3D(1150, -1.90735e-06, 0, -1.90735e-06, -1500, 3.89414e-05, 3.63798e-12, -0.000584122, -100, 128.643, 41.4006, -44.7819)
+
+[node name="VitreArriere" parent="Decor/Cargo/Boat/RootNode" index="6"]
+transform = Transform3D(-9.53674e-07, -4.47035e-05, 100, -1250, -5.68434e-14, -3.15905e-06, 3.72529e-05, -1500, 1.36424e-12, 140.884, 40.4904, -28.0366)
+
+[node name="VitreArrierePlateformeObservation" parent="Decor/Cargo/Boat/RootNode" index="7"]
+transform = Transform3D(-2.38419e-07, -7.8231e-05, 100, -450, 5.68434e-14, -3.15905e-06, 1.3411e-05, -2625, 1.36424e-12, 123.272, 51.9357, -27.4963)
+
+[node name="VitrePlateformeObservationDroite" parent="Decor/Cargo/Boat/RootNode" index="8"]
+transform = Transform3D(225, 0, 9.09495e-13, -1.19209e-07, 350, -4.37114e-06, 1.81899e-12, 1.5299e-05, 100, 119.716, 51.9601, -0.110718)
+
+[node name="VitrePlateformeObservationGauche" parent="Decor/Cargo/Boat/RootNode" index="9"]
+transform = Transform3D(225, 0, -9.09495e-13, -1.19209e-07, -350, -8.74228e-06, 1.81899e-12, 3.0598e-05, -100, 119.716, 51.9601, -54.8015)
+
+[node name="NomBateauCoteDroit" parent="Decor/Cargo/Boat/RootNode" index="10"]
+transform = Transform3D(1000, 0, 9.09495e-13, -9.53674e-07, 150, -4.37114e-06, 1.09139e-11, 6.55671e-06, 100, 38.9417, 25.5001, -2.21411)
+material_override = SubResource("StandardMaterial3D_i80c1")
+
+[node name="NomBateauCoteGauche" parent="Decor/Cargo/Boat/RootNode" index="11"]
+transform = Transform3D(-1000, 1.3113e-05, -9.09495e-13, 8.82149e-05, 150, 8.74228e-06, 3.63798e-12, 1.31134e-05, -100, 38.9417, 25.5001, -52.6456)
+material_override = SubResource("StandardMaterial3D_4o8pw")
+
+[node name="BandeCoqueDroite" parent="Decor/Cargo/Boat/RootNode" index="12"]
+transform = Transform3D(6250, 0, 9.09495e-13, 0, 150, -4.37114e-06, 5.82077e-11, 6.55671e-06, 100, 88.2054, 17.535, -2.39996)
+
+[node name="BandeCoqueGauche" parent="Decor/Cargo/Boat/RootNode" index="13"]
+transform = Transform3D(6250, 0, -9.09495e-13, 0, -150, -8.74228e-06, 5.82077e-11, 1.31134e-05, -100, 88.2054, 17.535, -52.462)
+
+[node name="BandeCoqueArriere" parent="Decor/Cargo/Boat/RootNode" index="14"]
+transform = Transform3D(0.000149012, 6.55651e-06, 100, 4.20641e-12, 150, -4.52995e-06, -2500, 8.06466e-13, 5.96046e-06, 151.033, 17.535, -27.3368)
+
+[node name="BandeCoqueAvant" parent="Decor/Cargo/Boat/RootNode" index="15"]
+transform = Transform3D(2579.57, 0, 1.19209e-07, -1.90735e-06, -0.000299185, 150, 2.18279e-11, -2509.75, -1.78814e-05, 26.537, 17.5, -27.3823)
+
+[node name="ancre" parent="Decor/Cargo/Boat/RootNode" index="16"]
+transform = Transform3D(8.82947, -1.93715e-07, -4.69471, -7.45058e-09, 10, -4.35859e-07, 4.69472, 3.85949e-07, 8.82948, 17.2562, 20.5268, -7.5351)
+
+[node name="Containers" type="Node3D" parent="Decor/Cargo/Boat"]
+
+[node name="Etage0" type="Node3D" parent="Decor/Cargo/Boat/Containers"]
+
+[node name="ConteneurAssemble2" type="MeshInstance3D" parent="Decor/Cargo/Boat/Containers/Etage0"]
+transform = Transform3D(-2.18557e-07, 1.11759e-08, 5, -1.53128e-16, 5, -1.11759e-08, -5, 1.11022e-16, -2.18557e-07, 76.8717, 27.2675, -34.2479)
+material_override = SubResource("StandardMaterial3D_2w6o5")
+mesh = ExtResource("5_lhw7r")
+skeleton = NodePath("../../../../../..")
+
+[node name="ConteneurAssemble5" type="MeshInstance3D" parent="Decor/Cargo/Boat/Containers/Etage0"]
+transform = Transform3D(-2.18557e-07, 7.45058e-09, 5, -1.35245e-16, 5, -7.45058e-09, -5, 0, -2.18557e-07, 41.8719, 27.2675, -34.2479)
+material_override = SubResource("StandardMaterial3D_2w6o5")
+mesh = ExtResource("5_lhw7r")
+skeleton = NodePath("../../../../../..")
+
+[node name="ConteneurAssemble3" type="MeshInstance3D" parent="Decor/Cargo/Boat/Containers/Etage0"]
+transform = Transform3D(-2.18557e-07, 7.45058e-09, 5, -1.35245e-16, 5, -7.45058e-09, -5, 0, -2.18557e-07, 76.8718, 27.2675, -23.2479)
+material_override = SubResource("StandardMaterial3D_2w6o5")
+mesh = ExtResource("5_lhw7r")
+skeleton = NodePath("../../../../../..")
+
+[node name="ConteneurAssemble6" type="MeshInstance3D" parent="Decor/Cargo/Boat/Containers/Etage0"]
+transform = Transform3D(-2.18557e-07, 7.45058e-09, 5, -1.35245e-16, 5, -7.45058e-09, -5, 0, -2.18557e-07, 41.8719, 27.2675, -23.2479)
+material_override = SubResource("StandardMaterial3D_2w6o5")
+mesh = ExtResource("5_lhw7r")
+skeleton = NodePath("../../../../../..")
+
+[node name="ConteneurAssemble4" type="MeshInstance3D" parent="Decor/Cargo/Boat/Containers/Etage0"]
+transform = Transform3D(-2.18557e-07, 7.45058e-09, 5, -1.35245e-16, 5, -7.45058e-09, -5, 0, -2.18557e-07, 76.8718, 27.2675, -12.2479)
+material_override = SubResource("StandardMaterial3D_2w6o5")
+mesh = ExtResource("5_lhw7r")
+skeleton = NodePath("../../../../../..")
+
+[node name="ConteneurAssemble7" type="MeshInstance3D" parent="Decor/Cargo/Boat/Containers/Etage0"]
+transform = Transform3D(-2.18557e-07, 7.45058e-09, 5, -1.35245e-16, 5, -7.45058e-09, -5, 0, -2.18557e-07, 41.8719, 27.2675, -12.2479)
+material_override = SubResource("StandardMaterial3D_2w6o5")
+mesh = ExtResource("5_lhw7r")
+skeleton = NodePath("../../../../../..")
+
+[node name="Etage1" type="Node3D" parent="Decor/Cargo/Boat/Containers"]
+
+[node name="ConteneurAssemble8" type="MeshInstance3D" parent="Decor/Cargo/Boat/Containers/Etage1"]
+transform = Transform3D(-2.18557e-07, 7.45058e-09, 5, -1.35245e-16, 5, -7.45058e-09, -5, 0, -2.18557e-07, 76.8719, 37.2675, -34.2479)
+material_override = SubResource("StandardMaterial3D_2w6o5")
+mesh = ExtResource("5_lhw7r")
+skeleton = NodePath("../../../../../..")
+
+[node name="ConteneurAssemble9" type="MeshInstance3D" parent="Decor/Cargo/Boat/Containers/Etage1"]
+transform = Transform3D(-2.18557e-07, 7.45058e-09, 5, -1.35245e-16, 5, -7.45058e-09, -5, 0, -2.18557e-07, 41.8718, 37.2675, -34.2479)
+material_override = SubResource("StandardMaterial3D_2w6o5")
+mesh = ExtResource("5_lhw7r")
+skeleton = NodePath("../../../../../..")
+
+[node name="ConteneurAssemble10" type="MeshInstance3D" parent="Decor/Cargo/Boat/Containers/Etage1"]
+transform = Transform3D(-2.18557e-07, 7.45058e-09, 5, -1.35245e-16, 5, -7.45058e-09, -5, 0, -2.18557e-07, 76.8719, 37.2675, -23.2479)
+material_override = SubResource("StandardMaterial3D_2w6o5")
+mesh = ExtResource("5_lhw7r")
+skeleton = NodePath("../../../../../..")
+
+[node name="ConteneurAssemble11" type="MeshInstance3D" parent="Decor/Cargo/Boat/Containers/Etage1"]
+transform = Transform3D(-2.18557e-07, 7.45058e-09, 5, -1.35245e-16, 5, -7.45058e-09, -5, 0, -2.18557e-07, 41.8718, 37.2675, -23.2479)
+material_override = SubResource("StandardMaterial3D_2w6o5")
+mesh = ExtResource("5_lhw7r")
+skeleton = NodePath("../../../../../..")
+
+[node name="ConteneurAssemble12" type="MeshInstance3D" parent="Decor/Cargo/Boat/Containers/Etage1"]
+transform = Transform3D(-2.18557e-07, 7.45058e-09, 5, -1.35245e-16, 5, -7.45058e-09, -5, 0, -2.18557e-07, 76.8719, 37.2675, -12.2479)
+material_override = SubResource("StandardMaterial3D_2w6o5")
+mesh = ExtResource("5_lhw7r")
+skeleton = NodePath("../../../../../..")
+
+[node name="ConteneurAssemble13" type="MeshInstance3D" parent="Decor/Cargo/Boat/Containers/Etage1"]
+transform = Transform3D(-2.18557e-07, 7.45058e-09, 5, -1.35245e-16, 5, -7.45058e-09, -5, 0, -2.18557e-07, 41.8718, 37.2675, -12.2479)
+material_override = SubResource("StandardMaterial3D_2w6o5")
+mesh = ExtResource("5_lhw7r")
+skeleton = NodePath("../../../../../..")
+
+[node name="Easter" type="MeshInstance3D" parent="Decor/Cargo/Boat"]
+transform = Transform3D(5, 7.45058e-09, -4.26326e-14, -7.45058e-09, 5, 2.22045e-16, 7.10543e-14, 0, 5, 12.7692, 29.3258, -30.067)
+material_override = SubResource("StandardMaterial3D_niqhr")
+mesh = ExtResource("11_2rli5")
+skeleton = NodePath("../../../..")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Decor/Cargo"]
+transform = Transform3D(4.11422, 0, 0, 0, 3.74218, 0, 0, 0, 13.3745, -61.0986, 2.1386, 64.5021)
+shape = SubResource("BoxShape3D_mjk48")
+
+[node name="AnimationShip" type="AnimationPlayer" parent="Decor/Cargo"]
+libraries = {
+"": SubResource("AnimationLibrary_ym6pj")
+}
+
+[node name="Wagon" parent="Decor" instance=ExtResource("15_te7jc")]
+transform = Transform3D(-8.39611e-12, 0.000192081, -8.39611e-12, 0, -2.25829e-09, -0.0516636, -0.000169387, -7.40413e-12, 3.23646e-19, 0.10386, 0.831489, -0.0179652)
+
+[node name="wagon_couvert2" parent="Decor/Wagon" instance=ExtResource("15_te7jc")]
+transform = Transform3D(1, 0, -2.11758e-22, 0, 1, -8.35187e-23, -2.11758e-22, -8.35187e-23, 1, -70.001, 0, 0)
+
+[node name="wagon_couvert3" parent="Decor/Wagon" instance=ExtResource("15_te7jc")]
+transform = Transform3D(1, 0, -1.05879e-21, 0, 1, -8.35187e-23, -1.05879e-21, -8.35187e-23, 1, -139.994, 0, 0)
+
+[node name="wagon_couvert4" parent="Decor/Wagon" instance=ExtResource("15_te7jc")]
+transform = Transform3D(1, 0, -1.69407e-21, 0, 1, -8.35188e-23, -1.69407e-21, -8.35187e-23, 1, -209.995, 0, 0)
+
+[node name="FreightTrain" parent="Decor" instance=ExtResource("12_wpetr")]
+transform = Transform3D(-8.39611e-12, 0.000192081, -8.39611e-12, 0, -2.25829e-09, -0.0516636, -0.000169387, -7.40413e-12, 3.23646e-19, 0.084585, 0.802284, -0.256096)
+script = ExtResource("13_rwn6p")
+
+[node name="train_fret" parent="Decor/FreightTrain/RootNode" index="0"]
+transform = Transform3D(-1.19209e-07, 1, -4.37114e-08, -1, -1.19209e-07, -4.37114e-08, -4.37114e-08, 4.37114e-08, 1, -8.71704, 19.8036, -27.2997)
+
+[node name="partie_centrale_bogieAvant" parent="Decor/FreightTrain/RootNode" index="1"]
+transform = Transform3D(1, -2.5411e-21, 1.06581e-14, -1.42109e-14, -2.38419e-07, 1, 2.11758e-22, -1, -2.38419e-07, 0, 0, 0)
+
+[node name="roue_bogie" parent="Decor/FreightTrain/RootNode" index="2"]
+transform = Transform3D(1, -2.5411e-21, 1.06581e-14, -1.42109e-14, -2.38419e-07, 1, 2.11758e-22, -1, -2.38419e-07, -1.99774, -0.200012, 0.72)
+
+[node name="roue_bogie_001" parent="Decor/FreightTrain/RootNode" index="3"]
+transform = Transform3D(1, -2.5411e-21, 1.06581e-14, -1.42109e-14, -2.38419e-07, 1, 2.11758e-22, -1, -2.38419e-07, 10.2435, -0.200012, 0.72)
+
+[node name="partie_centrale_bogieArriere" parent="Decor/FreightTrain/RootNode" index="4"]
+transform = Transform3D(1, -2.5411e-21, 1.06581e-14, -1.42109e-14, -2.38419e-07, 1, 2.11758e-22, -1, -2.38419e-07, 57.8606, 0.000183105, 0)
+
+[node name="roue_bogie_002" parent="Decor/FreightTrain/RootNode" index="5"]
+transform = Transform3D(1, -2.5411e-21, 1.06581e-14, -1.42109e-14, -2.38419e-07, 1, 2.11758e-22, -1, -2.38419e-07, 55.8629, -0.199829, 0.72)
+
+[node name="roue_bogie_003" parent="Decor/FreightTrain/RootNode" index="6"]
+transform = Transform3D(1, -2.5411e-21, 1.06581e-14, -1.42109e-14, -2.38419e-07, 1, 2.11758e-22, -1, -2.38419e-07, 68.1041, -0.199829, 0.72)
+
+[node name="VitreCotreGauche" parent="Decor/FreightTrain/RootNode" index="7"]
+transform = Transform3D(952.391, -1.81899e-12, -9.09495e-13, -7.27596e-12, -143.633, -77.7146, -4.33681e-19, 177.372, -62.932, 25.8507, 1.36804, -22.8337)
+
+[node name="VitreArriere" parent="Decor/FreightTrain/RootNode" index="8"]
+transform = Transform3D(0, -4.76135e-05, 100, -972.697, 3.37572e-12, 0, 8.12384e-20, -228.235, -2.38419e-05, 35.5001, 9.51465, -22.2402)
+
+[node name="VitreCoteDroit" parent="Decor/FreightTrain/RootNode" index="9"]
+transform = Transform3D(952.391, -1.36424e-12, -2.27374e-13, -7.27596e-12, -143.633, 77.7146, -4.33681e-19, -177.372, -62.932, 25.8507, 17.6243, -22.7702)
+
+[node name="GrilleMoteurAvant" parent="Decor/FreightTrain/RootNode" index="10"]
+transform = Transform3D(-7.27596e-12, -1.27569e-05, -317.117, -647.683, 4.89935e-12, -9.45083e-06, -1.93025e-05, -428.05, -1.0842e-19, 1.35577, 9.58496, -14.2328)
+
+[node name="MoteurCoteDroit" parent="Decor/FreightTrain/RootNode" index="11"]
+transform = Transform3D(3471.84, 1.0842e-19, 0, 0, -5.10276e-05, 317.117, 0, -428.05, -3.78033e-05, 36, 16.1657, -14.3639)
+
+[node name="MoteurCoteGauche" parent="Decor/FreightTrain/RootNode" index="12"]
+transform = Transform3D(3471.84, -8.67362e-19, 0, 0, -5.10276e-05, -317.117, 0, 428.05, -3.78033e-05, 36, 2.88373, -14.3639)
+
+[node name="GrilleMoteurArriere" parent="Decor/FreightTrain/RootNode" index="13"]
+transform = Transform3D(7.27596e-12, 8.92982e-05, 317.117, 647.683, 5.72234e-12, -5.45697e-12, 7.27596e-12, -428.05, 7.56067e-05, 70.5562, 9.58514, -14.2328)
+
+[node name="CoteDroitTrain" parent="Decor/FreightTrain/RootNode" index="14"]
+transform = Transform3D(3468.84, -5.42101e-20, 2.72848e-12, -4.36557e-11, -2.91129e-05, 321.117, -4.33681e-19, -244.217, -3.82802e-05, 36, 19.3725, -8.31436)
+
+[node name="CoteGaucheTrain" parent="Decor/FreightTrain/RootNode" index="15"]
+transform = Transform3D(3468.84, -5.42101e-20, 2.72848e-12, -4.36557e-11, -2.91129e-05, 321.117, -4.33681e-19, -244.217, -3.82802e-05, 36, -0.337646, -8.25436)
+
+[node name="MoteurDessousPartieDroit" parent="Decor/FreightTrain/RootNode" index="16"]
+transform = Transform3D(1130, -1.6263e-19, 3.63798e-12, 0, -2.98023e-05, 324.117, -6.50521e-19, -250, -3.86378e-05, 30.2694, 17.8196, -3.29356)
+
+[node name="MoteurDessousGrilleGauche" parent="Decor/FreightTrain/RootNode" index="17"]
+transform = Transform3D(-500, 2.84217e-11, -0.000203492, 0.000313917, 4.47035e-05, -324.117, 2.27682e-18, -250, -3.86378e-05, 46.2374, 1.60376, -3.29356)
+
+[node name="MoteurDessousGrilleDroite" parent="Decor/FreightTrain/RootNode" index="18"]
+transform = Transform3D(500, -1.6263e-19, 3.63798e-12, -5.45697e-12, -2.98023e-05, 324.117, 1.0842e-19, -250, -3.86378e-05, 46.2374, 17.3722, -3.29356)
+
+[node name="MoteurDessousPartieGauche" parent="Decor/FreightTrain/RootNode" index="19"]
+transform = Transform3D(-1130, 1.42109e-11, -0.000126216, 0.000440038, 4.47035e-05, -324.117, 1.60583e-11, -250, -3.86378e-05, 30.2694, 1.16785, -3.29356)
+
+[node name="FeuAvantGauche1" parent="Decor/FreightTrain/RootNode" index="20"]
+transform = Transform3D(0, -2.98023e-06, 10, -100, -1.3027e-13, -2.98023e-07, 2.98023e-06, -100, -8.47033e-21, -5.98083, 1.69495, -10.8111)
+
+[node name="FeuAvantGauche2" parent="Decor/FreightTrain/RootNode" index="21"]
+transform = Transform3D(0, -2.98023e-06, 10, -100, -1.3027e-13, -2.98023e-07, 2.98023e-06, -100, -8.47033e-21, -5.98083, 5.19305, -10.8111)
+
+[node name="FeuAvantDroit2" parent="Decor/FreightTrain/RootNode" index="22"]
+transform = Transform3D(0, -2.98023e-06, 10, -100, -1.3027e-13, -2.98023e-07, 2.98023e-06, -100, -8.47033e-21, -5.98083, 13.7938, -10.8111)
+
+[node name="FeuAvantDroit1" parent="Decor/FreightTrain/RootNode" index="23"]
+transform = Transform3D(0, -2.98023e-06, 10, -100, -1.3027e-13, -2.98023e-07, 2.98023e-06, -100, -8.47033e-21, -5.98083, 17.3491, -10.8111)
+
+[node name="PanneauFretDroit" parent="Decor/FreightTrain/RootNode" index="24"]
+transform = Transform3D(750, 0, 9.09495e-13, 0, -4.76837e-05, 100, -3.25261e-19, -400, -1.19209e-05, 26.0018, 19.4613, -15.2338)
+material_override = SubResource("StandardMaterial3D_mcu7y")
+
+[node name="PanneauFretGauche" parent="Decor/FreightTrain/RootNode" index="25"]
+transform = Transform3D(-750, -1.13687e-11, 1.50996e-05, -0.000113247, 7.15256e-05, -100, -2.1684e-19, -400, -1.19209e-05, 26.0018, -0.303284, -15.2338)
+material_override = SubResource("StandardMaterial3D_muwu8")
+
+[node name="TamponAvantDroit" parent="Decor/FreightTrain/RootNode" index="26"]
+transform = Transform3D(0, -4.47035e-06, 25, -150, -1.95405e-13, -7.45058e-07, 4.47035e-06, -150, -2.03288e-20, -8.77142, 16.7862, -4.32477)
+
+[node name="TamponAvantGauche" parent="Decor/FreightTrain/RootNode" index="27"]
+transform = Transform3D(0, -4.47035e-06, 25, -150, -1.95405e-13, -7.45058e-07, 4.47035e-06, -150, -2.03288e-20, -8.77142, 2.18298, -4.23487)
+
+[node name="TamponArriereDroit" parent="Decor/FreightTrain/RootNode" index="28"]
+transform = Transform3D(0, -4.47035e-06, 25, -150, -1.95405e-13, -7.45058e-07, 4.47035e-06, -150, -2.03288e-20, 80.8, 16.7864, -4.32477)
+
+[node name="TamponArriereGauche" parent="Decor/FreightTrain/RootNode" index="29"]
+transform = Transform3D(0, -4.47035e-06, 25, -150, -1.95405e-13, -7.45058e-07, 4.47035e-06, -150, -2.03288e-20, 80.8, 2.25299, -4.19965)
+
+[node name="FeuRampe2" parent="Decor/FreightTrain/RootNode" index="30"]
+transform = Transform3D(0, -1.3411e-06, 10, -45, -5.86215e-14, -2.98023e-07, 1.3411e-06, -45, -8.47033e-21, 14.5709, 11.8065, -26.7966)
+
+[node name="FeuRampe3" parent="Decor/FreightTrain/RootNode" index="31"]
+transform = Transform3D(0, -1.3411e-06, 10, -45, -5.86215e-14, -2.98023e-07, 1.3411e-06, -45, -8.47033e-21, 14.5709, 10.3077, -26.7966)
+
+[node name="FeuRampe5" parent="Decor/FreightTrain/RootNode" index="32"]
+transform = Transform3D(0, -1.3411e-06, 10, -45, -5.86215e-14, -2.98023e-07, 1.3411e-06, -45, -8.47033e-21, 14.5709, 7.18201, -26.7966)
+
+[node name="FeuRampe6" parent="Decor/FreightTrain/RootNode" index="33"]
+transform = Transform3D(0, -1.3411e-06, 10, -45, -5.86215e-14, -2.98023e-07, 1.3411e-06, -45, -8.47033e-21, 14.5709, 5.67834, -26.7966)
+
+[node name="FeuRampe1" parent="Decor/FreightTrain/RootNode" index="34"]
+transform = Transform3D(0, -1.3411e-06, 10, -45, -5.86215e-14, -2.98023e-07, 1.3411e-06, -45, -8.47033e-21, 14.5709, 13.3062, -26.7966)
+
+[node name="FeuRampe4" parent="Decor/FreightTrain/RootNode" index="35"]
+transform = Transform3D(0, -1.3411e-06, 10, -45, -5.86215e-14, -2.98023e-07, 1.3411e-06, -45, -8.47033e-21, 14.5709, 8.69824, -26.7966)
+
+[node name="Pare-ChocAvant" parent="Decor/FreightTrain/RootNode" index="36"]
+transform = Transform3D(2.18279e-11, 8.9407e-06, -100, 982, 4.93828e-12, -2.98023e-06, -2.92659e-05, -300, 0, -5.05804, 9.50201, -5.77637)
+
+[node name="Sol" parent="Decor/FreightTrain/RootNode" index="37"]
+transform = Transform3D(4000, -1.45519e-11, 3.25261e-19, -4.36557e-11, -980, 1.50996e-05, 8.67362e-19, -0.000147976, -100, 36.3201, 9.50568, -10.8169)
+
+[node name="MoteurDessousPartieAvant" parent="Decor/FreightTrain/RootNode" index="38"]
+transform = Transform3D(0, 7.45058e-06, -324.117, 835, 3.05416e-12, -9.65945e-06, -2.48849e-05, -250, 0, 18.9099, 9.49084, -3.26356)
+
+[node name="MoteurDessousPartieArriere" parent="Decor/FreightTrain/RootNode" index="39"]
+transform = Transform3D(-0.00019908, -7.45058e-06, 324.117, -835, 2.40281e-12, -8.6935e-05, 2.48849e-05, -250, -1.0842e-18, 52.9968, 9.49103, -3.29356)
+
+[node name="Pare-ChocArriere" parent="Decor/FreightTrain/RootNode" index="40"]
+transform = Transform3D(-2.18279e-11, -8.9407e-06, 100, -982, 4.15666e-12, -2.98023e-06, 2.92659e-05, -300, -8.13152e-20, 77.1123, 9.5022, -5.77637)
+
+[node name="DessousMoteur" parent="Decor/FreightTrain/RootNode" index="41"]
+transform = Transform3D(-9.95397e-05, -1704, 1.5173e-05, 835, -0.000203133, -1.5173e-05, 3.6499e-05, 7.44842e-05, 347.117, 35.9658, 9.47345, -0.773747)
+
+[node name="RampeDeToit" parent="Decor/FreightTrain/RootNode" index="42"]
+transform = Transform3D(0.000200272, 2.71051e-20, -100, 480, 2.27374e-13, 4.47035e-05, 5.45697e-12, -50, 3.25261e-19, 14.6239, 9.49561, -26.7864)
+
+[node name="DessousTrain" parent="Decor/FreightTrain/RootNode" index="43"]
+transform = Transform3D(4050, 1.45519e-11, -8.13152e-20, -5.82077e-11, 980, -4.37114e-06, 0, 4.28372e-05, 100, 36.2395, 9.54346, -5.76241)
+
+[node name="EchelleArriereDroite" parent="Decor/FreightTrain/RootNode" index="44"]
+transform = Transform3D(300, -5.42101e-20, 9.09495e-13, -4.54747e-12, -2.86102e-05, 100, 5.42101e-20, -240, -1.19209e-05, 73.2592, 18.7083, -8.32025)
+
+[node name="EchelleAvantDroite" parent="Decor/FreightTrain/RootNode" index="45"]
+transform = Transform3D(300, -5.42101e-20, 9.09495e-13, -4.54747e-12, -2.86102e-05, 100, 5.42101e-20, -240, -1.19209e-05, -1.62732, 18.7081, -8.34701)
+
+[node name="EchelleAvantDroite_001" parent="Decor/FreightTrain/RootNode" index="46"]
+transform = Transform3D(300, 0, 0, -4.54747e-12, -1.04907e-05, -100, 5.42101e-20, 240, -4.37114e-06, -1.62732, 0.447571, -8.23351)
+
+[node name="EchelleArriereGauche" parent="Decor/FreightTrain/RootNode" index="47"]
+transform = Transform3D(300, 0, 0, -4.54747e-12, -1.04907e-05, -100, 5.42101e-20, 240, -4.37114e-06, 73.2592, 0.684265, -8.32025)
+
+[node name="VitreAvant" parent="Decor/FreightTrain/RootNode" index="48"]
+transform = Transform3D(-0.000463818, 6.80192e-06, -100, 972.697, 3.9353e-12, -5.06639e-05, -2.89886e-05, -228.235, -3.25261e-19, 16.2581, 9.51447, -22.2402)
+
+[node name="wagon_couvert" parent="Decor/FreightTrain" instance=ExtResource("15_te7jc")]
+transform = Transform3D(1, 1.42109e-14, -6.35275e-22, -1.42109e-14, 1, -1.42109e-14, 0, 1.42109e-14, 1, 92.2686, 0.000976563, -0.0139427)
+
+[node name="wagon_couverts3" parent="Decor/FreightTrain" instance=ExtResource("15_te7jc")]
+transform = Transform3D(1, 2.13163e-14, -3.38813e-21, -2.13163e-14, 1, -2.13163e-14, -1.90582e-21, 2.13163e-14, 1, 232.3, 0.0032959, -0.0420005)
+
+[node name="wagon_couvert2" parent="Decor/FreightTrain" instance=ExtResource("15_te7jc")]
+transform = Transform3D(1, 1.77636e-14, -3.17637e-21, -1.77636e-14, 1, -1.77636e-14, -2.11758e-21, 1.77636e-14, 1, 162.28, 0.00219727, -0.0279999)
+
+[node name="TrainSound" type="AudioStreamPlayer3D" parent="Decor/FreightTrain"]
+transform = Transform3D(10, 1.7053e-13, 4.74338e-20, -1.7053e-13, 10, -1.7053e-13, -1.18585e-20, 1.7053e-13, 10, 12.8893, 8.74005, -21.8252)
+stream = ExtResource("16_pewfp")
+autoplay = true
+
+[node name="Cathdrale_de_strasbourg" parent="Decor" instance=ExtResource("17_sq121")]
+transform = Transform3D(0.000768322, 0, 0, 0, 0.206654, 0, 0, 0, 0.000677547, -0.0193537, 0.258318, -0.091741)
+
+[node name="Ground" type="StaticBody3D" parent="."]
+
+[node name="CSGBox3D" type="CSGBox3D" parent="Ground"]
+material_override = SubResource("StandardMaterial3D_e6rni")
+size = Vector3(60, 1, 60)
+script = ExtResource("3_f5822")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Ground"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.117584, 0, 0.118523)
+shape = SubResource("BoxShape3D_0stvd")
+
+[node name="Timer" type="Timer" parent="Ground"]
+wait_time = 0.597
+
+[node name="GridMap" type="GridMap" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.694429, 0)
+mesh_library = ExtResource("3_5stp2")
+cell_size = Vector3(10, 1, 10)
+cell_center_y = false
+data = {
+"cells": PackedInt32Array(4, 2, 1048609, 4, 3, 1048609, 4, 65533, 1048609, 4, 65532, 1048609, 4, 65531, 1048609, 4, 65530, 1048609, 4, 65529, 1048609, 4, 65528, 1048609, 4, 65527, 1048609, 4, 65526, 1048609, 4, 65525, 1048609, 4, 65524, 1048609, 4, 4, 1048609, 4, 5, 1048609, 4, 6, 1048609, 4, 7, 1048609, 4, 8, 1048609, 4, 9, 1048609, 4, 10, 1048609, 4, 11, 1048609, 4, 12, 1048609, 4, 13, 1048609, 4, 14, 1048609, 4, 65534, 1048609, 4, 65523, 1048609, 4, 65522, 1048609, 4, 65521, 1048609, 4, 65520, 1048609, 5, 3, 1048609, 5, 2, 1048609, 5, 0, 1048609, 5, 65535, 1048609, 5, 65534, 1048609, 5, 65533, 1048609, 5, 65532, 1048609, 5, 65531, 1048609, 5, 65530, 1048609, 5, 65529, 1048609, 5, 65528, 1048609, 5, 65527, 1048609, 5, 65526, 1048609, 5, 65525, 1048609, 5, 65524, 1048609, 5, 65523, 1048609, 5, 65522, 1048609, 5, 65521, 1048609, 5, 65520, 1048609, 65528, 1, 655396, 65528, 2, 655396, 65528, 3, 655396, 65528, 4, 655396, 65528, 5, 655396, 65528, 6, 655396, 65528, 7, 655396, 65528, 8, 655396, 65528, 9, 655396, 65528, 10, 655396, 65528, 11, 655396, 65528, 12, 655396, 65528, 13, 655396, 65528, 0, 655396, 65528, 65535, 655396, 65528, 65534, 655396, 65528, 65533, 655396, 65528, 65532, 655396, 65528, 65531, 655396, 65528, 65530, 655396, 65528, 65529, 655396, 65528, 65528, 655396, 65528, 65527, 655396, 65528, 65526, 655396, 65528, 65525, 655396, 65528, 65524, 655396, 65528, 65523, 655396, 65528, 65522, 655396, 65532, 65533, 1048577, 65532, 65534, 1048577, 65532, 65535, 1048577, 65532, 0, 1048577, 65532, 1, 1048577, 65532, 2, 1048577, 65529, 65534, 1048577, 65529, 65535, 1048577, 65529, 0, 1048577, 65529, 1, 1048577, 3, 65533, 1048577, 3, 65534, 1048577, 3, 65535, 1048577, 3, 0, 1048577, 3, 1, 1048577, 3, 2, 1048577, 65532, 65532, 1048577, 65533, 65532, 1048577, 65534, 65532, 1048577, 65535, 65532, 1048577, 0, 65532, 1048577, 1, 65532, 1048577, 3, 65532, 1048577, 3, 65531, 1048577, 3, 65530, 1048577, 2, 65530, 1048577, 2, 65529, 1048577, 1, 65529, 1048577, 1, 65530, 1048577, 0, 65530, 1048577, 65535, 65530, 1048577, 65534, 65530, 1048577, 65534, 65529, 1048577, 65533, 65529, 1048577, 65533, 65530, 1048577, 65532, 65530, 1048577, 65532, 65531, 1048577, 65532, 65529, 1048577, 65533, 65531, 1048577, 65534, 65531, 1048577, 65535, 65531, 1048577, 0, 65531, 1048577, 3, 65529, 1048577, 65532, 3, 1048577, 65533, 3, 1048577, 65534, 3, 1048577, 0, 3, 1048577, 1, 3, 1048577, 2, 3, 1048577, 3, 3, 1048577, 2, 65532, 1048577, 4, 65535, 1048609, 4, 0, 1048609, 4, 1, 1048609, 5, 1, 1048609, 65535, 65529, 1048577, 0, 65529, 1048577, 10, 65530, 1441804, 10, 65533, 1441804, 10, 1, 1441804, 10, 4, 1441804, 10, 65531, 1441805, 10, 65535, 1441805, 10, 3, 1441805, 10, 65532, 1441803, 10, 65534, 1441803, 10, 0, 1441803, 10, 2, 1441803, 10, 65527, 1048582, 10, 65528, 1048587, 10, 65529, 1048582, 10, 5, 1441800, 10, 6, 1441800, 10, 7, 1441803, 10, 8, 1441793, 10, 9, 1441793, 9, 65525, 655396, 9, 65526, 655396, 9, 65527, 655396, 9, 65528, 655396, 9, 65529, 655396, 9, 65530, 655396, 9, 65531, 655396, 9, 65532, 655396, 9, 65533, 655396, 9, 65534, 655396, 9, 65535, 655396, 9, 0, 655396, 9, 1, 655396, 9, 2, 655396, 9, 3, 655396, 9, 4, 655396, 9, 5, 655396, 9, 6, 655396, 9, 7, 655396, 9, 8, 655396, 9, 9, 655396, 9, 10, 655396, 9, 11, 655396, 5, 4, 1048591, 65523, 65529, 1048599, 65523, 65530, 1048599, 65523, 65531, 1048599, 65523, 65532, 1048599, 65523, 65534, 1048599, 65523, 65535, 1048599, 65523, 0, 1048599, 65524, 1, 1048599, 65523, 1, 1048599, 65524, 2, 1048599, 65523, 4, 1048599, 65523, 5, 1048599, 65524, 5, 1048599, 65524, 4, 1048599, 65524, 3, 1048599, 65524, 65531, 1048599, 65524, 65532, 1048599, 65524, 65533, 1048599, 65524, 0, 1048599, 65524, 65530, 1048599, 65522, 65533, 1048599, 65522, 65534, 1048599, 65522, 65535, 1048599, 65522, 1, 1048599, 65522, 2, 1048599, 65522, 3, 1048599, 65522, 4, 1048599, 65522, 65532, 1048599, 65522, 65531, 1048599, 65522, 65530, 1048599, 65524, 7, 1048599, 65525, 65533, 1048599, 65525, 65534, 1048599, 65526, 65534, 1048599, 65526, 65535, 1048599, 65526, 0, 1048599, 65526, 1, 1048599, 65525, 1, 1048599, 65525, 2, 1048599, 65525, 65535, 1048599, 65525, 3, 1048599, 65525, 4, 1048599, 65525, 5, 1048599, 65525, 6, 1048599, 65526, 6, 1048599, 65525, 7, 1048599, 65525, 65531, 1048617, 65526, 65529, 1048617, 11, 6, 1048583, 11, 5, 1048583, 11, 4, 1048582, 11, 3, 1048589, 11, 2, 1048582, 11, 1, 1048589, 11, 0, 1048583, 11, 65535, 1048589, 12, 65535, 1048582, 12, 65534, 1048582, 12, 65533, 1048587, 12, 65532, 1048582, 12, 65531, 1048587, 12, 65530, 1048583, 11, 65530, 1048589, 11, 65531, 1048583, 11, 65532, 1048583, 11, 65533, 1048587, 11, 65534, 1048589, 12, 2, 1048582, 12, 3, 1048589, 12, 4, 1048583, 12, 5, 1048589, 12, 1, 1048582, 12, 0, 1048589, 13, 65535, 1048582, 13, 0, 1048583, 13, 1, 1048582, 13, 2, 1048583, 13, 3, 1048583, 13, 65534, 1048583, 13, 65533, 1048583, 13, 4, 1048583, 13, 65532, 1048583, 3, 65528, 1048577, 2, 65528, 1048577, 1, 65528, 1048577, 0, 65528, 1048577, 65535, 65528, 1048577, 65534, 65528, 1048577, 65533, 65528, 1048577, 65532, 65528, 1048577, 65535, 3, 1048577, 0, 13, 1048593, 65535, 13, 1048593, 1, 13, 1048594, 1, 12, 1048593, 2, 12, 1048593, 2, 11, 1048593, 1, 11, 1048593, 0, 12, 1048593, 65535, 12, 1048593, 65534, 13, 1048593, 65533, 13, 1048593, 65533, 14, 1048593, 65534, 14, 1048593, 65535, 10, 1048593, 65534, 12, 1048593, 65532, 14, 1048593, 65533, 12, 1048593, 65533, 11, 1048593, 1, 10, 1048593, 1, 9, 1048593, 2, 10, 1048593, 3, 11, 1048593, 3, 12, 1048593, 2, 13, 1048593, 3, 13, 1048593, 65532, 65523, 1048593, 65533, 65523, 1048593, 65534, 65523, 1048593, 65535, 65523, 1048593, 0, 65523, 1048593, 1, 65523, 1048593, 2, 65523, 1048593, 2, 65522, 1048593, 1, 65522, 1048593, 0, 65522, 1048593, 65535, 65522, 1048593, 65534, 65522, 1048593, 65534, 65524, 1048593, 65534, 65525, 1048593, 65535, 65525, 1048593, 65533, 65524, 1048593, 65535, 65524, 1048593, 0, 65524, 1048593, 1, 65524, 1048593, 65534, 11, 1048593, 65535, 11, 1048593, 0, 10, 1048593, 0, 11, 1048593, 1, 65531, 1048577, 2, 65531, 1048577)
+}
+metadata/_editor_floor_ = Vector3(0, 0, -1)
+
+[node name="FirstPivot" type="Marker3D" parent="."]
+script = ExtResource("2_b74gc")
+
+[node name="SecondPivot" type="Marker3D" parent="FirstPivot"]
+
+[node name="Camera" type="Camera3D" parent="FirstPivot/SecondPivot"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 35, 35)
+current = true
+
+[node name="Harbor" type="Node3D" parent="."]
+transform = Transform3D(0.7, 0, 0, 0, 0.7, 0, 0, 0, 0.7, -1.41916, 0.6, 0)
+
+[node name="BuildingHarbor" type="MeshInstance3D" parent="Harbor"]
+transform = Transform3D(13.7695, 0, 0, 0, 4.15097, 0, 0, 0, 23.0189, -48.016, 1.892, -0.5)
+mesh = SubResource("BoxMesh_tgik5")
+
+[node name="Area3DHarbor" type="Area3D" parent="Harbor/BuildingHarbor"]
+
+[node name="CollisionHarbor" type="CollisionShape3D" parent="Harbor/BuildingHarbor/Area3DHarbor"]
+shape = SubResource("BoxShape3D_e0x6w")
+
+[node name="ancre" parent="Harbor" instance=ExtResource("4_knja3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -52.6173, 3.65777, 5.41963)
+
+[node name="Containers" type="Node3D" parent="Harbor"]
+transform = Transform3D(1.42857, 0, 0, 0, 1.42857, 0, 0, 0, 1.42857, -12.1796, 0, 0)
+
+[node name="Container1" type="MeshInstance3D" parent="Harbor/Containers"]
+transform = Transform3D(0.7, 0, 0, 0, 0.7, 0, 0, 0, 0.7, -23.1983, 0.07, 8.75)
+material_override = SubResource("StandardMaterial3D_3qgnb")
+mesh = ExtResource("5_lhw7r")
+skeleton = NodePath("../../..")
+
+[node name="Container2" type="MeshInstance3D" parent="Harbor/Containers"]
+transform = Transform3D(0.7, 0, 0, 0, 0.7, 0, 0, 0, 0.7, -24.8994, 0.07, 8.75)
+material_override = SubResource("StandardMaterial3D_3qgnb")
+mesh = ExtResource("5_lhw7r")
+skeleton = NodePath("../../..")
+
+[node name="Container3" type="MeshInstance3D" parent="Harbor/Containers"]
+transform = Transform3D(0.7, 0, 0, 0, 0.7, 0, 0, 0, 0.7, -26.6022, 0.07, 8.75)
+material_override = SubResource("StandardMaterial3D_3qgnb")
+mesh = ExtResource("5_lhw7r")
+skeleton = NodePath("../../..")
+
+[node name="Container4" type="MeshInstance3D" parent="Harbor/Containers"]
+transform = Transform3D(0.7, 0, 0, 0, 0.7, 0, 0, 0, 0.7, -28.3308, 0.07, 8.75)
+material_override = SubResource("StandardMaterial3D_3qgnb")
+mesh = ExtResource("5_lhw7r")
+skeleton = NodePath("../../..")
+
+[node name="Container5" type="MeshInstance3D" parent="Harbor/Containers"]
+transform = Transform3D(0.7, 0, 0, 0, 0.7, 0, 0, 0, 0.7, -23.1983, 0.07, 13.6316)
+material_override = SubResource("StandardMaterial3D_3qgnb")
+mesh = ExtResource("5_lhw7r")
+skeleton = NodePath("../../..")
+
+[node name="Container6" type="MeshInstance3D" parent="Harbor/Containers"]
+transform = Transform3D(0.7, 0, 0, 0, 0.7, 0, 0, 0, 0.7, -24.8994, 0.07, 13.6316)
+material_override = SubResource("StandardMaterial3D_3qgnb")
+mesh = ExtResource("5_lhw7r")
+skeleton = NodePath("../../..")
+
+[node name="Container7" type="MeshInstance3D" parent="Harbor/Containers"]
+transform = Transform3D(0.7, 0, 0, 0, 0.7, 0, 0, 0, 0.7, -26.6022, 0.07, 13.6316)
+material_override = SubResource("StandardMaterial3D_3qgnb")
+mesh = ExtResource("5_lhw7r")
+skeleton = NodePath("../../..")
+
+[node name="Container8" type="MeshInstance3D" parent="Harbor/Containers"]
+transform = Transform3D(0.7, 0, 0, 0, 0.7, 0, 0, 0, 0.7, -28.3308, 0.07, 13.6316)
+material_override = SubResource("StandardMaterial3D_3qgnb")
+mesh = ExtResource("5_lhw7r")
+skeleton = NodePath("../../..")
+
+[node name="Tanks" type="Node3D" parent="Harbor"]
+transform = Transform3D(-4.37114e-09, 0, 0.1, 0, 0.1, 0, -0.1, 0, -4.37114e-09, -51.23, 0.2, -15)
+
+[node name="Tank1" parent="Harbor/Tanks" instance=ExtResource("6_mphlc")]
+transform = Transform3D(1, 0, -3.55271e-15, 0, 1, 0, 3.55271e-15, 0, 1, 0, 0, 0)
+
+[node name="Tank2" parent="Harbor/Tanks" instance=ExtResource("6_mphlc")]
+transform = Transform3D(1, 0, -1.77636e-14, 0, 1, 0, 1.77636e-14, 0, 1, 27.5006, 0, 0)
+
+[node name="Tank3" parent="Harbor/Tanks" instance=ExtResource("6_mphlc")]
+transform = Transform3D(1, 0, -3.19744e-14, 0, 1, 0, 3.19744e-14, 0, 1, 55.0012, 0, 0)
+
+[node name="Tank4" parent="Harbor/Tanks" instance=ExtResource("6_mphlc")]
+transform = Transform3D(1, 0, -4.61853e-14, 0, 1, 0, 4.61853e-14, 0, 1, 82.5018, 0, 0)
+
+[node name="Tank5" parent="Harbor/Tanks" instance=ExtResource("6_mphlc")]
+transform = Transform3D(1, 0, -6.03961e-14, 0, 1, 0, 6.03961e-14, 0, 1, 110.002, 0, 0)
+
+[node name="grue_portuaire" parent="Harbor" instance=ExtResource("7_ivhoj")]
+transform = Transform3D(0.04, 0, 0, 0, 0.0430713, 0, 0, 0, 0.04, -97.7788, 0, -2)
+
+[node name="grue_portuaire2" parent="Harbor/grue_portuaire" instance=ExtResource("7_ivhoj")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 425)
+
+[node name="TrainStation" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 15.6393, 0, 0)
+
+[node name="BuldingTrainStation" type="MeshInstance3D" parent="TrainStation"]
+transform = Transform3D(6.50449, 0, 0, 0, 4.15097, 0, 0, 0, 18.6476, 17.8365, 1.89248, 0)
+material_override = SubResource("StandardMaterial3D_shurb")
+mesh = SubResource("BoxMesh_tgik5")
+script = ExtResource("13_km7px")
+
+[node name="Area3DTrainStation" type="Area3D" parent="TrainStation/BuldingTrainStation"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.624117, 0)
+
+[node name="CollisionTrainStation" type="CollisionShape3D" parent="TrainStation/BuldingTrainStation/Area3DTrainStation"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.614227, 0)
+shape = SubResource("BoxShape3D_01bgd")
+
+[node name="Timer" type="Timer" parent="TrainStation"]
+
+[node name="Cloud" parent="." instance=ExtResource("19_hxjx1")]
+transform = Transform3D(0.6, 0, 0, 0, 0.6, 0, 0, 0, 0.6, -98.2351, 43.3422, 0)
+
+[node name="UI" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_bottom = 29.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_vertical = 4
+mouse_filter = 2
+
+[node name="Phone" parent="UI" instance=ExtResource("21_qn0pu")]
+visible = false
+layout_mode = 1
+offset_left = 1308.0
+offset_top = 55.0
+offset_right = -348.0
+offset_bottom = -595.0
+
+[node name="BoatMenu" parent="UI" instance=ExtResource("19_fkd3u")]
+z_index = 1
+layout_mode = 1
+offset_left = 250.0
+offset_right = -1220.0
+
+[node name="TrainMenu" parent="UI" instance=ExtResource("20_2fjkj")]
+z_index = 1
+layout_mode = 1
+offset_left = 750.0
+offset_right = -717.0
+
+[node name="BuildModUI" type="Control" parent="UI"]
+layout_mode = 3
+anchors_preset = 0
+offset_top = 809.0
+offset_right = 1920.0
+offset_bottom = 1080.0
+script = ExtResource("18_f3q7j")
+
+[node name="TextureRect" type="ColorRect" parent="UI/BuildModUI"]
+layout_mode = 2
+offset_top = 36.0
+offset_right = 1920.0
+offset_bottom = 299.0
+color = Color(0.980392, 1, 1, 0.745098)
+
+[node name="TabBar" type="TabBar" parent="UI/BuildModUI"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = -0.002
+anchor_top = -0.109
+anchor_right = -0.002
+anchor_bottom = -0.109
+offset_left = 3.84
+offset_top = 30.539
+offset_right = 692.84
+offset_bottom = 66.539
+focus_mode = 0
+theme_override_colors/font_selected_color = Color(0, 0, 0, 1)
+theme_override_constants/h_separation = 0
+theme_override_constants/icon_max_width = 0
+theme_override_constants/outline_size = 0
+theme_override_font_sizes/font_size = 20
+theme_override_styles/tab_selected = SubResource("StyleBoxFlat_o3aai")
+theme_override_styles/tab_hovered = SubResource("StyleBoxFlat_tl18s")
+theme_override_styles/tab_unselected = SubResource("StyleBoxFlat_darpg")
+tab_count = 3
+tab_0/title = "Bâtiments simples"
+tab_1/title = "Bâtiments complexes"
+tab_2/title = "Production d'eléctricité"
+
+[node name="MarginContainer" type="MarginContainer" parent="UI/BuildModUI/TabBar"]
+material = SubResource("CanvasItemMaterial_nunyr")
+layout_mode = 1
+offset_left = -0.00999975
+offset_top = 36.545
+offset_right = 1919.99
+offset_bottom = 276.545
+theme_override_constants/margin_left = 10
+theme_override_constants/margin_top = 10
+theme_override_constants/margin_right = 10
+theme_override_constants/margin_bottom = 10
+metadata/tag = 0
+
+[node name="HBoxContainer" type="HBoxContainer" parent="UI/BuildModUI/TabBar/MarginContainer"]
+layout_mode = 2
+metadata/tag = 0
+
+[node name="CampDeBucheron" type="Panel" parent="UI/BuildModUI/TabBar/MarginContainer/HBoxContainer"]
+custom_minimum_size = Vector2(160, 0)
+layout_mode = 2
+theme = ExtResource("19_3jmat")
+
+[node name="TextureButton12" type="TextureButton" parent="UI/BuildModUI/TabBar/MarginContainer/HBoxContainer/CampDeBucheron"]
+layout_mode = 2
+offset_left = 5.0
+offset_top = 25.0
+offset_right = 155.0
+offset_bottom = 175.0
+texture_normal = ExtResource("20_er72a")
+ignore_texture_size = true
+stretch_mode = 0
+script = ExtResource("21_eh7vb")
+metadata/index = 23
+metadata/name = "Camp de bucherons"
+
+[node name="Label" type="Label" parent="UI/BuildModUI/TabBar/MarginContainer/HBoxContainer/CampDeBucheron"]
+layout_mode = 0
+offset_left = 3.0
+offset_top = 1.0
+offset_right = 158.0
+offset_bottom = 24.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "Camp de bucherons"
+horizontal_alignment = 1
+
+[node name="Prix" type="Label" parent="UI/BuildModUI/TabBar/MarginContainer/HBoxContainer/CampDeBucheron"]
+layout_mode = 0
+offset_left = 5.0
+offset_top = 30.0
+offset_right = 35.0
+offset_bottom = 55.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "3"
+
+[node name="Coin" type="TextureRect" parent="UI/BuildModUI/TabBar/MarginContainer/HBoxContainer/CampDeBucheron"]
+layout_mode = 0
+offset_left = 17.01
+offset_top = 35.455
+offset_right = 32.01
+offset_bottom = 50.455
+texture = ExtResource("22_b5bfd")
+expand_mode = 1
+
+[node name="Required" type="TextureRect" parent="UI/BuildModUI/TabBar/MarginContainer/HBoxContainer/CampDeBucheron"]
+layout_mode = 0
+offset_left = 17.0
+offset_top = 180.0
+offset_right = 47.0
+offset_bottom = 210.0
+texture = ExtResource("23_7ldvi")
+expand_mode = 1
+
+[node name="Arrow" type="TextureRect" parent="UI/BuildModUI/TabBar/MarginContainer/HBoxContainer/CampDeBucheron"]
+layout_mode = 0
+offset_left = 60.0
+offset_top = 175.0
+offset_right = 100.0
+offset_bottom = 215.0
+texture = ExtResource("24_qjav0")
+expand_mode = 2
+
+[node name="Produce" type="TextureRect" parent="UI/BuildModUI/TabBar/MarginContainer/HBoxContainer/CampDeBucheron"]
+layout_mode = 0
+offset_left = 110.0
+offset_top = 175.0
+offset_right = 150.0
+offset_bottom = 215.0
+texture = ExtResource("25_crl3b")
+expand_mode = 2
+
+[node name="Scierie" type="Panel" parent="UI/BuildModUI/TabBar/MarginContainer/HBoxContainer"]
+visible = false
+custom_minimum_size = Vector2(160, 0)
+layout_mode = 2
+theme = ExtResource("19_3jmat")
+
+[node name="Label" type="Label" parent="UI/BuildModUI/TabBar/MarginContainer/HBoxContainer/Scierie"]
+layout_mode = 0
+offset_left = 5.0
+offset_top = 1.0
+offset_right = 155.0
+offset_bottom = 24.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "Scierie
+"
+horizontal_alignment = 1
+
+[node name="TextureButton2" type="TextureButton" parent="UI/BuildModUI/TabBar/MarginContainer/HBoxContainer/Scierie"]
+layout_mode = 2
+offset_left = 5.0
+offset_top = 25.0
+offset_right = 155.0
+offset_bottom = 175.0
+texture_normal = ExtResource("26_krobq")
+ignore_texture_size = true
+stretch_mode = 0
+script = ExtResource("21_eh7vb")
+metadata/index = 39
+metadata/name = "Scierie"
+
+[node name="Prix" type="Label" parent="UI/BuildModUI/TabBar/MarginContainer/HBoxContainer/Scierie"]
+layout_mode = 0
+offset_left = 5.0
+offset_top = 30.0
+offset_right = 35.0
+offset_bottom = 55.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "5"
+
+[node name="Coin" type="TextureRect" parent="UI/BuildModUI/TabBar/MarginContainer/HBoxContainer/Scierie"]
+layout_mode = 0
+offset_left = 17.0
+offset_top = 35.0
+offset_right = 32.0
+offset_bottom = 50.0
+texture = ExtResource("22_b5bfd")
+expand_mode = 1
+
+[node name="Required" type="TextureRect" parent="UI/BuildModUI/TabBar/MarginContainer/HBoxContainer/Scierie"]
+layout_mode = 0
+offset_left = 10.0
+offset_top = 175.0
+offset_right = 50.0
+offset_bottom = 215.0
+texture = ExtResource("25_crl3b")
+expand_mode = 2
+
+[node name="Arrow" type="TextureRect" parent="UI/BuildModUI/TabBar/MarginContainer/HBoxContainer/Scierie"]
+layout_mode = 0
+offset_left = 60.0
+offset_top = 175.0
+offset_right = 100.0
+offset_bottom = 215.0
+texture = ExtResource("24_qjav0")
+expand_mode = 2
+
+[node name="Produce" type="TextureRect" parent="UI/BuildModUI/TabBar/MarginContainer/HBoxContainer/Scierie"]
+layout_mode = 0
+offset_left = 110.0
+offset_top = 175.0
+offset_right = 150.0
+offset_bottom = 215.0
+texture = ExtResource("27_ox57o")
+expand_mode = 2
+
+[node name="Mine" type="Panel" parent="UI/BuildModUI/TabBar/MarginContainer/HBoxContainer"]
+visible = false
+custom_minimum_size = Vector2(160, 0)
+layout_mode = 2
+theme = ExtResource("19_3jmat")
+
+[node name="Label" type="Label" parent="UI/BuildModUI/TabBar/MarginContainer/HBoxContainer/Mine"]
+layout_mode = 0
+offset_left = 5.0
+offset_top = 1.0
+offset_right = 155.0
+offset_bottom = 24.0
+theme = ExtResource("19_3jmat")
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "Mine
+"
+horizontal_alignment = 1
+
+[node name="TextureButton3" type="TextureButton" parent="UI/BuildModUI/TabBar/MarginContainer/HBoxContainer/Mine"]
+layout_mode = 2
+offset_left = 5.0
+offset_top = 25.0
+offset_right = 155.0
+offset_bottom = 175.0
+texture_normal = ExtResource("28_ltwcb")
+ignore_texture_size = true
+stretch_mode = 0
+script = ExtResource("21_eh7vb")
+metadata/index = 27
+metadata/name = "Mine"
+
+[node name="Prix" type="Label" parent="UI/BuildModUI/TabBar/MarginContainer/HBoxContainer/Mine"]
+layout_mode = 0
+offset_left = 5.0
+offset_top = 30.0
+offset_right = 35.0
+offset_bottom = 55.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "3"
+
+[node name="Coin" type="TextureRect" parent="UI/BuildModUI/TabBar/MarginContainer/HBoxContainer/Mine"]
+layout_mode = 0
+offset_left = 17.0
+offset_top = 35.0
+offset_right = 32.0
+offset_bottom = 50.0
+texture = ExtResource("22_b5bfd")
+expand_mode = 1
+
+[node name="Required" type="TextureRect" parent="UI/BuildModUI/TabBar/MarginContainer/HBoxContainer/Mine"]
+layout_mode = 0
+offset_left = 17.0
+offset_top = 180.0
+offset_right = 47.0
+offset_bottom = 210.0
+texture = ExtResource("23_7ldvi")
+expand_mode = 1
+
+[node name="Arrow" type="TextureRect" parent="UI/BuildModUI/TabBar/MarginContainer/HBoxContainer/Mine"]
+layout_mode = 0
+offset_left = 60.0
+offset_top = 175.0
+offset_right = 100.0
+offset_bottom = 215.0
+texture = ExtResource("24_qjav0")
+expand_mode = 2
+
+[node name="Produce" type="TextureRect" parent="UI/BuildModUI/TabBar/MarginContainer/HBoxContainer/Mine"]
+layout_mode = 0
+offset_left = 110.0
+offset_top = 175.0
+offset_right = 150.0
+offset_bottom = 215.0
+texture = ExtResource("29_h7ldo")
+expand_mode = 2
+
+[node name="Briquerie" type="Panel" parent="UI/BuildModUI/TabBar/MarginContainer/HBoxContainer"]
+visible = false
+custom_minimum_size = Vector2(160, 0)
+layout_mode = 2
+theme = ExtResource("19_3jmat")
+
+[node name="TextureButton2" type="TextureButton" parent="UI/BuildModUI/TabBar/MarginContainer/HBoxContainer/Briquerie"]
+layout_mode = 2
+offset_left = 5.0
+offset_top = 25.0
+offset_right = 155.0
+offset_bottom = 175.0
+texture_normal = ExtResource("30_lys4e")
+ignore_texture_size = true
+stretch_mode = 0
+script = ExtResource("21_eh7vb")
+metadata/index = 4
+metadata/name = "Briqeterie"
+
+[node name="Label" type="Label" parent="UI/BuildModUI/TabBar/MarginContainer/HBoxContainer/Briquerie"]
+layout_mode = 0
+offset_left = 5.0
+offset_top = 1.0
+offset_right = 155.0
+offset_bottom = 24.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "Briquerie
+"
+horizontal_alignment = 1
+
+[node name="Prix" type="Label" parent="UI/BuildModUI/TabBar/MarginContainer/HBoxContainer/Briquerie"]
+layout_mode = 0
+offset_left = 5.0
+offset_top = 30.0
+offset_right = 35.0
+offset_bottom = 55.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "5"
+
+[node name="Coin" type="TextureRect" parent="UI/BuildModUI/TabBar/MarginContainer/HBoxContainer/Briquerie"]
+layout_mode = 0
+offset_left = 17.0
+offset_top = 35.0
+offset_right = 32.0
+offset_bottom = 50.0
+texture = ExtResource("22_b5bfd")
+expand_mode = 1
+
+[node name="Required" type="TextureRect" parent="UI/BuildModUI/TabBar/MarginContainer/HBoxContainer/Briquerie"]
+layout_mode = 0
+offset_left = 10.0
+offset_top = 175.0
+offset_right = 50.0
+offset_bottom = 215.0
+texture = ExtResource("29_h7ldo")
+expand_mode = 2
+
+[node name="Arrow" type="TextureRect" parent="UI/BuildModUI/TabBar/MarginContainer/HBoxContainer/Briquerie"]
+layout_mode = 0
+offset_left = 60.0
+offset_top = 175.0
+offset_right = 100.0
+offset_bottom = 215.0
+texture = ExtResource("24_qjav0")
+expand_mode = 2
+
+[node name="Produce" type="TextureRect" parent="UI/BuildModUI/TabBar/MarginContainer/HBoxContainer/Briquerie"]
+layout_mode = 0
+offset_left = 110.0
+offset_top = 175.0
+offset_right = 150.0
+offset_bottom = 215.0
+texture = ExtResource("31_jl6op")
+expand_mode = 2
+
+[node name="Pompe" type="Panel" parent="UI/BuildModUI/TabBar/MarginContainer/HBoxContainer"]
+visible = false
+custom_minimum_size = Vector2(160, 0)
+layout_mode = 2
+theme = ExtResource("19_3jmat")
+
+[node name="TextureButton6" type="TextureButton" parent="UI/BuildModUI/TabBar/MarginContainer/HBoxContainer/Pompe"]
+layout_mode = 2
+offset_left = 5.0
+offset_top = 25.0
+offset_right = 155.0
+offset_bottom = 175.0
+texture_normal = ExtResource("32_56t2e")
+ignore_texture_size = true
+stretch_mode = 0
+script = ExtResource("21_eh7vb")
+metadata/index = 31
+metadata/name = "Pompe"
+
+[node name="Label" type="Label" parent="UI/BuildModUI/TabBar/MarginContainer/HBoxContainer/Pompe"]
+layout_mode = 0
+offset_left = 5.0
+offset_top = 1.0
+offset_right = 155.0
+offset_bottom = 24.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "Pompe"
+horizontal_alignment = 1
+
+[node name="Prix" type="Label" parent="UI/BuildModUI/TabBar/MarginContainer/HBoxContainer/Pompe"]
+layout_mode = 0
+offset_left = 5.0
+offset_top = 30.0
+offset_right = 35.0
+offset_bottom = 55.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "3"
+
+[node name="Coin" type="TextureRect" parent="UI/BuildModUI/TabBar/MarginContainer/HBoxContainer/Pompe"]
+layout_mode = 0
+offset_left = 17.0
+offset_top = 35.0
+offset_right = 32.0
+offset_bottom = 50.0
+texture = ExtResource("22_b5bfd")
+expand_mode = 1
+
+[node name="Required" type="TextureRect" parent="UI/BuildModUI/TabBar/MarginContainer/HBoxContainer/Pompe"]
+layout_mode = 0
+offset_left = 17.0
+offset_top = 180.0
+offset_right = 47.0
+offset_bottom = 210.0
+texture = ExtResource("23_7ldvi")
+expand_mode = 1
+
+[node name="Arrow" type="TextureRect" parent="UI/BuildModUI/TabBar/MarginContainer/HBoxContainer/Pompe"]
+layout_mode = 0
+offset_left = 60.0
+offset_top = 175.0
+offset_right = 100.0
+offset_bottom = 215.0
+texture = ExtResource("24_qjav0")
+expand_mode = 2
+
+[node name="Produce" type="TextureRect" parent="UI/BuildModUI/TabBar/MarginContainer/HBoxContainer/Pompe"]
+layout_mode = 0
+offset_left = 110.0
+offset_top = 175.0
+offset_right = 150.0
+offset_bottom = 215.0
+texture = ExtResource("33_uktes")
+expand_mode = 2
+
+[node name="Houblon" type="Panel" parent="UI/BuildModUI/TabBar/MarginContainer/HBoxContainer"]
+visible = false
+custom_minimum_size = Vector2(160, 0)
+layout_mode = 2
+theme = ExtResource("19_3jmat")
+
+[node name="TextureButton8" type="TextureButton" parent="UI/BuildModUI/TabBar/MarginContainer/HBoxContainer/Houblon"]
+layout_mode = 2
+offset_left = 5.0
+offset_top = 25.0
+offset_right = 155.0
+offset_bottom = 175.0
+texture_normal = ExtResource("34_70nww")
+ignore_texture_size = true
+stretch_mode = 0
+script = ExtResource("21_eh7vb")
+metadata/index = 18
+metadata/name = "Champs de houblon"
+
+[node name="Label" type="Label" parent="UI/BuildModUI/TabBar/MarginContainer/HBoxContainer/Houblon"]
+layout_mode = 0
+offset_left = 5.0
+offset_top = 1.0
+offset_right = 155.0
+offset_bottom = 24.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "Houblon"
+horizontal_alignment = 1
+
+[node name="Prix" type="Label" parent="UI/BuildModUI/TabBar/MarginContainer/HBoxContainer/Houblon"]
+layout_mode = 0
+offset_left = 5.0
+offset_top = 30.0
+offset_right = 35.0
+offset_bottom = 55.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "2"
+
+[node name="Coin" type="TextureRect" parent="UI/BuildModUI/TabBar/MarginContainer/HBoxContainer/Houblon"]
+layout_mode = 0
+offset_left = 17.0
+offset_top = 35.0
+offset_right = 32.0
+offset_bottom = 50.0
+texture = ExtResource("22_b5bfd")
+expand_mode = 1
+
+[node name="Required" type="TextureRect" parent="UI/BuildModUI/TabBar/MarginContainer/HBoxContainer/Houblon"]
+layout_mode = 0
+offset_left = 10.0
+offset_top = 175.0
+offset_right = 50.0
+offset_bottom = 215.0
+texture = ExtResource("33_uktes")
+expand_mode = 2
+
+[node name="Arrow" type="TextureRect" parent="UI/BuildModUI/TabBar/MarginContainer/HBoxContainer/Houblon"]
+layout_mode = 0
+offset_left = 60.0
+offset_top = 175.0
+offset_right = 100.0
+offset_bottom = 215.0
+texture = ExtResource("24_qjav0")
+expand_mode = 2
+
+[node name="Produce" type="TextureRect" parent="UI/BuildModUI/TabBar/MarginContainer/HBoxContainer/Houblon"]
+layout_mode = 0
+offset_left = 110.0
+offset_top = 175.0
+offset_right = 150.0
+offset_bottom = 215.0
+texture = ExtResource("35_f5b5k")
+expand_mode = 2
+
+[node name="Ble" type="Panel" parent="UI/BuildModUI/TabBar/MarginContainer/HBoxContainer"]
+visible = false
+custom_minimum_size = Vector2(160, 0)
+layout_mode = 2
+theme = ExtResource("19_3jmat")
+
+[node name="TextureButton7" type="TextureButton" parent="UI/BuildModUI/TabBar/MarginContainer/HBoxContainer/Ble"]
+layout_mode = 2
+offset_left = 5.0
+offset_top = 25.0
+offset_right = 155.0
+offset_bottom = 175.0
+texture_normal = ExtResource("36_rajhf")
+ignore_texture_size = true
+stretch_mode = 0
+script = ExtResource("21_eh7vb")
+metadata/index = 17
+metadata/name = "Champs de blé"
+
+[node name="Label" type="Label" parent="UI/BuildModUI/TabBar/MarginContainer/HBoxContainer/Ble"]
+layout_mode = 0
+offset_left = 5.0
+offset_top = 1.0
+offset_right = 155.0
+offset_bottom = 24.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "Ble"
+horizontal_alignment = 1
+
+[node name="Prix" type="Label" parent="UI/BuildModUI/TabBar/MarginContainer/HBoxContainer/Ble"]
+layout_mode = 0
+offset_left = 5.0
+offset_top = 30.0
+offset_right = 35.0
+offset_bottom = 55.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "2"
+
+[node name="Coin" type="TextureRect" parent="UI/BuildModUI/TabBar/MarginContainer/HBoxContainer/Ble"]
+layout_mode = 0
+offset_left = 18.0
+offset_top = 35.0
+offset_right = 33.0
+offset_bottom = 50.0
+texture = ExtResource("22_b5bfd")
+expand_mode = 1
+
+[node name="Required" type="TextureRect" parent="UI/BuildModUI/TabBar/MarginContainer/HBoxContainer/Ble"]
+layout_mode = 0
+offset_left = 10.0
+offset_top = 175.0
+offset_right = 50.0
+offset_bottom = 215.0
+texture = ExtResource("33_uktes")
+expand_mode = 2
+
+[node name="Arrow" type="TextureRect" parent="UI/BuildModUI/TabBar/MarginContainer/HBoxContainer/Ble"]
+layout_mode = 0
+offset_left = 60.0
+offset_top = 175.0
+offset_right = 100.0
+offset_bottom = 215.0
+texture = ExtResource("24_qjav0")
+expand_mode = 2
+
+[node name="Produce" type="TextureRect" parent="UI/BuildModUI/TabBar/MarginContainer/HBoxContainer/Ble"]
+layout_mode = 0
+offset_left = 110.0
+offset_top = 175.0
+offset_right = 150.0
+offset_bottom = 215.0
+texture = ExtResource("37_l7wo2")
+expand_mode = 2
+
+[node name="Moulin" type="Panel" parent="UI/BuildModUI/TabBar/MarginContainer/HBoxContainer"]
+visible = false
+custom_minimum_size = Vector2(160, 0)
+layout_mode = 2
+theme = ExtResource("19_3jmat")
+
+[node name="Label" type="Label" parent="UI/BuildModUI/TabBar/MarginContainer/HBoxContainer/Moulin"]
+layout_mode = 0
+offset_left = 5.0
+offset_top = 1.0
+offset_right = 155.0
+offset_bottom = 24.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "Moulin"
+horizontal_alignment = 1
+
+[node name="TextureButton4" type="TextureButton" parent="UI/BuildModUI/TabBar/MarginContainer/HBoxContainer/Moulin"]
+layout_mode = 2
+offset_left = 5.0
+offset_top = 25.0
+offset_right = 155.0
+offset_bottom = 175.0
+texture_normal = ExtResource("38_mdv6q")
+ignore_texture_size = true
+stretch_mode = 0
+script = ExtResource("21_eh7vb")
+metadata/index = 26
+metadata/name = "Moulin"
+
+[node name="Prix" type="Label" parent="UI/BuildModUI/TabBar/MarginContainer/HBoxContainer/Moulin"]
+layout_mode = 0
+offset_left = 5.0
+offset_top = 30.0
+offset_right = 35.0
+offset_bottom = 55.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "3"
+
+[node name="Coin" type="TextureRect" parent="UI/BuildModUI/TabBar/MarginContainer/HBoxContainer/Moulin"]
+layout_mode = 0
+offset_left = 18.0
+offset_top = 35.0
+offset_right = 33.0
+offset_bottom = 50.0
+texture = ExtResource("22_b5bfd")
+expand_mode = 1
+
+[node name="Required" type="TextureRect" parent="UI/BuildModUI/TabBar/MarginContainer/HBoxContainer/Moulin"]
+layout_mode = 0
+offset_left = 10.0
+offset_top = 175.0
+offset_right = 50.0
+offset_bottom = 215.0
+texture = ExtResource("37_l7wo2")
+expand_mode = 2
+
+[node name="Arrow" type="TextureRect" parent="UI/BuildModUI/TabBar/MarginContainer/HBoxContainer/Moulin"]
+layout_mode = 0
+offset_left = 60.0
+offset_top = 175.0
+offset_right = 100.0
+offset_bottom = 215.0
+texture = ExtResource("24_qjav0")
+expand_mode = 2
+
+[node name="Produce" type="TextureRect" parent="UI/BuildModUI/TabBar/MarginContainer/HBoxContainer/Moulin"]
+layout_mode = 0
+offset_left = 110.0
+offset_top = 175.0
+offset_right = 150.0
+offset_bottom = 215.0
+texture = ExtResource("39_sag3b")
+expand_mode = 2
+
+[node name="FourACharbon" type="Panel" parent="UI/BuildModUI/TabBar/MarginContainer/HBoxContainer"]
+visible = false
+custom_minimum_size = Vector2(160, 0)
+layout_mode = 2
+theme = ExtResource("19_3jmat")
+
+[node name="Label" type="Label" parent="UI/BuildModUI/TabBar/MarginContainer/HBoxContainer/FourACharbon"]
+layout_mode = 0
+offset_left = 5.0
+offset_top = 1.0
+offset_right = 155.0
+offset_bottom = 24.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "Four à charbon"
+horizontal_alignment = 1
+
+[node name="TextureButton4" type="TextureButton" parent="UI/BuildModUI/TabBar/MarginContainer/HBoxContainer/FourACharbon"]
+layout_mode = 2
+offset_left = 5.0
+offset_top = 25.0
+offset_right = 155.0
+offset_bottom = 175.0
+texture_normal = ExtResource("40_k268w")
+ignore_texture_size = true
+stretch_mode = 0
+script = ExtResource("21_eh7vb")
+metadata/index = 20
+metadata/name = "Four a charbon"
+
+[node name="Prix" type="Label" parent="UI/BuildModUI/TabBar/MarginContainer/HBoxContainer/FourACharbon"]
+layout_mode = 0
+offset_left = 5.0
+offset_top = 30.0
+offset_right = 35.0
+offset_bottom = 55.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "5"
+
+[node name="Coin" type="TextureRect" parent="UI/BuildModUI/TabBar/MarginContainer/HBoxContainer/FourACharbon"]
+layout_mode = 0
+offset_left = 17.0
+offset_top = 35.0
+offset_right = 32.0
+offset_bottom = 50.0
+texture = ExtResource("22_b5bfd")
+expand_mode = 1
+
+[node name="Required" type="TextureRect" parent="UI/BuildModUI/TabBar/MarginContainer/HBoxContainer/FourACharbon"]
+layout_mode = 0
+offset_left = 10.0
+offset_top = 175.0
+offset_right = 50.0
+offset_bottom = 215.0
+texture = ExtResource("25_crl3b")
+expand_mode = 2
+
+[node name="Arrow" type="TextureRect" parent="UI/BuildModUI/TabBar/MarginContainer/HBoxContainer/FourACharbon"]
+layout_mode = 0
+offset_left = 60.0
+offset_top = 175.0
+offset_right = 100.0
+offset_bottom = 215.0
+texture = ExtResource("24_qjav0")
+expand_mode = 2
+
+[node name="Produce" type="TextureRect" parent="UI/BuildModUI/TabBar/MarginContainer/HBoxContainer/FourACharbon"]
+layout_mode = 0
+offset_left = 105.01
+offset_top = 178.455
+offset_right = 140.01
+offset_bottom = 213.455
+texture = ExtResource("41_2seg2")
+expand_mode = 2
+
+[node name="FourAPain" type="Panel" parent="UI/BuildModUI/TabBar/MarginContainer/HBoxContainer"]
+visible = false
+custom_minimum_size = Vector2(160, 0)
+layout_mode = 2
+theme = ExtResource("19_3jmat")
+
+[node name="Label" type="Label" parent="UI/BuildModUI/TabBar/MarginContainer/HBoxContainer/FourAPain"]
+layout_mode = 0
+offset_left = 5.0
+offset_top = 1.0
+offset_right = 155.0
+offset_bottom = 24.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "Four à pain
+"
+horizontal_alignment = 1
+
+[node name="TextureButton4" type="TextureButton" parent="UI/BuildModUI/TabBar/MarginContainer/HBoxContainer/FourAPain"]
+layout_mode = 2
+offset_left = 5.0
+offset_top = 25.0
+offset_right = 155.0
+offset_bottom = 175.0
+texture_normal = ExtResource("40_k268w")
+ignore_texture_size = true
+stretch_mode = 0
+script = ExtResource("21_eh7vb")
+metadata/index = 2
+metadata/name = "Four a pain"
+
+[node name="Prix" type="Label" parent="UI/BuildModUI/TabBar/MarginContainer/HBoxContainer/FourAPain"]
+layout_mode = 0
+offset_left = 5.0
+offset_top = 30.0
+offset_right = 35.0
+offset_bottom = 55.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "5"
+
+[node name="Coin" type="TextureRect" parent="UI/BuildModUI/TabBar/MarginContainer/HBoxContainer/FourAPain"]
+layout_mode = 0
+offset_left = 17.0
+offset_top = 35.0
+offset_right = 32.0
+offset_bottom = 50.0
+texture = ExtResource("22_b5bfd")
+expand_mode = 1
+
+[node name="Required" type="TextureRect" parent="UI/BuildModUI/TabBar/MarginContainer/HBoxContainer/FourAPain"]
+layout_mode = 0
+offset_left = 10.0
+offset_top = 175.0
+offset_right = 35.0
+offset_bottom = 200.0
+texture = ExtResource("39_sag3b")
+expand_mode = 2
+
+[node name="Required2" type="TextureRect" parent="UI/BuildModUI/TabBar/MarginContainer/HBoxContainer/FourAPain"]
+layout_mode = 0
+offset_left = 36.99
+offset_top = 192.545
+offset_right = 56.99
+offset_bottom = 212.545
+texture = ExtResource("41_2seg2")
+expand_mode = 2
+
+[node name="Arrow" type="TextureRect" parent="UI/BuildModUI/TabBar/MarginContainer/HBoxContainer/FourAPain"]
+layout_mode = 0
+offset_left = 60.0
+offset_top = 175.0
+offset_right = 100.0
+offset_bottom = 215.0
+texture = ExtResource("24_qjav0")
+expand_mode = 2
+
+[node name="Produce" type="TextureRect" parent="UI/BuildModUI/TabBar/MarginContainer/HBoxContainer/FourAPain"]
+layout_mode = 0
+offset_left = 110.0
+offset_top = 175.0
+offset_right = 150.0
+offset_bottom = 215.0
+texture = ExtResource("43_6ibne")
+expand_mode = 2
+
+[node name="Epicerie" type="Panel" parent="UI/BuildModUI/TabBar/MarginContainer/HBoxContainer"]
+visible = false
+custom_minimum_size = Vector2(160, 0)
+layout_mode = 2
+theme = ExtResource("19_3jmat")
+
+[node name="TextureButton10" type="TextureButton" parent="UI/BuildModUI/TabBar/MarginContainer/HBoxContainer/Epicerie"]
+layout_mode = 2
+offset_left = 5.0
+offset_top = 25.0
+offset_right = 155.0
+offset_bottom = 175.0
+texture_normal = ExtResource("53_xff6a")
+ignore_texture_size = true
+stretch_mode = 0
+script = ExtResource("21_eh7vb")
+metadata/index = 21
+metadata/name = "Epiecrie"
+
+[node name="Label" type="Label" parent="UI/BuildModUI/TabBar/MarginContainer/HBoxContainer/Epicerie"]
+layout_mode = 0
+offset_left = 5.0
+offset_top = 1.0
+offset_right = 155.0
+offset_bottom = 24.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "Epicerie"
+horizontal_alignment = 1
+
+[node name="Prix" type="Label" parent="UI/BuildModUI/TabBar/MarginContainer/HBoxContainer/Epicerie"]
+layout_mode = 0
+offset_left = 5.0
+offset_top = 30.0
+offset_right = 36.0
+offset_bottom = 55.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "7"
+
+[node name="Coin" type="TextureRect" parent="UI/BuildModUI/TabBar/MarginContainer/HBoxContainer/Epicerie"]
+layout_mode = 0
+offset_left = 17.0
+offset_top = 35.0
+offset_right = 32.0
+offset_bottom = 50.0
+texture = ExtResource("22_b5bfd")
+expand_mode = 1
+
+[node name="Required" type="TextureRect" parent="UI/BuildModUI/TabBar/MarginContainer/HBoxContainer/Epicerie"]
+layout_mode = 0
+offset_left = 10.0
+offset_top = 188.0
+offset_right = 37.0
+offset_bottom = 215.0
+texture = ExtResource("43_6ibne")
+expand_mode = 1
+
+[node name="Arrow" type="TextureRect" parent="UI/BuildModUI/TabBar/MarginContainer/HBoxContainer/Epicerie"]
+layout_mode = 0
+offset_left = 60.0
+offset_top = 175.0
+offset_right = 100.0
+offset_bottom = 215.0
+texture = ExtResource("24_qjav0")
+expand_mode = 2
+
+[node name="Produce" type="TextureRect" parent="UI/BuildModUI/TabBar/MarginContainer/HBoxContainer/Epicerie"]
+layout_mode = 0
+offset_left = 110.0
+offset_top = 180.0
+offset_right = 143.0
+offset_bottom = 210.0
+texture = ExtResource("22_b5bfd")
+expand_mode = 2
+
+[node name="Required2" type="TextureRect" parent="UI/BuildModUI/TabBar/MarginContainer/HBoxContainer/Epicerie"]
+layout_mode = 0
+offset_left = 36.01
+offset_top = 184.455
+offset_right = 64.01
+offset_bottom = 212.455
+texture = ExtResource("33_uktes")
+expand_mode = 1
+
+[node name="MarginContainer2" type="MarginContainer" parent="UI/BuildModUI/TabBar"]
+visible = false
+layout_mode = 0
+offset_top = 37.0
+offset_right = 1920.0
+offset_bottom = 277.0
+theme_override_constants/margin_left = 10
+theme_override_constants/margin_top = 10
+theme_override_constants/margin_right = 10
+theme_override_constants/margin_bottom = 10
+metadata/tag = 1
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="UI/BuildModUI/TabBar/MarginContainer2"]
+layout_mode = 2
+metadata/tag = 1
+
+[node name="Brasserie" type="Panel" parent="UI/BuildModUI/TabBar/MarginContainer2/HBoxContainer2"]
+visible = false
+custom_minimum_size = Vector2(160, 0)
+layout_mode = 2
+theme = ExtResource("19_3jmat")
+
+[node name="TextureButton" type="TextureButton" parent="UI/BuildModUI/TabBar/MarginContainer2/HBoxContainer2/Brasserie"]
+layout_mode = 2
+offset_left = 5.0
+offset_top = 25.0
+offset_right = 155.0
+offset_bottom = 175.0
+texture_normal = ExtResource("44_y0enj")
+ignore_texture_size = true
+stretch_mode = 0
+script = ExtResource("21_eh7vb")
+metadata/index = 3
+metadata/name = "Brasserie"
+
+[node name="Label" type="Label" parent="UI/BuildModUI/TabBar/MarginContainer2/HBoxContainer2/Brasserie"]
+layout_mode = 0
+offset_left = 5.0
+offset_top = 1.0
+offset_right = 155.0
+offset_bottom = 24.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "Brasserie"
+horizontal_alignment = 1
+
+[node name="Prix" type="Label" parent="UI/BuildModUI/TabBar/MarginContainer2/HBoxContainer2/Brasserie"]
+layout_mode = 0
+offset_left = 5.0
+offset_top = 30.0
+offset_right = 35.0
+offset_bottom = 55.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "7"
+
+[node name="Coin" type="TextureRect" parent="UI/BuildModUI/TabBar/MarginContainer2/HBoxContainer2/Brasserie"]
+layout_mode = 0
+offset_left = 17.0
+offset_top = 35.0
+offset_right = 32.0
+offset_bottom = 50.0
+texture = ExtResource("22_b5bfd")
+expand_mode = 1
+
+[node name="Required" type="TextureRect" parent="UI/BuildModUI/TabBar/MarginContainer2/HBoxContainer2/Brasserie"]
+layout_mode = 0
+offset_left = 6.0
+offset_top = 181.0
+offset_right = 39.0
+offset_bottom = 214.0
+texture = ExtResource("35_f5b5k")
+expand_mode = 1
+
+[node name="Arrow" type="TextureRect" parent="UI/BuildModUI/TabBar/MarginContainer2/HBoxContainer2/Brasserie"]
+layout_mode = 0
+offset_left = 60.0
+offset_top = 175.0
+offset_right = 100.0
+offset_bottom = 215.0
+texture = ExtResource("24_qjav0")
+expand_mode = 2
+
+[node name="Produce" type="TextureRect" parent="UI/BuildModUI/TabBar/MarginContainer2/HBoxContainer2/Brasserie"]
+layout_mode = 0
+offset_left = 110.0
+offset_top = 175.0
+offset_right = 150.0
+offset_bottom = 215.0
+texture = ExtResource("45_kcm52")
+expand_mode = 2
+
+[node name="Required2" type="TextureRect" parent="UI/BuildModUI/TabBar/MarginContainer2/HBoxContainer2/Brasserie"]
+layout_mode = 0
+offset_left = 35.0
+offset_top = 185.0
+offset_right = 62.0
+offset_bottom = 212.0
+texture = ExtResource("33_uktes")
+expand_mode = 1
+
+[node name="Bar" type="Panel" parent="UI/BuildModUI/TabBar/MarginContainer2/HBoxContainer2"]
+visible = false
+custom_minimum_size = Vector2(160, 0)
+layout_mode = 2
+theme = ExtResource("19_3jmat")
+
+[node name="TextureButton6" type="TextureButton" parent="UI/BuildModUI/TabBar/MarginContainer2/HBoxContainer2/Bar"]
+layout_mode = 2
+offset_left = 5.0
+offset_top = 25.0
+offset_right = 155.0
+offset_bottom = 175.0
+texture_normal = ExtResource("46_j4vja")
+ignore_texture_size = true
+stretch_mode = 0
+script = ExtResource("21_eh7vb")
+metadata/index = 0
+metadata/name = "Bar"
+
+[node name="Label" type="Label" parent="UI/BuildModUI/TabBar/MarginContainer2/HBoxContainer2/Bar"]
+layout_mode = 0
+offset_left = 5.0
+offset_top = 1.0
+offset_right = 155.0
+offset_bottom = 24.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "Bar"
+horizontal_alignment = 1
+
+[node name="Prix" type="Label" parent="UI/BuildModUI/TabBar/MarginContainer2/HBoxContainer2/Bar"]
+layout_mode = 0
+offset_left = 5.0
+offset_top = 30.0
+offset_right = 35.0
+offset_bottom = 55.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "10"
+
+[node name="Coin" type="TextureRect" parent="UI/BuildModUI/TabBar/MarginContainer2/HBoxContainer2/Bar"]
+layout_mode = 0
+offset_left = 27.0
+offset_top = 35.0
+offset_right = 42.0
+offset_bottom = 50.0
+texture = ExtResource("22_b5bfd")
+expand_mode = 1
+
+[node name="Required" type="TextureRect" parent="UI/BuildModUI/TabBar/MarginContainer2/HBoxContainer2/Bar"]
+layout_mode = 0
+offset_left = 10.0
+offset_top = 175.0
+offset_right = 50.0
+offset_bottom = 215.0
+texture = ExtResource("45_kcm52")
+expand_mode = 2
+
+[node name="Arrow" type="TextureRect" parent="UI/BuildModUI/TabBar/MarginContainer2/HBoxContainer2/Bar"]
+layout_mode = 0
+offset_left = 60.0
+offset_top = 175.0
+offset_right = 100.0
+offset_bottom = 215.0
+texture = ExtResource("24_qjav0")
+expand_mode = 2
+
+[node name="Produce" type="TextureRect" parent="UI/BuildModUI/TabBar/MarginContainer2/HBoxContainer2/Bar"]
+layout_mode = 0
+offset_left = 110.0
+offset_top = 180.0
+offset_right = 143.0
+offset_bottom = 210.0
+texture = ExtResource("22_b5bfd")
+expand_mode = 2
+
+[node name="Maison" type="Panel" parent="UI/BuildModUI/TabBar/MarginContainer2/HBoxContainer2"]
+visible = false
+custom_minimum_size = Vector2(160, 0)
+layout_mode = 2
+theme = ExtResource("19_3jmat")
+
+[node name="TextureButton12" type="TextureButton" parent="UI/BuildModUI/TabBar/MarginContainer2/HBoxContainer2/Maison"]
+layout_mode = 2
+offset_left = 5.0
+offset_top = 25.0
+offset_right = 155.0
+offset_bottom = 175.0
+texture_normal = ExtResource("47_3u5wp")
+ignore_texture_size = true
+stretch_mode = 0
+script = ExtResource("21_eh7vb")
+metadata/index = 22
+metadata/name = "Maison"
+
+[node name="Label" type="Label" parent="UI/BuildModUI/TabBar/MarginContainer2/HBoxContainer2/Maison"]
+layout_mode = 0
+offset_left = 5.0
+offset_top = 1.0
+offset_right = 155.0
+offset_bottom = 24.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "Maison"
+horizontal_alignment = 1
+
+[node name="Prix" type="Label" parent="UI/BuildModUI/TabBar/MarginContainer2/HBoxContainer2/Maison"]
+layout_mode = 0
+offset_left = 5.0
+offset_top = 30.0
+offset_right = 35.0
+offset_bottom = 55.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "5"
+
+[node name="Coin" type="TextureRect" parent="UI/BuildModUI/TabBar/MarginContainer2/HBoxContainer2/Maison"]
+layout_mode = 0
+offset_left = 17.0
+offset_top = 35.0
+offset_right = 32.0
+offset_bottom = 50.0
+texture = ExtResource("22_b5bfd")
+expand_mode = 1
+
+[node name="Required" type="TextureRect" parent="UI/BuildModUI/TabBar/MarginContainer2/HBoxContainer2/Maison"]
+layout_mode = 0
+offset_left = 17.0
+offset_top = 180.0
+offset_right = 47.0
+offset_bottom = 210.0
+texture = ExtResource("23_7ldvi")
+expand_mode = 1
+
+[node name="Arrow" type="TextureRect" parent="UI/BuildModUI/TabBar/MarginContainer2/HBoxContainer2/Maison"]
+layout_mode = 0
+offset_left = 60.0
+offset_top = 175.0
+offset_right = 100.0
+offset_bottom = 215.0
+texture = ExtResource("24_qjav0")
+expand_mode = 2
+
+[node name="Produce" type="TextureRect" parent="UI/BuildModUI/TabBar/MarginContainer2/HBoxContainer2/Maison"]
+layout_mode = 0
+offset_left = 110.0
+offset_top = 175.0
+offset_right = 150.0
+offset_bottom = 215.0
+texture = ExtResource("48_6bn2n")
+expand_mode = 2
+
+[node name="Ferme" type="Panel" parent="UI/BuildModUI/TabBar/MarginContainer2/HBoxContainer2"]
+visible = false
+custom_minimum_size = Vector2(160, 0)
+layout_mode = 2
+theme = ExtResource("19_3jmat")
+
+[node name="TextureButton11" type="TextureButton" parent="UI/BuildModUI/TabBar/MarginContainer2/HBoxContainer2/Ferme"]
+layout_mode = 2
+offset_left = 5.0
+offset_top = 25.0
+offset_right = 155.0
+offset_bottom = 175.0
+texture_normal = ExtResource("49_f60d4")
+ignore_texture_size = true
+stretch_mode = 0
+script = ExtResource("21_eh7vb")
+metadata/index = 16
+metadata/name = "Ferme"
+
+[node name="Label" type="Label" parent="UI/BuildModUI/TabBar/MarginContainer2/HBoxContainer2/Ferme"]
+layout_mode = 0
+offset_left = 5.0
+offset_top = 1.0
+offset_right = 155.0
+offset_bottom = 24.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "Ferme"
+horizontal_alignment = 1
+
+[node name="Prix" type="Label" parent="UI/BuildModUI/TabBar/MarginContainer2/HBoxContainer2/Ferme"]
+layout_mode = 0
+offset_left = 5.0
+offset_top = 30.0
+offset_right = 35.0
+offset_bottom = 55.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "7"
+
+[node name="Coin" type="TextureRect" parent="UI/BuildModUI/TabBar/MarginContainer2/HBoxContainer2/Ferme"]
+layout_mode = 0
+offset_left = 17.0
+offset_top = 35.0
+offset_right = 32.0
+offset_bottom = 50.0
+texture = ExtResource("22_b5bfd")
+expand_mode = 1
+
+[node name="Required" type="TextureRect" parent="UI/BuildModUI/TabBar/MarginContainer2/HBoxContainer2/Ferme"]
+layout_mode = 0
+offset_left = 10.0
+offset_top = 175.0
+offset_right = 50.0
+offset_bottom = 215.0
+texture = ExtResource("37_l7wo2")
+expand_mode = 2
+
+[node name="Arrow" type="TextureRect" parent="UI/BuildModUI/TabBar/MarginContainer2/HBoxContainer2/Ferme"]
+layout_mode = 0
+offset_left = 60.0
+offset_top = 175.0
+offset_right = 100.0
+offset_bottom = 215.0
+texture = ExtResource("24_qjav0")
+expand_mode = 2
+
+[node name="Produce" type="TextureRect" parent="UI/BuildModUI/TabBar/MarginContainer2/HBoxContainer2/Ferme"]
+layout_mode = 0
+offset_left = 110.0
+offset_top = 175.0
+offset_right = 150.0
+offset_bottom = 215.0
+texture = ExtResource("50_ytfwa")
+expand_mode = 2
+
+[node name="UsineAlimentaire" type="Panel" parent="UI/BuildModUI/TabBar/MarginContainer2/HBoxContainer2"]
+visible = false
+custom_minimum_size = Vector2(160, 0)
+layout_mode = 2
+theme = ExtResource("19_3jmat")
+
+[node name="TextureButton7" type="TextureButton" parent="UI/BuildModUI/TabBar/MarginContainer2/HBoxContainer2/UsineAlimentaire"]
+layout_mode = 2
+offset_left = 5.0
+offset_top = 25.0
+offset_right = 155.0
+offset_bottom = 175.0
+texture_normal = ExtResource("51_nmv6y")
+ignore_texture_size = true
+stretch_mode = 0
+script = ExtResource("21_eh7vb")
+metadata/index = 19
+metadata/name = "Usine alimentaire"
+
+[node name="Label" type="Label" parent="UI/BuildModUI/TabBar/MarginContainer2/HBoxContainer2/UsineAlimentaire"]
+layout_mode = 0
+offset_left = 5.0
+offset_top = 1.0
+offset_right = 155.0
+offset_bottom = 24.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "Usine alimentaire"
+horizontal_alignment = 1
+
+[node name="Prix" type="Label" parent="UI/BuildModUI/TabBar/MarginContainer2/HBoxContainer2/UsineAlimentaire"]
+layout_mode = 0
+offset_left = 5.0
+offset_top = 30.0
+offset_right = 35.0
+offset_bottom = 55.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "10"
+
+[node name="Coin" type="TextureRect" parent="UI/BuildModUI/TabBar/MarginContainer2/HBoxContainer2/UsineAlimentaire"]
+layout_mode = 0
+offset_left = 27.0
+offset_top = 35.0
+offset_right = 42.0
+offset_bottom = 50.0
+texture = ExtResource("22_b5bfd")
+expand_mode = 1
+
+[node name="Required" type="TextureRect" parent="UI/BuildModUI/TabBar/MarginContainer2/HBoxContainer2/UsineAlimentaire"]
+layout_mode = 0
+offset_left = 36.0
+offset_top = 190.0
+offset_right = 61.0
+offset_bottom = 215.0
+texture = ExtResource("50_ytfwa")
+expand_mode = 1
+
+[node name="Required2" type="TextureRect" parent="UI/BuildModUI/TabBar/MarginContainer2/HBoxContainer2/UsineAlimentaire"]
+layout_mode = 0
+offset_left = 25.0
+offset_top = 163.0
+offset_right = 52.0
+offset_bottom = 190.0
+texture = ExtResource("43_6ibne")
+expand_mode = 1
+
+[node name="Required3" type="TextureRect" parent="UI/BuildModUI/TabBar/MarginContainer2/HBoxContainer2/UsineAlimentaire"]
+layout_mode = 0
+offset_left = 7.0
+offset_top = 189.0
+offset_right = 34.0
+offset_bottom = 216.0
+texture = ExtResource("62_g8wh7")
+expand_mode = 1
+
+[node name="Arrow" type="TextureRect" parent="UI/BuildModUI/TabBar/MarginContainer2/HBoxContainer2/UsineAlimentaire"]
+layout_mode = 0
+offset_left = 60.0
+offset_top = 175.0
+offset_right = 100.0
+offset_bottom = 215.0
+texture = ExtResource("24_qjav0")
+expand_mode = 2
+
+[node name="Produce" type="TextureRect" parent="UI/BuildModUI/TabBar/MarginContainer2/HBoxContainer2/UsineAlimentaire"]
+layout_mode = 0
+offset_left = 110.0
+offset_top = 175.0
+offset_right = 150.0
+offset_bottom = 215.0
+texture = ExtResource("52_jvhnx")
+expand_mode = 2
+
+[node name="Supermarche" type="Panel" parent="UI/BuildModUI/TabBar/MarginContainer2/HBoxContainer2"]
+visible = false
+custom_minimum_size = Vector2(160, 0)
+layout_mode = 2
+theme = ExtResource("19_3jmat")
+
+[node name="TextureButton8" type="TextureButton" parent="UI/BuildModUI/TabBar/MarginContainer2/HBoxContainer2/Supermarche"]
+layout_mode = 2
+offset_left = 5.0
+offset_top = 25.0
+offset_right = 155.0
+offset_bottom = 175.0
+texture_normal = ExtResource("53_xff6a")
+ignore_texture_size = true
+stretch_mode = 0
+script = ExtResource("21_eh7vb")
+metadata/index = 24
+metadata/name = "Super marché"
+
+[node name="Label" type="Label" parent="UI/BuildModUI/TabBar/MarginContainer2/HBoxContainer2/Supermarche"]
+layout_mode = 0
+offset_left = 5.0
+offset_top = 1.0
+offset_right = 155.0
+offset_bottom = 24.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "Supermarché
+"
+horizontal_alignment = 1
+
+[node name="Prix" type="Label" parent="UI/BuildModUI/TabBar/MarginContainer2/HBoxContainer2/Supermarche"]
+layout_mode = 0
+offset_left = 5.0
+offset_top = 30.0
+offset_right = 35.0
+offset_bottom = 55.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "15"
+
+[node name="Coin" type="TextureRect" parent="UI/BuildModUI/TabBar/MarginContainer2/HBoxContainer2/Supermarche"]
+layout_mode = 0
+offset_left = 28.0
+offset_top = 35.0
+offset_right = 43.0
+offset_bottom = 50.0
+texture = ExtResource("22_b5bfd")
+expand_mode = 1
+
+[node name="Arrow" type="TextureRect" parent="UI/BuildModUI/TabBar/MarginContainer2/HBoxContainer2/Supermarche"]
+layout_mode = 0
+offset_left = 60.0
+offset_top = 175.0
+offset_right = 100.0
+offset_bottom = 215.0
+texture = ExtResource("24_qjav0")
+expand_mode = 2
+
+[node name="Produce" type="TextureRect" parent="UI/BuildModUI/TabBar/MarginContainer2/HBoxContainer2/Supermarche"]
+layout_mode = 0
+offset_left = 110.0
+offset_top = 180.0
+offset_right = 143.0
+offset_bottom = 210.0
+texture = ExtResource("22_b5bfd")
+expand_mode = 2
+
+[node name="Required" type="TextureRect" parent="UI/BuildModUI/TabBar/MarginContainer2/HBoxContainer2/Supermarche"]
+layout_mode = 0
+offset_left = 26.0
+offset_top = 165.0
+offset_right = 50.0
+offset_bottom = 189.0
+texture = ExtResource("52_jvhnx")
+expand_mode = 1
+
+[node name="Required2" type="TextureRect" parent="UI/BuildModUI/TabBar/MarginContainer2/HBoxContainer2/Supermarche"]
+layout_mode = 0
+offset_left = 38.0
+offset_top = 188.0
+offset_right = 63.0
+offset_bottom = 213.0
+texture = ExtResource("45_kcm52")
+expand_mode = 1
+
+[node name="Required3" type="TextureRect" parent="UI/BuildModUI/TabBar/MarginContainer2/HBoxContainer2/Supermarche"]
+layout_mode = 0
+offset_left = 8.0
+offset_top = 189.0
+offset_right = 35.0
+offset_bottom = 216.0
+texture = ExtResource("62_g8wh7")
+expand_mode = 1
+
+[node name="Fonderie" type="Panel" parent="UI/BuildModUI/TabBar/MarginContainer2/HBoxContainer2"]
+visible = false
+custom_minimum_size = Vector2(160, 0)
+layout_mode = 2
+theme = ExtResource("19_3jmat")
+
+[node name="TextureButton3" type="TextureButton" parent="UI/BuildModUI/TabBar/MarginContainer2/HBoxContainer2/Fonderie"]
+layout_mode = 2
+offset_left = 5.0
+offset_top = 25.0
+offset_right = 155.0
+offset_bottom = 175.0
+texture_normal = ExtResource("54_aglfe")
+ignore_texture_size = true
+stretch_mode = 0
+script = ExtResource("21_eh7vb")
+metadata/index = 25
+metadata/name = "Fonderie"
+
+[node name="Label" type="Label" parent="UI/BuildModUI/TabBar/MarginContainer2/HBoxContainer2/Fonderie"]
+layout_mode = 0
+offset_left = 5.0
+offset_top = 1.0
+offset_right = 155.0
+offset_bottom = 24.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "Fonderie"
+horizontal_alignment = 1
+
+[node name="Prix" type="Label" parent="UI/BuildModUI/TabBar/MarginContainer2/HBoxContainer2/Fonderie"]
+layout_mode = 0
+offset_left = 5.0
+offset_top = 30.0
+offset_right = 35.0
+offset_bottom = 55.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "15"
+
+[node name="Coin" type="TextureRect" parent="UI/BuildModUI/TabBar/MarginContainer2/HBoxContainer2/Fonderie"]
+layout_mode = 0
+offset_left = 27.0
+offset_top = 35.0
+offset_right = 42.0
+offset_bottom = 50.0
+texture = ExtResource("22_b5bfd")
+expand_mode = 1
+
+[node name="Required" type="TextureRect" parent="UI/BuildModUI/TabBar/MarginContainer2/HBoxContainer2/Fonderie"]
+layout_mode = 0
+offset_left = 24.0
+offset_top = 169.0
+offset_right = 49.0
+offset_bottom = 194.0
+texture = ExtResource("55_oi0p3")
+expand_mode = 2
+
+[node name="Required2" type="TextureRect" parent="UI/BuildModUI/TabBar/MarginContainer2/HBoxContainer2/Fonderie"]
+layout_mode = 0
+offset_left = 12.0
+offset_top = 196.0
+offset_right = 32.0
+offset_bottom = 216.0
+texture = ExtResource("41_2seg2")
+expand_mode = 2
+
+[node name="Arrow" type="TextureRect" parent="UI/BuildModUI/TabBar/MarginContainer2/HBoxContainer2/Fonderie"]
+layout_mode = 0
+offset_left = 60.0
+offset_top = 175.0
+offset_right = 100.0
+offset_bottom = 215.0
+texture = ExtResource("24_qjav0")
+expand_mode = 2
+
+[node name="Produce" type="TextureRect" parent="UI/BuildModUI/TabBar/MarginContainer2/HBoxContainer2/Fonderie"]
+layout_mode = 0
+offset_left = 110.0
+offset_top = 175.0
+offset_right = 150.0
+offset_bottom = 215.0
+texture = ExtResource("56_h2383")
+expand_mode = 2
+
+[node name="Required3" type="TextureRect" parent="UI/BuildModUI/TabBar/MarginContainer2/HBoxContainer2/Fonderie"]
+layout_mode = 0
+offset_left = 36.0
+offset_top = 189.0
+offset_right = 63.0
+offset_bottom = 216.0
+texture = ExtResource("62_g8wh7")
+expand_mode = 1
+
+[node name="Bureau" type="Panel" parent="UI/BuildModUI/TabBar/MarginContainer2/HBoxContainer2"]
+visible = false
+custom_minimum_size = Vector2(160, 0)
+layout_mode = 2
+theme = ExtResource("19_3jmat")
+
+[node name="TextureButton5" type="TextureButton" parent="UI/BuildModUI/TabBar/MarginContainer2/HBoxContainer2/Bureau"]
+layout_mode = 2
+offset_left = 5.0
+offset_top = 25.0
+offset_right = 155.0
+offset_bottom = 175.0
+texture_normal = ExtResource("57_bjuet")
+ignore_texture_size = true
+stretch_mode = 0
+script = ExtResource("21_eh7vb")
+metadata/index = 29
+metadata/name = "Bureau"
+
+[node name="Label" type="Label" parent="UI/BuildModUI/TabBar/MarginContainer2/HBoxContainer2/Bureau"]
+layout_mode = 0
+offset_left = 5.0
+offset_top = 1.0
+offset_right = 155.0
+offset_bottom = 24.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "Bureau"
+horizontal_alignment = 1
+
+[node name="Required" type="TextureRect" parent="UI/BuildModUI/TabBar/MarginContainer2/HBoxContainer2/Bureau"]
+layout_mode = 0
+offset_left = 17.0
+offset_top = 180.0
+offset_right = 47.0
+offset_bottom = 210.0
+texture = ExtResource("23_7ldvi")
+expand_mode = 1
+
+[node name="Arrow" type="TextureRect" parent="UI/BuildModUI/TabBar/MarginContainer2/HBoxContainer2/Bureau"]
+layout_mode = 0
+offset_left = 60.0
+offset_top = 175.0
+offset_right = 100.0
+offset_bottom = 215.0
+texture = ExtResource("24_qjav0")
+expand_mode = 2
+
+[node name="Produce" type="TextureRect" parent="UI/BuildModUI/TabBar/MarginContainer2/HBoxContainer2/Bureau"]
+layout_mode = 0
+offset_left = 110.0
+offset_top = 180.0
+offset_right = 143.0
+offset_bottom = 210.0
+texture = ExtResource("22_b5bfd")
+expand_mode = 2
+
+[node name="Prix" type="Label" parent="UI/BuildModUI/TabBar/MarginContainer2/HBoxContainer2/Bureau"]
+layout_mode = 0
+offset_left = 5.0
+offset_top = 30.0
+offset_right = 35.0
+offset_bottom = 55.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "20"
+
+[node name="Coin" type="TextureRect" parent="UI/BuildModUI/TabBar/MarginContainer2/HBoxContainer2/Bureau"]
+layout_mode = 0
+offset_left = 27.0
+offset_top = 35.0
+offset_right = 42.0
+offset_bottom = 50.0
+texture = ExtResource("22_b5bfd")
+expand_mode = 1
+
+[node name="Immeuble" type="Panel" parent="UI/BuildModUI/TabBar/MarginContainer2/HBoxContainer2"]
+visible = false
+custom_minimum_size = Vector2(160, 0)
+layout_mode = 2
+theme = ExtResource("19_3jmat")
+
+[node name="TextureButton13" type="TextureButton" parent="UI/BuildModUI/TabBar/MarginContainer2/HBoxContainer2/Immeuble"]
+layout_mode = 2
+offset_left = 5.0
+offset_top = 25.0
+offset_right = 155.0
+offset_bottom = 175.0
+texture_normal = ExtResource("58_75elu")
+ignore_texture_size = true
+stretch_mode = 0
+script = ExtResource("21_eh7vb")
+metadata/index = 5
+metadata/name = "Immeuble"
+
+[node name="Label" type="Label" parent="UI/BuildModUI/TabBar/MarginContainer2/HBoxContainer2/Immeuble"]
+layout_mode = 0
+offset_left = 5.0
+offset_top = 1.0
+offset_right = 155.0
+offset_bottom = 24.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "Immeuble"
+horizontal_alignment = 1
+
+[node name="Prix" type="Label" parent="UI/BuildModUI/TabBar/MarginContainer2/HBoxContainer2/Immeuble"]
+layout_mode = 0
+offset_left = 5.0
+offset_top = 30.0
+offset_right = 35.0
+offset_bottom = 55.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "10"
+
+[node name="Coin" type="TextureRect" parent="UI/BuildModUI/TabBar/MarginContainer2/HBoxContainer2/Immeuble"]
+layout_mode = 0
+offset_left = 27.0
+offset_top = 35.0
+offset_right = 42.0
+offset_bottom = 50.0
+texture = ExtResource("22_b5bfd")
+expand_mode = 1
+
+[node name="Required" type="TextureRect" parent="UI/BuildModUI/TabBar/MarginContainer2/HBoxContainer2/Immeuble"]
+layout_mode = 0
+offset_left = 17.0
+offset_top = 180.0
+offset_right = 47.0
+offset_bottom = 210.0
+texture = ExtResource("23_7ldvi")
+expand_mode = 1
+
+[node name="Arrow" type="TextureRect" parent="UI/BuildModUI/TabBar/MarginContainer2/HBoxContainer2/Immeuble"]
+layout_mode = 0
+offset_left = 60.0
+offset_top = 175.0
+offset_right = 100.0
+offset_bottom = 215.0
+texture = ExtResource("24_qjav0")
+expand_mode = 2
+
+[node name="Produce" type="TextureRect" parent="UI/BuildModUI/TabBar/MarginContainer2/HBoxContainer2/Immeuble"]
+layout_mode = 0
+offset_left = 110.0
+offset_top = 175.0
+offset_right = 150.0
+offset_bottom = 215.0
+texture = ExtResource("48_6bn2n")
+expand_mode = 2
+
+[node name="Parc" type="Panel" parent="UI/BuildModUI/TabBar/MarginContainer2/HBoxContainer2"]
+visible = false
+custom_minimum_size = Vector2(160, 0)
+layout_mode = 2
+theme = ExtResource("19_3jmat")
+
+[node name="TextureButton4" type="TextureButton" parent="UI/BuildModUI/TabBar/MarginContainer2/HBoxContainer2/Parc"]
+layout_mode = 2
+offset_left = 5.0
+offset_top = 25.0
+offset_right = 155.0
+offset_bottom = 175.0
+texture_normal = ExtResource("59_i4g71")
+ignore_texture_size = true
+stretch_mode = 0
+script = ExtResource("21_eh7vb")
+metadata/index = 30
+metadata/name = "Parc"
+
+[node name="Label" type="Label" parent="UI/BuildModUI/TabBar/MarginContainer2/HBoxContainer2/Parc"]
+layout_mode = 0
+offset_left = 5.0
+offset_top = 1.0
+offset_right = 155.0
+offset_bottom = 24.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "Parc"
+horizontal_alignment = 1
+
+[node name="Prix" type="Label" parent="UI/BuildModUI/TabBar/MarginContainer2/HBoxContainer2/Parc"]
+layout_mode = 0
+offset_left = 5.0
+offset_top = 30.0
+offset_right = 35.0
+offset_bottom = 55.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "3"
+
+[node name="Coin" type="TextureRect" parent="UI/BuildModUI/TabBar/MarginContainer2/HBoxContainer2/Parc"]
+layout_mode = 0
+offset_left = 18.0
+offset_top = 35.0
+offset_right = 33.0
+offset_bottom = 50.0
+texture = ExtResource("22_b5bfd")
+expand_mode = 1
+
+[node name="Required" type="TextureRect" parent="UI/BuildModUI/TabBar/MarginContainer2/HBoxContainer2/Parc"]
+layout_mode = 0
+offset_left = 17.0
+offset_top = 180.0
+offset_right = 47.0
+offset_bottom = 210.0
+texture = ExtResource("23_7ldvi")
+expand_mode = 1
+
+[node name="Arrow" type="TextureRect" parent="UI/BuildModUI/TabBar/MarginContainer2/HBoxContainer2/Parc"]
+layout_mode = 0
+offset_left = 60.0
+offset_top = 175.0
+offset_right = 100.0
+offset_bottom = 215.0
+texture = ExtResource("24_qjav0")
+expand_mode = 2
+
+[node name="Produce" type="TextureRect" parent="UI/BuildModUI/TabBar/MarginContainer2/HBoxContainer2/Parc"]
+layout_mode = 0
+offset_left = 110.0
+offset_top = 180.0
+offset_right = 143.0
+offset_bottom = 210.0
+texture = ExtResource("60_g8uqq")
+expand_mode = 2
+
+[node name="MarginContainer3" type="MarginContainer" parent="UI/BuildModUI/TabBar"]
+visible = false
+layout_mode = 0
+offset_top = 37.0
+offset_right = 1920.0
+offset_bottom = 277.0
+theme_override_constants/margin_left = 10
+theme_override_constants/margin_top = 10
+theme_override_constants/margin_right = 10
+theme_override_constants/margin_bottom = 10
+metadata/tag = 2
+
+[node name="HBoxContainer3" type="HBoxContainer" parent="UI/BuildModUI/TabBar/MarginContainer3"]
+layout_mode = 2
+metadata/tag = 2
+
+[node name="CentralCharbon" type="Panel" parent="UI/BuildModUI/TabBar/MarginContainer3/HBoxContainer3"]
+visible = false
+custom_minimum_size = Vector2(160, 0)
+layout_mode = 2
+theme = ExtResource("19_3jmat")
+
+[node name="TextureButton" type="TextureButton" parent="UI/BuildModUI/TabBar/MarginContainer3/HBoxContainer3/CentralCharbon"]
+layout_mode = 2
+offset_left = 5.0
+offset_top = 25.0
+offset_right = 155.0
+offset_bottom = 175.0
+texture_normal = ExtResource("61_fnjav")
+ignore_texture_size = true
+stretch_mode = 0
+script = ExtResource("21_eh7vb")
+metadata/index = 14
+metadata/name = "Centrale à charbon"
+
+[node name="Label" type="Label" parent="UI/BuildModUI/TabBar/MarginContainer3/HBoxContainer3/CentralCharbon"]
+layout_mode = 0
+offset_left = 5.0
+offset_top = 1.0
+offset_right = 155.0
+offset_bottom = 24.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "Centrale à charbon"
+horizontal_alignment = 1
+
+[node name="Prix" type="Label" parent="UI/BuildModUI/TabBar/MarginContainer3/HBoxContainer3/CentralCharbon"]
+layout_mode = 0
+offset_left = 5.0
+offset_top = 30.0
+offset_right = 35.0
+offset_bottom = 55.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "10"
+
+[node name="Coin" type="TextureRect" parent="UI/BuildModUI/TabBar/MarginContainer3/HBoxContainer3/CentralCharbon"]
+layout_mode = 0
+offset_left = 27.0
+offset_top = 35.0
+offset_right = 42.0
+offset_bottom = 50.0
+texture = ExtResource("22_b5bfd")
+expand_mode = 1
+
+[node name="Required" type="TextureRect" parent="UI/BuildModUI/TabBar/MarginContainer3/HBoxContainer3/CentralCharbon"]
+layout_mode = 0
+offset_left = 10.0
+offset_top = 175.0
+offset_right = 50.0
+offset_bottom = 215.0
+texture = ExtResource("41_2seg2")
+expand_mode = 2
+
+[node name="Arrow" type="TextureRect" parent="UI/BuildModUI/TabBar/MarginContainer3/HBoxContainer3/CentralCharbon"]
+layout_mode = 0
+offset_left = 60.0
+offset_top = 175.0
+offset_right = 100.0
+offset_bottom = 215.0
+texture = ExtResource("24_qjav0")
+expand_mode = 2
+
+[node name="Produce" type="TextureRect" parent="UI/BuildModUI/TabBar/MarginContainer3/HBoxContainer3/CentralCharbon"]
+layout_mode = 0
+offset_left = 110.0
+offset_top = 175.0
+offset_right = 150.0
+offset_bottom = 215.0
+texture = ExtResource("62_g8wh7")
+expand_mode = 2
+
+[node name="PanneauSolaire" type="Panel" parent="UI/BuildModUI/TabBar/MarginContainer3/HBoxContainer3"]
+visible = false
+custom_minimum_size = Vector2(160, 0)
+layout_mode = 2
+theme = ExtResource("19_3jmat")
+
+[node name="TextureButton2" type="TextureButton" parent="UI/BuildModUI/TabBar/MarginContainer3/HBoxContainer3/PanneauSolaire"]
+layout_mode = 2
+offset_left = 5.0
+offset_top = 25.0
+offset_right = 155.0
+offset_bottom = 175.0
+texture_normal = ExtResource("63_p3www")
+ignore_texture_size = true
+stretch_mode = 0
+script = ExtResource("21_eh7vb")
+metadata/index = 40
+metadata/name = "Panneau photovoltaïque"
+
+[node name="Label" type="Label" parent="UI/BuildModUI/TabBar/MarginContainer3/HBoxContainer3/PanneauSolaire"]
+layout_mode = 0
+offset_left = 5.0
+offset_top = 1.0
+offset_right = 155.0
+offset_bottom = 24.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "Panneau solaire
+"
+horizontal_alignment = 1
+
+[node name="Prix" type="Label" parent="UI/BuildModUI/TabBar/MarginContainer3/HBoxContainer3/PanneauSolaire"]
+layout_mode = 0
+offset_left = 5.0
+offset_top = 30.0
+offset_right = 35.0
+offset_bottom = 55.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "5"
+
+[node name="Coin" type="TextureRect" parent="UI/BuildModUI/TabBar/MarginContainer3/HBoxContainer3/PanneauSolaire"]
+layout_mode = 0
+offset_left = 17.0
+offset_top = 35.0
+offset_right = 32.0
+offset_bottom = 50.0
+texture = ExtResource("22_b5bfd")
+expand_mode = 1
+
+[node name="Required" type="TextureRect" parent="UI/BuildModUI/TabBar/MarginContainer3/HBoxContainer3/PanneauSolaire"]
+layout_mode = 0
+offset_left = 17.0
+offset_top = 180.0
+offset_right = 47.0
+offset_bottom = 210.0
+texture = ExtResource("23_7ldvi")
+expand_mode = 1
+
+[node name="Arrow" type="TextureRect" parent="UI/BuildModUI/TabBar/MarginContainer3/HBoxContainer3/PanneauSolaire"]
+layout_mode = 0
+offset_left = 60.0
+offset_top = 175.0
+offset_right = 100.0
+offset_bottom = 215.0
+texture = ExtResource("24_qjav0")
+expand_mode = 2
+
+[node name="Produce" type="TextureRect" parent="UI/BuildModUI/TabBar/MarginContainer3/HBoxContainer3/PanneauSolaire"]
+layout_mode = 0
+offset_left = 110.0
+offset_top = 175.0
+offset_right = 150.0
+offset_bottom = 215.0
+texture = ExtResource("62_g8wh7")
+expand_mode = 2
+
+[node name="Eolienne" type="Panel" parent="UI/BuildModUI/TabBar/MarginContainer3/HBoxContainer3"]
+visible = false
+custom_minimum_size = Vector2(160, 0)
+layout_mode = 2
+theme = ExtResource("19_3jmat")
+
+[node name="TextureButton3" type="TextureButton" parent="UI/BuildModUI/TabBar/MarginContainer3/HBoxContainer3/Eolienne"]
+layout_mode = 2
+offset_left = 5.0
+offset_top = 25.0
+offset_right = 155.0
+offset_bottom = 175.0
+texture_normal = ExtResource("64_ke146")
+ignore_texture_size = true
+stretch_mode = 0
+script = ExtResource("21_eh7vb")
+metadata/index = 41
+metadata/name = "Éolienne"
+
+[node name="Label" type="Label" parent="UI/BuildModUI/TabBar/MarginContainer3/HBoxContainer3/Eolienne"]
+layout_mode = 0
+offset_left = 5.0
+offset_top = 1.0
+offset_right = 155.0
+offset_bottom = 24.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "Eolienne"
+horizontal_alignment = 1
+
+[node name="Prix" type="Label" parent="UI/BuildModUI/TabBar/MarginContainer3/HBoxContainer3/Eolienne"]
+layout_mode = 0
+offset_left = 5.0
+offset_top = 30.0
+offset_right = 35.0
+offset_bottom = 55.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "5"
+
+[node name="Coin" type="TextureRect" parent="UI/BuildModUI/TabBar/MarginContainer3/HBoxContainer3/Eolienne"]
+layout_mode = 0
+offset_left = 17.0
+offset_top = 35.0
+offset_right = 32.0
+offset_bottom = 50.0
+texture = ExtResource("22_b5bfd")
+expand_mode = 1
+
+[node name="Required" type="TextureRect" parent="UI/BuildModUI/TabBar/MarginContainer3/HBoxContainer3/Eolienne"]
+layout_mode = 0
+offset_left = 17.0
+offset_top = 180.0
+offset_right = 47.0
+offset_bottom = 210.0
+texture = ExtResource("23_7ldvi")
+expand_mode = 1
+
+[node name="Arrow" type="TextureRect" parent="UI/BuildModUI/TabBar/MarginContainer3/HBoxContainer3/Eolienne"]
+layout_mode = 0
+offset_left = 60.0
+offset_top = 175.0
+offset_right = 100.0
+offset_bottom = 215.0
+texture = ExtResource("24_qjav0")
+expand_mode = 2
+
+[node name="Produce" type="TextureRect" parent="UI/BuildModUI/TabBar/MarginContainer3/HBoxContainer3/Eolienne"]
+layout_mode = 0
+offset_left = 110.0
+offset_top = 175.0
+offset_right = 150.0
+offset_bottom = 215.0
+texture = ExtResource("62_g8wh7")
+expand_mode = 2
+
+[node name="CentraleNucleaire" type="Panel" parent="UI/BuildModUI/TabBar/MarginContainer3/HBoxContainer3"]
+visible = false
+custom_minimum_size = Vector2(160, 0)
+layout_mode = 2
+theme = ExtResource("19_3jmat")
+
+[node name="TextureButton4" type="TextureButton" parent="UI/BuildModUI/TabBar/MarginContainer3/HBoxContainer3/CentraleNucleaire"]
+layout_mode = 2
+offset_left = 5.0
+offset_top = 25.0
+offset_right = 155.0
+offset_bottom = 175.0
+texture_normal = ExtResource("65_xvigl")
+ignore_texture_size = true
+stretch_mode = 0
+script = ExtResource("21_eh7vb")
+metadata/index = 28
+metadata/name = "Centrale nucléaire"
+
+[node name="Label" type="Label" parent="UI/BuildModUI/TabBar/MarginContainer3/HBoxContainer3/CentraleNucleaire"]
+layout_mode = 0
+offset_left = 5.0
+offset_top = 1.0
+offset_right = 155.0
+offset_bottom = 24.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "Centrale nucléaire"
+horizontal_alignment = 1
+
+[node name="Prix" type="Label" parent="UI/BuildModUI/TabBar/MarginContainer3/HBoxContainer3/CentraleNucleaire"]
+layout_mode = 0
+offset_left = 5.0
+offset_top = 30.0
+offset_right = 35.0
+offset_bottom = 55.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "30"
+
+[node name="Coin" type="TextureRect" parent="UI/BuildModUI/TabBar/MarginContainer3/HBoxContainer3/CentraleNucleaire"]
+layout_mode = 0
+offset_left = 27.0
+offset_top = 35.0
+offset_right = 42.0
+offset_bottom = 50.0
+texture = ExtResource("22_b5bfd")
+expand_mode = 1
+
+[node name="Required" type="TextureRect" parent="UI/BuildModUI/TabBar/MarginContainer3/HBoxContainer3/CentraleNucleaire"]
+layout_mode = 0
+offset_left = 10.0
+offset_top = 175.0
+offset_right = 50.0
+offset_bottom = 215.0
+texture = ExtResource("66_xmjwj")
+expand_mode = 2
+
+[node name="Arrow" type="TextureRect" parent="UI/BuildModUI/TabBar/MarginContainer3/HBoxContainer3/CentraleNucleaire"]
+layout_mode = 0
+offset_left = 60.0
+offset_top = 175.0
+offset_right = 100.0
+offset_bottom = 215.0
+texture = ExtResource("24_qjav0")
+expand_mode = 2
+
+[node name="Produce" type="TextureRect" parent="UI/BuildModUI/TabBar/MarginContainer3/HBoxContainer3/CentraleNucleaire"]
+layout_mode = 0
+offset_left = 110.0
+offset_top = 175.0
+offset_right = 150.0
+offset_bottom = 215.0
+texture = ExtResource("62_g8wh7")
+expand_mode = 2
+
+[node name="BackgroundInfo" type="ColorRect" parent="UI/BuildModUI"]
+visible = false
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.304
+anchor_top = -0.708
+anchor_right = 0.304
+anchor_bottom = -0.708
+offset_left = 441.32
+offset_top = 50.868
+offset_right = 802.32
+offset_bottom = 221.868
+color = Color(0.282353, 0.262745, 0.25098, 0.258824)
+
+[node name="BuildingStatsLabel" type="Label" parent="UI/BuildModUI/BackgroundInfo"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="UI/BuildModUI"]
+libraries = {
+"": SubResource("AnimationLibrary_7tmuf")
+}
+script = ExtResource("67_evhq7")
+
+[node name="BuildModButton" type="Button" parent="UI/BuildModUI"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.5
+anchor_top = 0.964
+anchor_right = 0.5
+anchor_bottom = 0.964
+offset_left = -279.0
+offset_top = -266.244
+offset_right = -146.0
+offset_bottom = -226.244
+focus_mode = 0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/icon_hover_color = Color(0.72549, 0.054902, 0.529412, 1)
+theme_override_styles/normal = SubResource("StyleBoxFlat_2qg3n")
+theme_override_styles/hover = SubResource("StyleBoxFlat_wvo1u")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_2qg3n")
+text = "CONSTRUCTION"
+
+[node name="BtnModeDesctruction" type="Button" parent="UI/BuildModUI"]
+layout_mode = 0
+offset_left = 816.0
+offset_top = -5.0
+offset_right = 949.0
+offset_bottom = 35.0
+focus_mode = 0
+theme_override_styles/normal = SubResource("StyleBoxFlat_1ivxg")
+theme_override_styles/hover = SubResource("StyleBoxFlat_e4nb0")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_2qg3n")
+text = "DESTRUCTION"
+
+[node name="DestructionModUI" type="Control" parent="UI"]
+visible = false
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="PnlDestruction" type="Panel" parent="UI/DestructionModUI"]
+layout_mode = 0
+offset_left = 725.0
+offset_top = 63.0
+offset_right = 1195.0
+offset_bottom = 220.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_yg3fa")
+
+[node name="LblDestruction" type="Label" parent="UI/DestructionModUI/PnlDestruction"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.501
+anchor_top = 0.306
+anchor_right = 0.501
+anchor_bottom = 0.306
+offset_left = -214.47
+offset_top = -39.042
+offset_right = 214.53
+offset_bottom = 38.958
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/font_size = 22
+text = "Mode DESTRUCTION : 
+Cliquer sur un bâtiment pour le détruire"
+horizontal_alignment = 1
+
+[node name="BtnModeDesctruction" type="Button" parent="UI/DestructionModUI/PnlDestruction"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.5
+anchor_top = 0.739
+anchor_right = 0.5
+anchor_bottom = 0.739
+offset_left = -80.0
+offset_top = -20.023
+offset_right = 82.0
+offset_bottom = 21.977
+theme_override_styles/normal = SubResource("StyleBoxFlat_8nti8")
+theme_override_styles/hover = SubResource("StyleBoxFlat_ry16c")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_8nti8")
+text = "Sortir"
+
+[node name="ColorRect" type="ColorRect" parent="UI/DestructionModUI"]
+layout_mode = 0
+offset_top = -29.0
+offset_right = 10.0
+offset_bottom = 1093.0
+color = Color(0.737255, 0, 0, 1)
+
+[node name="ColorRect2" type="ColorRect" parent="UI/DestructionModUI"]
+layout_mode = 0
+offset_left = -12.0
+offset_top = -1.0
+offset_right = 1940.0
+offset_bottom = 9.0
+color = Color(0.737255, 0, 0, 1)
+
+[node name="ColorRect3" type="ColorRect" parent="UI/DestructionModUI"]
+layout_mode = 0
+offset_left = 1910.0
+offset_top = -18.0
+offset_right = 1920.0
+offset_bottom = 1104.0
+color = Color(0.737255, 0, 0, 1)
+
+[node name="ColorRect4" type="ColorRect" parent="UI/DestructionModUI"]
+layout_mode = 0
+offset_left = -4.0
+offset_top = 1071.0
+offset_right = 1940.0
+offset_bottom = 1081.0
+color = Color(0.737255, 0, 0, 1)
+
+[node name="BuildingInfoWindow" type="Window" parent="UI"]
+title = "Informations sur un bâtiment"
+initial_position = 1
+size = Vector2i(420, 400)
+visible = false
+script = ExtResource("69_efvt0")
+
+[node name="PnlInfos" type="Panel" parent="UI/BuildingInfoWindow"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_bottom = -30.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="LblBuildingName" type="Label" parent="UI/BuildingInfoWindow/PnlInfos"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -89.0
+offset_right = 89.0
+offset_bottom = 26.0
+grow_horizontal = 2
+text = "Batiment sélectionné : "
+horizontal_alignment = 1
+
+[node name="Picture" type="TextureRect" parent="UI/BuildingInfoWindow/PnlInfos"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -75.0
+offset_top = -155.0
+offset_right = 75.0
+offset_bottom = -5.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("46_j4vja")
+expand_mode = 1
+
+[node name="ScrollContainer" type="ScrollContainer" parent="UI/BuildingInfoWindow/PnlInfos"]
+clip_contents = false
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_top = 25.0
+offset_bottom = 225.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="HBoxContainer" type="VBoxContainer" parent="UI/BuildingInfoWindow/PnlInfos/ScrollContainer"]
+layout_mode = 2
+size_flags_vertical = 0
+alignment = 1
+
+[node name="PnlForLabel" type="Panel" parent="UI/BuildingInfoWindow/PnlInfos/ScrollContainer/HBoxContainer"]
+layout_mode = 2
+
+[node name="InfoLabel" type="Label" parent="UI/BuildingInfoWindow/PnlInfos/ScrollContainer/HBoxContainer/PnlForLabel"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -55.0
+offset_top = -20.0
+offset_right = 55.0
+offset_bottom = 84.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 4
+text = "Informations :
+- bois
+-planche
+-autre
+"
+horizontal_alignment = 1
+vertical_alignment = 2
+
+[node name="CloseButton" type="Button" parent="UI/BuildingInfoWindow"]
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -31.0
+grow_horizontal = 2
+grow_vertical = 0
+text = "Fermer"
+flat = true
+clip_text = true
+
+[node name="NotEnoughMoneyWindow" type="Window" parent="UI"]
+title = "Plus d'argent dans les caisses"
+initial_position = 2
+size = Vector2i(500, 400)
+visible = false
+theme_override_font_sizes/title_font_size = 25
+script = ExtResource("70_5h8ti")
+
+[node name="LblNotEnoughMoney" type="Label" parent="UI/NotEnoughMoneyWindow"]
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -281.5
+offset_top = 20.0
+offset_right = 268.5
+offset_bottom = 100.0
+grow_horizontal = 2
+size_flags_horizontal = 0
+size_flags_vertical = 1
+theme_override_font_sizes/font_size = 25
+text = "Vous n'avez pas assez de
+ moyen financier pour construire
+nom_batiment"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="LblInfoComplementaire" type="Label" parent="UI/NotEnoughMoneyWindow"]
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -220.0
+offset_top = -225.0
+offset_right = 220.0
+offset_bottom = -85.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_colors/font_color = Color(0.847059, 0.670588, 0, 1)
+theme_override_font_sizes/font_size = 23
+text = "Conseil :
+Faites vous de l'argent en exportant des
+ressources pour les tours suivants ou
+décommander certaines importations"
+
+[node name="BtnClose" type="Button" parent="UI/NotEnoughMoneyWindow"]
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -31.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_font_sizes/font_size = 34
+text = "Fermer
+"
+
+[node name="NextTurn" type="Control" parent="UI"]
+anchors_preset = 0
+offset_right = 72.0
+offset_bottom = 45.0
+script = ExtResource("71_gfn7n")
+
+[node name="NextRound" type="TextureRect" parent="UI/NextTurn"]
+z_index = -1
+layout_mode = 0
+offset_left = 1649.0
+offset_top = 461.0
+offset_right = 1950.0
+offset_bottom = 591.0
+mouse_filter = 0
+texture = ExtResource("72_2jnwm")
+expand_mode = 1
+
+[node name="BtnNextTurn" type="Button" parent="UI/NextTurn/NextRound"]
+layout_mode = 0
+offset_left = 22.0
+offset_top = 19.0
+offset_right = 242.0
+offset_bottom = 109.0
+focus_mode = 0
+text = "Tour suivant"
+
+[node name="GaugesUI" parent="UI" instance=ExtResource("73_elcf7")]
+layout_mode = 1
+mouse_filter = 1
+
+[node name="RessourceNode" parent="UI" instance=ExtResource("76_6p55d")]
+layout_mode = 1
+offset_bottom = -315.0
+
+[node name="NextTurnRecap" parent="UI" instance=ExtResource("77_1pagg")]
+visible = false
+layout_mode = 1
+
+[node name="ExitConfirmation" parent="UI" instance=ExtResource("78_3jj8n")]
+visible = false
+z_index = 5
+layout_mode = 1
+
+[node name="Ending" parent="UI" instance=ExtResource("81_0ev32")]
+layout_mode = 1
+offset_left = 2000.0
+offset_right = 2000.0
+script = ExtResource("82_aq4ad")
+
+[node name="Transitions" type="Node" parent="."]
+
+[node name="Credits" type="CanvasLayer" parent="Transitions"]
+
+[node name="TopRecangle" type="ColorRect" parent="Transitions/Credits"]
+z_index = 2
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_bottom = -542.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 1)
+
+[node name="BottomRectangle" type="ColorRect" parent="Transitions/Credits"]
+z_index = 2
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = 533.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 1)
+
+[node name="UngoLogo" type="TextureRect" parent="Transitions/Credits"]
+z_index = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -140.0
+offset_top = -224.0
+offset_right = 140.0
+offset_bottom = 56.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("79_tbpps")
+expand_mode = 3
+
+[node name="ReterLogo" type="TextureRect" parent="Transitions/Credits"]
+z_index = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -265.814
+offset_top = -24.0
+offset_right = 265.814
+offset_bottom = 156.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("80_006sb")
+expand_mode = 3
+
+[node name="BackGroundRectangle" type="ColorRect" parent="Transitions/Credits"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 1)
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Transitions/Credits"]
+libraries = {
+"": SubResource("AnimationLibrary_38b2v")
+}
+
+[node name="TransitionNextTurn" parent="Transitions" instance=ExtResource("81_1uw6u")]
+visible = false
+
+[node name="IntroDialogue" parent="Transitions" instance=ExtResource("82_feyrv")]
+visible = false
+
+[node name="Sounds" type="Node" parent="."]
+
+[node name="ConstructionSound" type="AudioStreamPlayer2D" parent="Sounds"]
+stream = ExtResource("83_srkrc")
+volume_db = 5.0
+
+[node name="DestructionSound" type="AudioStreamPlayer2D" parent="Sounds"]
+stream = ExtResource("84_hwqrs")
+volume_db = -25.0
+
+[node name="GameSound" type="AudioStreamPlayer" parent="Sounds"]
+stream = ExtResource("89_4hf02")
+volume_db = -20.0
+autoplay = true
+script = SubResource("GDScript_cqcfy")
+
+[connection signal="finished" from="Decor/FreightTrain/TrainSound" to="Decor/FreightTrain" method="_on_train_sound_finished"]
+[connection signal="input_event" from="Ground" to="." method="_on_static_body_3d_input_event"]
+[connection signal="input_event" from="Ground" to="FirstPivot" method="_on_static_body_3d_input_event"]
+[connection signal="timeout" from="Ground/Timer" to="Ground/CSGBox3D" method="_on_timer_timeout"]
+[connection signal="input_event" from="Harbor/BuildingHarbor/Area3DHarbor" to="." method="_on_area_3d_harbor_input_event"]
+[connection signal="mouse_exited" from="Harbor/BuildingHarbor/Area3DHarbor" to="." method="_on_area_3d_harbor_mouse_exited"]
+[connection signal="input_event" from="TrainStation/BuldingTrainStation/Area3DTrainStation" to="." method="_on_area_3d_train_station_input_event"]
+[connection signal="mouse_exited" from="TrainStation/BuldingTrainStation/Area3DTrainStation" to="." method="_on_area_3d_train_station_mouse_exited"]
+[connection signal="timeout" from="TrainStation/Timer" to="TrainStation/BuldingTrainStation" method="_on_timer_timeout"]
+[connection signal="tab_selected" from="UI/BuildModUI/TabBar" to="UI/BuildModUI" method="_on_tab_bar_tab_selected"]
+[connection signal="mouse_entered" from="UI/BuildModUI/TabBar/MarginContainer/HBoxContainer/CampDeBucheron/TextureButton12" to="UI/BuildModUI/TabBar/MarginContainer/HBoxContainer/CampDeBucheron/TextureButton12" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="UI/BuildModUI/TabBar/MarginContainer/HBoxContainer/CampDeBucheron/TextureButton12" to="UI/BuildModUI/TabBar/MarginContainer/HBoxContainer/CampDeBucheron/TextureButton12" method="_on_mouse_exited"]
+[connection signal="pressed" from="UI/BuildModUI/TabBar/MarginContainer/HBoxContainer/CampDeBucheron/TextureButton12" to="UI/BuildModUI/TabBar/MarginContainer/HBoxContainer/CampDeBucheron/TextureButton12" method="_on_pressed"]
+[connection signal="mouse_entered" from="UI/BuildModUI/TabBar/MarginContainer/HBoxContainer/Scierie/TextureButton2" to="UI/BuildModUI/TabBar/MarginContainer/HBoxContainer/Scierie/TextureButton2" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="UI/BuildModUI/TabBar/MarginContainer/HBoxContainer/Scierie/TextureButton2" to="UI/BuildModUI/TabBar/MarginContainer/HBoxContainer/Scierie/TextureButton2" method="_on_mouse_exited"]
+[connection signal="pressed" from="UI/BuildModUI/TabBar/MarginContainer/HBoxContainer/Scierie/TextureButton2" to="UI/BuildModUI/TabBar/MarginContainer/HBoxContainer/Scierie/TextureButton2" method="_on_pressed"]
+[connection signal="mouse_entered" from="UI/BuildModUI/TabBar/MarginContainer/HBoxContainer/Mine/TextureButton3" to="UI/BuildModUI/TabBar/MarginContainer/HBoxContainer/Mine/TextureButton3" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="UI/BuildModUI/TabBar/MarginContainer/HBoxContainer/Mine/TextureButton3" to="UI/BuildModUI/TabBar/MarginContainer/HBoxContainer/Mine/TextureButton3" method="_on_mouse_exited"]
+[connection signal="pressed" from="UI/BuildModUI/TabBar/MarginContainer/HBoxContainer/Mine/TextureButton3" to="UI/BuildModUI/TabBar/MarginContainer/HBoxContainer/Mine/TextureButton3" method="_on_pressed"]
+[connection signal="mouse_entered" from="UI/BuildModUI/TabBar/MarginContainer/HBoxContainer/Briquerie/TextureButton2" to="UI/BuildModUI/TabBar/MarginContainer/HBoxContainer/Briquerie/TextureButton2" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="UI/BuildModUI/TabBar/MarginContainer/HBoxContainer/Briquerie/TextureButton2" to="UI/BuildModUI/TabBar/MarginContainer/HBoxContainer/Briquerie/TextureButton2" method="_on_mouse_exited"]
+[connection signal="pressed" from="UI/BuildModUI/TabBar/MarginContainer/HBoxContainer/Briquerie/TextureButton2" to="UI/BuildModUI/TabBar/MarginContainer/HBoxContainer/Briquerie/TextureButton2" method="_on_pressed"]
+[connection signal="mouse_entered" from="UI/BuildModUI/TabBar/MarginContainer/HBoxContainer/Pompe/TextureButton6" to="UI/BuildModUI/TabBar/MarginContainer/HBoxContainer/Pompe/TextureButton6" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="UI/BuildModUI/TabBar/MarginContainer/HBoxContainer/Pompe/TextureButton6" to="UI/BuildModUI/TabBar/MarginContainer/HBoxContainer/Pompe/TextureButton6" method="_on_mouse_exited"]
+[connection signal="pressed" from="UI/BuildModUI/TabBar/MarginContainer/HBoxContainer/Pompe/TextureButton6" to="UI/BuildModUI/TabBar/MarginContainer/HBoxContainer/Pompe/TextureButton6" method="_on_pressed"]
+[connection signal="mouse_entered" from="UI/BuildModUI/TabBar/MarginContainer/HBoxContainer/Houblon/TextureButton8" to="UI/BuildModUI/TabBar/MarginContainer/HBoxContainer/Houblon/TextureButton8" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="UI/BuildModUI/TabBar/MarginContainer/HBoxContainer/Houblon/TextureButton8" to="UI/BuildModUI/TabBar/MarginContainer/HBoxContainer/Houblon/TextureButton8" method="_on_mouse_exited"]
+[connection signal="pressed" from="UI/BuildModUI/TabBar/MarginContainer/HBoxContainer/Houblon/TextureButton8" to="UI/BuildModUI/TabBar/MarginContainer/HBoxContainer/Houblon/TextureButton8" method="_on_pressed"]
+[connection signal="mouse_entered" from="UI/BuildModUI/TabBar/MarginContainer/HBoxContainer/Ble/TextureButton7" to="UI/BuildModUI/TabBar/MarginContainer/HBoxContainer/Ble/TextureButton7" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="UI/BuildModUI/TabBar/MarginContainer/HBoxContainer/Ble/TextureButton7" to="UI/BuildModUI/TabBar/MarginContainer/HBoxContainer/Ble/TextureButton7" method="_on_mouse_exited"]
+[connection signal="pressed" from="UI/BuildModUI/TabBar/MarginContainer/HBoxContainer/Ble/TextureButton7" to="UI/BuildModUI/TabBar/MarginContainer/HBoxContainer/Ble/TextureButton7" method="_on_pressed"]
+[connection signal="mouse_entered" from="UI/BuildModUI/TabBar/MarginContainer/HBoxContainer/Moulin/TextureButton4" to="UI/BuildModUI/TabBar/MarginContainer/HBoxContainer/Moulin/TextureButton4" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="UI/BuildModUI/TabBar/MarginContainer/HBoxContainer/Moulin/TextureButton4" to="UI/BuildModUI/TabBar/MarginContainer/HBoxContainer/Moulin/TextureButton4" method="_on_mouse_exited"]
+[connection signal="pressed" from="UI/BuildModUI/TabBar/MarginContainer/HBoxContainer/Moulin/TextureButton4" to="UI/BuildModUI/TabBar/MarginContainer/HBoxContainer/Moulin/TextureButton4" method="_on_pressed"]
+[connection signal="mouse_entered" from="UI/BuildModUI/TabBar/MarginContainer/HBoxContainer/FourACharbon/TextureButton4" to="UI/BuildModUI/TabBar/MarginContainer/HBoxContainer/FourACharbon/TextureButton4" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="UI/BuildModUI/TabBar/MarginContainer/HBoxContainer/FourACharbon/TextureButton4" to="UI/BuildModUI/TabBar/MarginContainer/HBoxContainer/FourACharbon/TextureButton4" method="_on_mouse_exited"]
+[connection signal="pressed" from="UI/BuildModUI/TabBar/MarginContainer/HBoxContainer/FourACharbon/TextureButton4" to="UI/BuildModUI/TabBar/MarginContainer/HBoxContainer/FourACharbon/TextureButton4" method="_on_pressed"]
+[connection signal="mouse_entered" from="UI/BuildModUI/TabBar/MarginContainer/HBoxContainer/FourAPain/TextureButton4" to="UI/BuildModUI/TabBar/MarginContainer/HBoxContainer/FourAPain/TextureButton4" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="UI/BuildModUI/TabBar/MarginContainer/HBoxContainer/FourAPain/TextureButton4" to="UI/BuildModUI/TabBar/MarginContainer/HBoxContainer/FourAPain/TextureButton4" method="_on_mouse_exited"]
+[connection signal="pressed" from="UI/BuildModUI/TabBar/MarginContainer/HBoxContainer/FourAPain/TextureButton4" to="UI/BuildModUI/TabBar/MarginContainer/HBoxContainer/FourAPain/TextureButton4" method="_on_pressed"]
+[connection signal="mouse_entered" from="UI/BuildModUI/TabBar/MarginContainer/HBoxContainer/Epicerie/TextureButton10" to="UI/BuildModUI/TabBar/MarginContainer/HBoxContainer/Epicerie/TextureButton10" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="UI/BuildModUI/TabBar/MarginContainer/HBoxContainer/Epicerie/TextureButton10" to="UI/BuildModUI/TabBar/MarginContainer/HBoxContainer/Epicerie/TextureButton10" method="_on_mouse_exited"]
+[connection signal="pressed" from="UI/BuildModUI/TabBar/MarginContainer/HBoxContainer/Epicerie/TextureButton10" to="UI/BuildModUI/TabBar/MarginContainer/HBoxContainer/Epicerie/TextureButton10" method="_on_pressed"]
+[connection signal="mouse_entered" from="UI/BuildModUI/TabBar/MarginContainer2/HBoxContainer2/Brasserie/TextureButton" to="UI/BuildModUI/TabBar/MarginContainer2/HBoxContainer2/Brasserie/TextureButton" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="UI/BuildModUI/TabBar/MarginContainer2/HBoxContainer2/Brasserie/TextureButton" to="UI/BuildModUI/TabBar/MarginContainer2/HBoxContainer2/Brasserie/TextureButton" method="_on_mouse_exited"]
+[connection signal="pressed" from="UI/BuildModUI/TabBar/MarginContainer2/HBoxContainer2/Brasserie/TextureButton" to="UI/BuildModUI/TabBar/MarginContainer2/HBoxContainer2/Brasserie/TextureButton" method="_on_pressed"]
+[connection signal="mouse_entered" from="UI/BuildModUI/TabBar/MarginContainer2/HBoxContainer2/Bar/TextureButton6" to="UI/BuildModUI/TabBar/MarginContainer2/HBoxContainer2/Bar/TextureButton6" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="UI/BuildModUI/TabBar/MarginContainer2/HBoxContainer2/Bar/TextureButton6" to="UI/BuildModUI/TabBar/MarginContainer2/HBoxContainer2/Bar/TextureButton6" method="_on_mouse_exited"]
+[connection signal="pressed" from="UI/BuildModUI/TabBar/MarginContainer2/HBoxContainer2/Bar/TextureButton6" to="UI/BuildModUI/TabBar/MarginContainer2/HBoxContainer2/Bar/TextureButton6" method="_on_pressed"]
+[connection signal="mouse_entered" from="UI/BuildModUI/TabBar/MarginContainer2/HBoxContainer2/Maison/TextureButton12" to="UI/BuildModUI/TabBar/MarginContainer2/HBoxContainer2/Maison/TextureButton12" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="UI/BuildModUI/TabBar/MarginContainer2/HBoxContainer2/Maison/TextureButton12" to="UI/BuildModUI/TabBar/MarginContainer2/HBoxContainer2/Maison/TextureButton12" method="_on_mouse_exited"]
+[connection signal="pressed" from="UI/BuildModUI/TabBar/MarginContainer2/HBoxContainer2/Maison/TextureButton12" to="UI/BuildModUI/TabBar/MarginContainer2/HBoxContainer2/Maison/TextureButton12" method="_on_pressed"]
+[connection signal="mouse_entered" from="UI/BuildModUI/TabBar/MarginContainer2/HBoxContainer2/Ferme/TextureButton11" to="UI/BuildModUI/TabBar/MarginContainer2/HBoxContainer2/Ferme/TextureButton11" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="UI/BuildModUI/TabBar/MarginContainer2/HBoxContainer2/Ferme/TextureButton11" to="UI/BuildModUI/TabBar/MarginContainer2/HBoxContainer2/Ferme/TextureButton11" method="_on_mouse_exited"]
+[connection signal="pressed" from="UI/BuildModUI/TabBar/MarginContainer2/HBoxContainer2/Ferme/TextureButton11" to="UI/BuildModUI/TabBar/MarginContainer2/HBoxContainer2/Ferme/TextureButton11" method="_on_pressed"]
+[connection signal="mouse_entered" from="UI/BuildModUI/TabBar/MarginContainer2/HBoxContainer2/UsineAlimentaire/TextureButton7" to="UI/BuildModUI/TabBar/MarginContainer2/HBoxContainer2/UsineAlimentaire/TextureButton7" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="UI/BuildModUI/TabBar/MarginContainer2/HBoxContainer2/UsineAlimentaire/TextureButton7" to="UI/BuildModUI/TabBar/MarginContainer2/HBoxContainer2/UsineAlimentaire/TextureButton7" method="_on_mouse_exited"]
+[connection signal="pressed" from="UI/BuildModUI/TabBar/MarginContainer2/HBoxContainer2/UsineAlimentaire/TextureButton7" to="UI/BuildModUI/TabBar/MarginContainer2/HBoxContainer2/UsineAlimentaire/TextureButton7" method="_on_pressed"]
+[connection signal="mouse_entered" from="UI/BuildModUI/TabBar/MarginContainer2/HBoxContainer2/Supermarche/TextureButton8" to="UI/BuildModUI/TabBar/MarginContainer2/HBoxContainer2/Supermarche/TextureButton8" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="UI/BuildModUI/TabBar/MarginContainer2/HBoxContainer2/Supermarche/TextureButton8" to="UI/BuildModUI/TabBar/MarginContainer2/HBoxContainer2/Supermarche/TextureButton8" method="_on_mouse_exited"]
+[connection signal="pressed" from="UI/BuildModUI/TabBar/MarginContainer2/HBoxContainer2/Supermarche/TextureButton8" to="UI/BuildModUI/TabBar/MarginContainer2/HBoxContainer2/Supermarche/TextureButton8" method="_on_pressed"]
+[connection signal="mouse_entered" from="UI/BuildModUI/TabBar/MarginContainer2/HBoxContainer2/Fonderie/TextureButton3" to="UI/BuildModUI/TabBar/MarginContainer2/HBoxContainer2/Fonderie/TextureButton3" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="UI/BuildModUI/TabBar/MarginContainer2/HBoxContainer2/Fonderie/TextureButton3" to="UI/BuildModUI/TabBar/MarginContainer2/HBoxContainer2/Fonderie/TextureButton3" method="_on_mouse_exited"]
+[connection signal="pressed" from="UI/BuildModUI/TabBar/MarginContainer2/HBoxContainer2/Fonderie/TextureButton3" to="UI/BuildModUI/TabBar/MarginContainer2/HBoxContainer2/Fonderie/TextureButton3" method="_on_pressed"]
+[connection signal="mouse_entered" from="UI/BuildModUI/TabBar/MarginContainer2/HBoxContainer2/Bureau/TextureButton5" to="UI/BuildModUI/TabBar/MarginContainer2/HBoxContainer2/Bureau/TextureButton5" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="UI/BuildModUI/TabBar/MarginContainer2/HBoxContainer2/Bureau/TextureButton5" to="UI/BuildModUI/TabBar/MarginContainer2/HBoxContainer2/Bureau/TextureButton5" method="_on_mouse_exited"]
+[connection signal="pressed" from="UI/BuildModUI/TabBar/MarginContainer2/HBoxContainer2/Bureau/TextureButton5" to="UI/BuildModUI/TabBar/MarginContainer2/HBoxContainer2/Bureau/TextureButton5" method="_on_pressed"]
+[connection signal="mouse_entered" from="UI/BuildModUI/TabBar/MarginContainer2/HBoxContainer2/Immeuble/TextureButton13" to="UI/BuildModUI/TabBar/MarginContainer2/HBoxContainer2/Immeuble/TextureButton13" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="UI/BuildModUI/TabBar/MarginContainer2/HBoxContainer2/Immeuble/TextureButton13" to="UI/BuildModUI/TabBar/MarginContainer2/HBoxContainer2/Immeuble/TextureButton13" method="_on_mouse_exited"]
+[connection signal="pressed" from="UI/BuildModUI/TabBar/MarginContainer2/HBoxContainer2/Immeuble/TextureButton13" to="UI/BuildModUI/TabBar/MarginContainer2/HBoxContainer2/Immeuble/TextureButton13" method="_on_pressed"]
+[connection signal="mouse_entered" from="UI/BuildModUI/TabBar/MarginContainer2/HBoxContainer2/Parc/TextureButton4" to="UI/BuildModUI/TabBar/MarginContainer2/HBoxContainer2/Parc/TextureButton4" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="UI/BuildModUI/TabBar/MarginContainer2/HBoxContainer2/Parc/TextureButton4" to="UI/BuildModUI/TabBar/MarginContainer2/HBoxContainer2/Parc/TextureButton4" method="_on_mouse_exited"]
+[connection signal="pressed" from="UI/BuildModUI/TabBar/MarginContainer2/HBoxContainer2/Parc/TextureButton4" to="UI/BuildModUI/TabBar/MarginContainer2/HBoxContainer2/Parc/TextureButton4" method="_on_pressed"]
+[connection signal="mouse_entered" from="UI/BuildModUI/TabBar/MarginContainer3/HBoxContainer3/CentralCharbon/TextureButton" to="UI/BuildModUI/TabBar/MarginContainer3/HBoxContainer3/CentralCharbon/TextureButton" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="UI/BuildModUI/TabBar/MarginContainer3/HBoxContainer3/CentralCharbon/TextureButton" to="UI/BuildModUI/TabBar/MarginContainer3/HBoxContainer3/CentralCharbon/TextureButton" method="_on_mouse_exited"]
+[connection signal="pressed" from="UI/BuildModUI/TabBar/MarginContainer3/HBoxContainer3/CentralCharbon/TextureButton" to="UI/BuildModUI/TabBar/MarginContainer3/HBoxContainer3/CentralCharbon/TextureButton" method="_on_pressed"]
+[connection signal="mouse_entered" from="UI/BuildModUI/TabBar/MarginContainer3/HBoxContainer3/PanneauSolaire/TextureButton2" to="UI/BuildModUI/TabBar/MarginContainer3/HBoxContainer3/PanneauSolaire/TextureButton2" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="UI/BuildModUI/TabBar/MarginContainer3/HBoxContainer3/PanneauSolaire/TextureButton2" to="UI/BuildModUI/TabBar/MarginContainer3/HBoxContainer3/PanneauSolaire/TextureButton2" method="_on_mouse_exited"]
+[connection signal="pressed" from="UI/BuildModUI/TabBar/MarginContainer3/HBoxContainer3/PanneauSolaire/TextureButton2" to="UI/BuildModUI/TabBar/MarginContainer3/HBoxContainer3/PanneauSolaire/TextureButton2" method="_on_pressed"]
+[connection signal="mouse_entered" from="UI/BuildModUI/TabBar/MarginContainer3/HBoxContainer3/Eolienne/TextureButton3" to="UI/BuildModUI/TabBar/MarginContainer3/HBoxContainer3/Eolienne/TextureButton3" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="UI/BuildModUI/TabBar/MarginContainer3/HBoxContainer3/Eolienne/TextureButton3" to="UI/BuildModUI/TabBar/MarginContainer3/HBoxContainer3/Eolienne/TextureButton3" method="_on_mouse_exited"]
+[connection signal="pressed" from="UI/BuildModUI/TabBar/MarginContainer3/HBoxContainer3/Eolienne/TextureButton3" to="UI/BuildModUI/TabBar/MarginContainer3/HBoxContainer3/Eolienne/TextureButton3" method="_on_pressed"]
+[connection signal="mouse_entered" from="UI/BuildModUI/TabBar/MarginContainer3/HBoxContainer3/CentraleNucleaire/TextureButton4" to="UI/BuildModUI/TabBar/MarginContainer3/HBoxContainer3/CentraleNucleaire/TextureButton4" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="UI/BuildModUI/TabBar/MarginContainer3/HBoxContainer3/CentraleNucleaire/TextureButton4" to="UI/BuildModUI/TabBar/MarginContainer3/HBoxContainer3/CentraleNucleaire/TextureButton4" method="_on_mouse_exited"]
+[connection signal="pressed" from="UI/BuildModUI/TabBar/MarginContainer3/HBoxContainer3/CentraleNucleaire/TextureButton4" to="UI/BuildModUI/TabBar/MarginContainer3/HBoxContainer3/CentraleNucleaire/TextureButton4" method="_on_pressed"]
+[connection signal="pressed" from="UI/BuildModUI/BuildModButton" to="." method="_on_build_mod_button_pressed"]
+[connection signal="pressed" from="UI/BuildModUI/BtnModeDesctruction" to="." method="_on_btn_mode_desctruction_pressed"]
+[connection signal="pressed" from="UI/DestructionModUI/PnlDestruction/BtnModeDesctruction" to="." method="_on_btn_mode_desctruction_pressed"]
+[connection signal="close_requested" from="UI/BuildingInfoWindow" to="UI/BuildingInfoWindow" method="_on_close_requested"]
+[connection signal="pressed" from="UI/BuildingInfoWindow/CloseButton" to="UI/BuildingInfoWindow" method="_on_close_button_pressed"]
+[connection signal="close_requested" from="UI/NotEnoughMoneyWindow" to="UI/NotEnoughMoneyWindow" method="_on_close_requested"]
+[connection signal="pressed" from="UI/NotEnoughMoneyWindow/BtnClose" to="UI/NotEnoughMoneyWindow" method="_on_btn_close_pressed"]
+[connection signal="pressed" from="UI/NextTurn/NextRound/BtnNextTurn" to="." method="_on_btn_next_turn_pressed"]
+[connection signal="pressed" from="UI/NextTurn/NextRound/BtnNextTurn" to="UI/NextTurn" method="_on_btn__next_turn_pressed"]
+[connection signal="animation_finished" from="Transitions/Credits/AnimationPlayer" to="." method="_on_animation_player_animation_finished"]
+[connection signal="finished" from="Sounds/GameSound" to="Sounds/GameSound" method="_on_finished"]
+
+[editable path="Decor/Cargo/Boat"]
+[editable path="Decor/FreightTrain"]

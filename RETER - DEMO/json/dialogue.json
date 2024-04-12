@@ -1,0 +1,41 @@
+{
+	"INTRODUCTION": [
+		"Bonjour, je suis Gérard MANVU, maire de KOENNIGSHOFFEN EST.",
+		"Votre mission, en tant que mon adjoint, est de revitaliser ce quartier. Mettons-nous au travail sans tarder.",
+		"Commencez par établir un camp de bûcherons pour préparer le terrain à la construction.",
+		"Je vous montrerai l'emplacement idéal pour commencer."
+	],
+	"CAMP_BUCHERON": [
+		"Regardez attentivement la zone en surbrillance. C'est l'endroit parfait pour notre camp de bûcherons.",
+		"Choisissez le camp de bûcherons dans le menu de construction et placez-le sur l'endroit indiqué."
+	],
+	"CAMP_BUCHERON_PLACE": [
+		"Une fois placé, appuyez sur 'Tour suivant' pour commencer la récolte de bois."
+	],
+	"NEXT_TURN": [
+		"Excellent ! Le bois est la ressource de base pour notre développement.",
+		"Maintenant que vous avez du bois, une scierie s'est installée.",
+		"Faites attention à la consommation et à la production de la scierie. Cliquez dessus pour avoir + infos."
+	],
+	"SCIERIE_INTRO": [
+		"La scierie est en place et la production de planches a commencé.",
+		"Appuyez sur 'Tour suivant' pour commencer la récolte de planche."
+	],
+	"GARE": [
+		"À présent, dirigez-vous vers la gare. C'est le moment de vendre nos planches pour financer nos futurs projets",
+	],
+	"VENTE_GARE": [
+		"Vendez toutes les planches disponibles à la gare. Cet argent est crucial pour notre développement.",
+		"Ne vous inquiétez pas, c'est une stratégie à court terme pour nous enrichir rapidement.",
+		"Une fois l'exportation des planches en place, passer le tour pour valider"
+	],
+	"ACHAT_PLANCHE": [
+		"Mince !!! J'ai pas vu mais un moulin voulait s'implémenter mais on a plus de planches",
+		"J'ai aussi vendu des planches de mon côté, je vais me prendre des vacances en moselle.",
+		"Débrouillez-vous pour exploitez au mieux vos ressources, une mauvaise gestion des ressources peut mener à la faillite."
+	],
+	"FIN_TUTO": [
+		"Ce n'était qu'un exercice. Maintenant, utilisez ces connaissances pour développer le quartier judicieusement.",
+		"La vraie partie commence. Bonne chance, l'avenir de KOENNIGSHOFFEN EST est entre vos mains."
+	]
+}

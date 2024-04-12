@@ -1,0 +1,22 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://divv2f1s3lp7n"
+path="res://.godot/imported/mill.obj-c0aa536e77bea9a5aa525f54de37913d.mesh"
+
+[deps]
+
+files=["res://.godot/imported/mill.obj-c0aa536e77bea9a5aa525f54de37913d.mesh"]
+
+source_file="res://assets/3D_assets/obj/mill.obj"
+dest_files=["res://.godot/imported/mill.obj-c0aa536e77bea9a5aa525f54de37913d.mesh", "res://.godot/imported/mill.obj-c0aa536e77bea9a5aa525f54de37913d.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true
+force_disable_mesh_compression=false

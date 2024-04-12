@@ -1,0 +1,22 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://bkm74ymtrm22x"
+path="res://.godot/imported/centrale_nucleaire.obj-91f521fed49887e0c1845d0d86c37fa6.mesh"
+
+[deps]
+
+files=["res://.godot/imported/centrale_nucleaire.obj-91f521fed49887e0c1845d0d86c37fa6.mesh"]
+
+source_file="res://assets/3D_assets/obj/centrale_nucleaire.obj"
+dest_files=["res://.godot/imported/centrale_nucleaire.obj-91f521fed49887e0c1845d0d86c37fa6.mesh", "res://.godot/imported/centrale_nucleaire.obj-91f521fed49887e0c1845d0d86c37fa6.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true
+force_disable_mesh_compression=false

@@ -1,0 +1,296 @@
+[gd_scene load_steps=19 format=3 uid="uid://0hki0d6uyrx6"]
+
+[ext_resource type="Texture2D" uid="uid://ccjqndnkw84wq" path="res://assets/images/UI/Ressources/Bois.png" id="1_n7jsq"]
+[ext_resource type="Texture2D" uid="uid://bmbd1ml3s5ctw" path="res://assets/images/UI/Ressources/Planche.png" id="2_o6o1v"]
+[ext_resource type="Texture2D" uid="uid://ckelimh6yllvi" path="res://assets/images/UI/Ressources/Pierre.png" id="3_bk00q"]
+[ext_resource type="Texture2D" uid="uid://ck2bldoq8xetu" path="res://assets/images/UI/Ressources/brique.png" id="4_qtcj8"]
+[ext_resource type="Texture2D" uid="uid://bst0dcm6sc6lv" path="res://assets/images/UI/Ressources/Charbon.png" id="5_0f3fq"]
+[ext_resource type="Texture2D" uid="uid://l4b1p1mgngu7" path="res://assets/images/UI/Ressources/MineraisFer.png" id="6_23l5o"]
+[ext_resource type="Texture2D" uid="uid://qrkwktuweb5t" path="res://assets/images/UI/Ressources/Eau.png" id="7_34unk"]
+[ext_resource type="Texture2D" uid="uid://d2foveyb6ubr3" path="res://assets/images/UI/Ressources/Houblon.png" id="8_e1j41"]
+[ext_resource type="Texture2D" uid="uid://cuylsmyh24x5u" path="res://assets/images/UI/Ressources/Biere.png" id="9_vwhk2"]
+[ext_resource type="Texture2D" uid="uid://dcbxuvfu6y40w" path="res://assets/images/UI/Ressources/Ble.png" id="10_keshw"]
+[ext_resource type="Texture2D" uid="uid://brw74kjots03o" path="res://assets/images/UI/Ressources/Farine.png" id="11_sqo5r"]
+[ext_resource type="Texture2D" uid="uid://0blxko5k5h3q" path="res://assets/images/UI/Ressources/Pain.png" id="12_enug6"]
+[ext_resource type="Texture2D" uid="uid://bmbtl0ify2qsv" path="res://assets/images/UI/Ressources/Viande.png" id="13_fdhnj"]
+[ext_resource type="Texture2D" uid="uid://dukm4t0whu5ot" path="res://assets/images/UI/Ressources/Plat.png" id="14_6crw0"]
+[ext_resource type="Texture2D" uid="uid://bjs4t4tu11k4y" path="res://assets/images/UI/Ressources/electricite.png" id="15_eyvdy"]
+[ext_resource type="Texture2D" uid="uid://b5p7p25jna6qw" path="res://assets/images/UI/Ressources/LingotMetal.png" id="16_ddqnh"]
+[ext_resource type="Texture2D" uid="uid://cn27pt5ttahnf" path="res://assets/images/UI/Ressources/Uranium.png" id="17_yp62d"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_b26ex"]
+font_size = 28
+
+[node name="RessourceNode" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = -1805.0
+offset_bottom = -269.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+
+[node name="Ressources" type="VBoxContainer" parent="."]
+layout_mode = 0
+offset_left = 6.0
+offset_top = 50.0
+offset_right = 150.0
+offset_bottom = 838.0
+mouse_filter = 2
+
+[node name="Bois" type="HBoxContainer" parent="Ressources"]
+layout_mode = 2
+
+[node name="RectTexBois" type="TextureRect" parent="Ressources/Bois"]
+custom_minimum_size = Vector2(40, 40)
+layout_mode = 2
+texture = ExtResource("1_n7jsq")
+expand_mode = 1
+
+[node name="LblBois" type="Label" parent="Ressources/Bois"]
+layout_mode = 2
+text = "10"
+label_settings = SubResource("LabelSettings_b26ex")
+metadata/name = "wood"
+
+[node name="Planche" type="HBoxContainer" parent="Ressources"]
+layout_mode = 2
+
+[node name="RectTexPlanche" type="TextureRect" parent="Ressources/Planche"]
+custom_minimum_size = Vector2(40, 40)
+layout_mode = 2
+texture = ExtResource("2_o6o1v")
+expand_mode = 1
+
+[node name="LblPlanche" type="Label" parent="Ressources/Planche"]
+layout_mode = 2
+text = "10"
+label_settings = SubResource("LabelSettings_b26ex")
+metadata/name = "planch"
+
+[node name="Pierre" type="HBoxContainer" parent="Ressources"]
+layout_mode = 2
+
+[node name="RectTexPierre" type="TextureRect" parent="Ressources/Pierre"]
+custom_minimum_size = Vector2(40, 40)
+layout_mode = 2
+texture = ExtResource("3_bk00q")
+expand_mode = 1
+
+[node name="LblPierre" type="Label" parent="Ressources/Pierre"]
+layout_mode = 2
+text = "10"
+label_settings = SubResource("LabelSettings_b26ex")
+metadata/name = "stone"
+
+[node name="Brique" type="HBoxContainer" parent="Ressources"]
+layout_mode = 2
+
+[node name="RectTexBrique" type="TextureRect" parent="Ressources/Brique"]
+custom_minimum_size = Vector2(40, 40)
+layout_mode = 2
+texture = ExtResource("4_qtcj8")
+expand_mode = 1
+
+[node name="LblBrique" type="Label" parent="Ressources/Brique"]
+layout_mode = 2
+text = "10"
+label_settings = SubResource("LabelSettings_b26ex")
+metadata/name = "brick"
+
+[node name="Charbon" type="HBoxContainer" parent="Ressources"]
+layout_mode = 2
+
+[node name="RectTexCharbon" type="TextureRect" parent="Ressources/Charbon"]
+custom_minimum_size = Vector2(40, 40)
+layout_mode = 2
+texture = ExtResource("5_0f3fq")
+expand_mode = 1
+
+[node name="LblCharbon" type="Label" parent="Ressources/Charbon"]
+layout_mode = 2
+text = "10"
+label_settings = SubResource("LabelSettings_b26ex")
+metadata/name = "coal"
+
+[node name="MineraisDeFer" type="HBoxContainer" parent="Ressources"]
+layout_mode = 2
+
+[node name="RectTexMineraisDeFer" type="TextureRect" parent="Ressources/MineraisDeFer"]
+custom_minimum_size = Vector2(40, 40)
+layout_mode = 2
+texture = ExtResource("6_23l5o")
+expand_mode = 1
+
+[node name="LblMineraisDeFer" type="Label" parent="Ressources/MineraisDeFer"]
+layout_mode = 2
+text = "10"
+label_settings = SubResource("LabelSettings_b26ex")
+metadata/name = "iron_ores"
+
+[node name="Eau" type="HBoxContainer" parent="Ressources"]
+layout_mode = 2
+
+[node name="RectTexEau" type="TextureRect" parent="Ressources/Eau"]
+custom_minimum_size = Vector2(40, 40)
+layout_mode = 2
+texture = ExtResource("7_34unk")
+expand_mode = 1
+
+[node name="LblEau" type="Label" parent="Ressources/Eau"]
+layout_mode = 2
+text = "10"
+label_settings = SubResource("LabelSettings_b26ex")
+metadata/name = "water"
+
+[node name="Houblon" type="HBoxContainer" parent="Ressources"]
+layout_mode = 2
+
+[node name="RectTexHoublon" type="TextureRect" parent="Ressources/Houblon"]
+custom_minimum_size = Vector2(40, 40)
+layout_mode = 2
+texture = ExtResource("8_e1j41")
+expand_mode = 1
+
+[node name="LblHoublon" type="Label" parent="Ressources/Houblon"]
+layout_mode = 2
+text = "10"
+label_settings = SubResource("LabelSettings_b26ex")
+metadata/name = "hop"
+
+[node name="Biere" type="HBoxContainer" parent="Ressources"]
+layout_mode = 2
+
+[node name="RectTexBiere" type="TextureRect" parent="Ressources/Biere"]
+custom_minimum_size = Vector2(40, 40)
+layout_mode = 2
+texture = ExtResource("9_vwhk2")
+expand_mode = 1
+
+[node name="LblBiere" type="Label" parent="Ressources/Biere"]
+layout_mode = 2
+text = "10"
+label_settings = SubResource("LabelSettings_b26ex")
+metadata/name = "beer"
+
+[node name="Ble" type="HBoxContainer" parent="Ressources"]
+layout_mode = 2
+
+[node name="RectTexBle" type="TextureRect" parent="Ressources/Ble"]
+custom_minimum_size = Vector2(40, 40)
+layout_mode = 2
+texture = ExtResource("10_keshw")
+expand_mode = 1
+
+[node name="LblBle" type="Label" parent="Ressources/Ble"]
+layout_mode = 2
+text = "10"
+label_settings = SubResource("LabelSettings_b26ex")
+metadata/name = "wheat"
+
+[node name="Farine" type="HBoxContainer" parent="Ressources"]
+layout_mode = 2
+
+[node name="RectTexFarine" type="TextureRect" parent="Ressources/Farine"]
+custom_minimum_size = Vector2(40, 40)
+layout_mode = 2
+texture = ExtResource("11_sqo5r")
+expand_mode = 1
+
+[node name="LblFarine" type="Label" parent="Ressources/Farine"]
+layout_mode = 2
+text = "10"
+label_settings = SubResource("LabelSettings_b26ex")
+metadata/name = "flour"
+
+[node name="Pain" type="HBoxContainer" parent="Ressources"]
+layout_mode = 2
+
+[node name="RectTexPain" type="TextureRect" parent="Ressources/Pain"]
+custom_minimum_size = Vector2(40, 40)
+layout_mode = 2
+texture = ExtResource("12_enug6")
+expand_mode = 1
+
+[node name="LblPain" type="Label" parent="Ressources/Pain"]
+layout_mode = 2
+text = "10"
+label_settings = SubResource("LabelSettings_b26ex")
+metadata/name = "bread"
+
+[node name="Viande" type="HBoxContainer" parent="Ressources"]
+layout_mode = 2
+
+[node name="RectTexViande" type="TextureRect" parent="Ressources/Viande"]
+custom_minimum_size = Vector2(40, 40)
+layout_mode = 2
+texture = ExtResource("13_fdhnj")
+expand_mode = 1
+
+[node name="LblViande" type="Label" parent="Ressources/Viande"]
+layout_mode = 2
+text = "10"
+label_settings = SubResource("LabelSettings_b26ex")
+metadata/name = "meat"
+
+[node name="Plat" type="HBoxContainer" parent="Ressources"]
+layout_mode = 2
+
+[node name="RectTexPlat" type="TextureRect" parent="Ressources/Plat"]
+custom_minimum_size = Vector2(40, 40)
+layout_mode = 2
+texture = ExtResource("14_6crw0")
+expand_mode = 1
+
+[node name="LblViande" type="Label" parent="Ressources/Plat"]
+layout_mode = 2
+text = "10"
+label_settings = SubResource("LabelSettings_b26ex")
+metadata/name = "food"
+
+[node name="Electricite" type="HBoxContainer" parent="Ressources"]
+layout_mode = 2
+
+[node name="RectTexElectricite" type="TextureRect" parent="Ressources/Electricite"]
+custom_minimum_size = Vector2(40, 40)
+layout_mode = 2
+texture = ExtResource("15_eyvdy")
+expand_mode = 1
+
+[node name="LblElectricite" type="Label" parent="Ressources/Electricite"]
+layout_mode = 2
+text = "10"
+label_settings = SubResource("LabelSettings_b26ex")
+metadata/name = "electricity"
+
+[node name="LingotDeMetal" type="HBoxContainer" parent="Ressources"]
+layout_mode = 2
+
+[node name="RectTexLingotDeMetal" type="TextureRect" parent="Ressources/LingotDeMetal"]
+custom_minimum_size = Vector2(40, 40)
+layout_mode = 2
+texture = ExtResource("16_ddqnh")
+expand_mode = 1
+
+[node name="LblLingotDeMetal" type="Label" parent="Ressources/LingotDeMetal"]
+layout_mode = 2
+text = "10"
+label_settings = SubResource("LabelSettings_b26ex")
+metadata/name = "metal"
+
+[node name="Uranium" type="HBoxContainer" parent="Ressources"]
+layout_mode = 2
+
+[node name="RectTexUranium" type="TextureRect" parent="Ressources/Uranium"]
+custom_minimum_size = Vector2(40, 40)
+layout_mode = 2
+texture = ExtResource("17_yp62d")
+expand_mode = 1
+
+[node name="LblUranium" type="Label" parent="Ressources/Uranium"]
+layout_mode = 2
+text = "10"
+label_settings = SubResource("LabelSettings_b26ex")
+metadata/name = "uranium"

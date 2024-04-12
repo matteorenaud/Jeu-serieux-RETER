@@ -1,0 +1,22 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://b0hab2sik2sx6"
+path="res://.godot/imported/bread_furnace.obj-03d5251727f4f7a8750c896e6ba80550.mesh"
+
+[deps]
+
+files=["res://.godot/imported/bread_furnace.obj-03d5251727f4f7a8750c896e6ba80550.mesh"]
+
+source_file="res://assets/3D_assets/obj/bread_furnace.obj"
+dest_files=["res://.godot/imported/bread_furnace.obj-03d5251727f4f7a8750c896e6ba80550.mesh", "res://.godot/imported/bread_furnace.obj-03d5251727f4f7a8750c896e6ba80550.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true
+force_disable_mesh_compression=false

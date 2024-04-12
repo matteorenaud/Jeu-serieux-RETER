@@ -1,0 +1,74 @@
+[gd_scene load_steps=4 format=3 uid="uid://ymsndtqwv2f3"]
+
+[ext_resource type="Script" path="res://script/ExitConfirmation.gd" id="1_i21jj"]
+[ext_resource type="Script" path="res://script/ButtonMouseCursor.gd" id="2_fskxn"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_wa52k"]
+bg_color = Color(0.717647, 0.345098, 0.247059, 1)
+border_width_left = 10
+border_width_top = 10
+border_width_right = 10
+border_width_bottom = 10
+border_color = Color(0, 0.8, 0.8, 1)
+corner_radius_top_left = 50
+corner_radius_top_right = 50
+corner_radius_bottom_right = 50
+corner_radius_bottom_left = 50
+
+[node name="ExitConfirmation" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_i21jj")
+
+[node name="PanelConfirmation" type="Panel" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -300.0
+offset_top = -150.0
+offset_right = 300.0
+offset_bottom = 150.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_wa52k")
+
+[node name="AreYouSureLabel" type="Label" parent="PanelConfirmation"]
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_top = 44.0
+offset_bottom = 93.0
+grow_horizontal = 2
+theme_override_font_sizes/font_size = 35
+text = "Êtes vous sûr de vouloir quitter ?"
+horizontal_alignment = 1
+
+[node name="ButtonExitYes" type="Button" parent="PanelConfirmation"]
+layout_mode = 0
+offset_left = 386.0
+offset_top = 154.0
+offset_right = 517.0
+offset_bottom = 211.0
+theme_override_font_sizes/font_size = 35
+text = "Quitter"
+script = ExtResource("2_fskxn")
+
+[node name="ButtonExitNo" type="Button" parent="PanelConfirmation"]
+layout_mode = 0
+offset_left = 45.0
+offset_top = 154.0
+offset_right = 293.0
+offset_bottom = 211.0
+theme_override_font_sizes/font_size = 35
+text = "Revenir au jeu"
+script = ExtResource("2_fskxn")
+
+[connection signal="pressed" from="PanelConfirmation/ButtonExitYes" to="." method="_on_button_exit_yes_pressed"]
+[connection signal="pressed" from="PanelConfirmation/ButtonExitNo" to="." method="_on_button_exit_no_pressed"]

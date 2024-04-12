@@ -1,0 +1,22 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://6cb0vnumrhs3"
+path="res://.godot/imported/batiment_reacteur.obj-e5847ea8c4a3f2ba162344df45ddea05.mesh"
+
+[deps]
+
+files=["res://.godot/imported/batiment_reacteur.obj-e5847ea8c4a3f2ba162344df45ddea05.mesh"]
+
+source_file="res://assets/3D_assets/obj/batiment_reacteur.obj"
+dest_files=["res://.godot/imported/batiment_reacteur.obj-e5847ea8c4a3f2ba162344df45ddea05.mesh", "res://.godot/imported/batiment_reacteur.obj-e5847ea8c4a3f2ba162344df45ddea05.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true
+force_disable_mesh_compression=false

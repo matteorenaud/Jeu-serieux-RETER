@@ -1,0 +1,22 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://cydw7yafscyqb"
+path="res://.godot/imported/symbole_radioactivite.obj-622d7de85fbdd3de17b5fbcfb1501049.mesh"
+
+[deps]
+
+files=["res://.godot/imported/symbole_radioactivite.obj-622d7de85fbdd3de17b5fbcfb1501049.mesh"]
+
+source_file="res://assets/3D_assets/obj/symbole_radioactivite.obj"
+dest_files=["res://.godot/imported/symbole_radioactivite.obj-622d7de85fbdd3de17b5fbcfb1501049.mesh", "res://.godot/imported/symbole_radioactivite.obj-622d7de85fbdd3de17b5fbcfb1501049.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true
+force_disable_mesh_compression=false

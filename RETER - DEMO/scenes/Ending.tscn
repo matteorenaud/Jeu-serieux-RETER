@@ -1,0 +1,311 @@
+[gd_scene load_steps=9 format=3 uid="uid://bg35gaxwq0gto"]
+
+[ext_resource type="Texture2D" uid="uid://cah3vt1hgbue3" path="res://assets/images/Piece.png" id="1_50q1w"]
+[ext_resource type="Texture2D" uid="uid://dpahqh42laf7" path="res://assets/images/UI/people_icone.png" id="2_ogkwh"]
+[ext_resource type="Texture2D" uid="uid://dk26pwdd83yo0" path="res://assets/images/UI/ecology_icone.png" id="3_q4l2v"]
+[ext_resource type="Script" path="res://script/EndingRestartButton.gd" id="4_tjfcl"]
+
+[sub_resource type="SystemFont" id="SystemFont_gi2tj"]
+font_names = PackedStringArray("Forte")
+subpixel_positioning = 0
+
+[sub_resource type="SystemFont" id="SystemFont_dqu42"]
+font_names = PackedStringArray("Forte")
+subpixel_positioning = 0
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_2fhg2"]
+bg_color = Color(0, 0, 0, 1)
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_er6cx"]
+bg_color = Color(0.235294, 0.235294, 0.235294, 0.784314)
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
+
+[node name="Ending" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 0
+offset_right = 1920.0
+offset_bottom = 1082.0
+color = Color(0, 0, 0, 0.921569)
+
+[node name="Win" type="Control" parent="."]
+visible = false
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Label" type="Label" parent="Win"]
+layout_mode = 0
+offset_right = 1916.0
+offset_bottom = 337.0
+theme_override_colors/font_color = Color(0, 0.729412, 0.172549, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_constants/shadow_offset_x = 10
+theme_override_constants/shadow_offset_y = 10
+theme_override_fonts/font = SubResource("SystemFont_gi2tj")
+theme_override_font_sizes/font_size = 200
+text = "Vous avez gagné !!!"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Fin1" type="Control" parent="Win"]
+visible = false
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Label" type="Label" parent="Win/Fin1"]
+layout_mode = 0
+offset_left = 294.0
+offset_top = 382.0
+offset_right = 1626.0
+offset_bottom = 519.0
+theme_override_fonts/font = SubResource("SystemFont_dqu42")
+theme_override_font_sizes/font_size = 100
+text = "votre quartier est plein aux as !"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="TextureRect" type="TextureRect" parent="Win/Fin1"]
+layout_mode = 0
+offset_left = 179.0
+offset_top = 632.0
+offset_right = 577.0
+offset_bottom = 994.0
+texture = ExtResource("1_50q1w")
+
+[node name="TextureRect2" type="TextureRect" parent="Win/Fin1"]
+layout_mode = 0
+offset_left = 1368.0
+offset_top = 635.0
+offset_right = 1766.0
+offset_bottom = 997.0
+texture = ExtResource("1_50q1w")
+
+[node name="Fin2" type="Control" parent="Win"]
+visible = false
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Label" type="Label" parent="Win/Fin2"]
+layout_mode = 0
+offset_left = -35.0
+offset_top = 358.0
+offset_right = 1965.0
+offset_bottom = 495.0
+theme_override_fonts/font = SubResource("SystemFont_dqu42")
+theme_override_font_sizes/font_size = 100
+text = "Tout le monde se plaît dans votre quartier !"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="TextureRect" type="TextureRect" parent="Win/Fin2"]
+layout_mode = 0
+offset_left = 168.0
+offset_top = 573.0
+offset_right = 586.0
+offset_bottom = 991.0
+texture = ExtResource("2_ogkwh")
+expand_mode = 1
+
+[node name="TextureRect2" type="TextureRect" parent="Win/Fin2"]
+layout_mode = 0
+offset_left = 1358.0
+offset_top = 576.0
+offset_right = 1776.0
+offset_bottom = 994.0
+texture = ExtResource("2_ogkwh")
+expand_mode = 1
+
+[node name="Fin3" type="Control" parent="Win"]
+visible = false
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Label" type="Label" parent="Win/Fin3"]
+layout_mode = 0
+offset_left = 151.0
+offset_top = 368.0
+offset_right = 1769.0
+offset_bottom = 505.0
+theme_override_fonts/font = SubResource("SystemFont_dqu42")
+theme_override_font_sizes/font_size = 100
+text = "car vous avez oeuvré pour la planète !"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="TextureRect" type="TextureRect" parent="Win/Fin3"]
+layout_mode = 0
+offset_left = 171.0
+offset_top = 606.0
+offset_right = 587.0
+offset_bottom = 1022.0
+texture = ExtResource("3_q4l2v")
+expand_mode = 1
+
+[node name="TextureRect2" type="TextureRect" parent="Win/Fin3"]
+layout_mode = 0
+offset_left = 1358.0
+offset_top = 608.0
+offset_right = 1774.0
+offset_bottom = 1024.0
+texture = ExtResource("3_q4l2v")
+expand_mode = 1
+
+[node name="Loses" type="Control" parent="."]
+visible = false
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Label" type="Label" parent="Loses"]
+layout_mode = 0
+offset_right = 1916.0
+offset_bottom = 337.0
+theme_override_colors/font_color = Color(0.827451, 0, 0, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_constants/shadow_offset_x = 10
+theme_override_constants/shadow_offset_y = 10
+theme_override_fonts/font = SubResource("SystemFont_gi2tj")
+theme_override_font_sizes/font_size = 200
+text = "Vous avez perdu ..."
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Fin1" type="Control" parent="Loses"]
+visible = false
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Label" type="Label" parent="Loses/Fin1"]
+layout_mode = 0
+offset_left = 327.0
+offset_top = 382.0
+offset_right = 1550.0
+offset_bottom = 519.0
+theme_override_fonts/font = SubResource("SystemFont_dqu42")
+theme_override_font_sizes/font_size = 100
+text = "car vous n'avez plus d'argent."
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="TextureRect" type="TextureRect" parent="Loses/Fin1"]
+layout_mode = 0
+offset_left = 179.0
+offset_top = 632.0
+offset_right = 577.0
+offset_bottom = 994.0
+texture = ExtResource("1_50q1w")
+
+[node name="TextureRect2" type="TextureRect" parent="Loses/Fin1"]
+layout_mode = 0
+offset_left = 1368.0
+offset_top = 635.0
+offset_right = 1766.0
+offset_bottom = 997.0
+texture = ExtResource("1_50q1w")
+
+[node name="Fin2" type="Control" parent="Loses"]
+visible = false
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Label" type="Label" parent="Loses/Fin2"]
+layout_mode = 0
+offset_left = 327.0
+offset_top = 382.0
+offset_right = 1550.0
+offset_bottom = 519.0
+theme_override_fonts/font = SubResource("SystemFont_dqu42")
+theme_override_font_sizes/font_size = 100
+text = "car tout le monde est parti."
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="TextureRect" type="TextureRect" parent="Loses/Fin2"]
+layout_mode = 0
+offset_left = 168.0
+offset_top = 573.0
+offset_right = 586.0
+offset_bottom = 991.0
+texture = ExtResource("2_ogkwh")
+expand_mode = 1
+
+[node name="TextureRect2" type="TextureRect" parent="Loses/Fin2"]
+layout_mode = 0
+offset_left = 1358.0
+offset_top = 576.0
+offset_right = 1776.0
+offset_bottom = 994.0
+texture = ExtResource("2_ogkwh")
+expand_mode = 1
+
+[node name="Fin3" type="Control" parent="Loses"]
+visible = false
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Label" type="Label" parent="Loses/Fin3"]
+layout_mode = 0
+offset_left = 327.0
+offset_top = 382.0
+offset_right = 1596.0
+offset_bottom = 519.0
+theme_override_fonts/font = SubResource("SystemFont_dqu42")
+theme_override_font_sizes/font_size = 100
+text = "car vous avez ruiné la planète."
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="TextureRect" type="TextureRect" parent="Loses/Fin3"]
+layout_mode = 0
+offset_left = 171.0
+offset_top = 606.0
+offset_right = 587.0
+offset_bottom = 1022.0
+texture = ExtResource("3_q4l2v")
+expand_mode = 1
+
+[node name="TextureRect2" type="TextureRect" parent="Loses/Fin3"]
+layout_mode = 0
+offset_left = 1358.0
+offset_top = 608.0
+offset_right = 1774.0
+offset_bottom = 1024.0
+texture = ExtResource("3_q4l2v")
+expand_mode = 1
+
+[node name="Button" type="Button" parent="."]
+layout_mode = 0
+offset_left = 733.0
+offset_top = 735.0
+offset_right = 1181.0
+offset_bottom = 883.0
+theme_override_font_sizes/font_size = 50
+theme_override_styles/normal = SubResource("StyleBoxFlat_2fhg2")
+theme_override_styles/hover = SubResource("StyleBoxFlat_er6cx")
+text = "Recommencer"
+script = ExtResource("4_tjfcl")
+
+[connection signal="pressed" from="Button" to="Button" method="_on_pressed"]

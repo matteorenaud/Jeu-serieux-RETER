@@ -1,0 +1,280 @@
+[gd_scene load_steps=11 format=3 uid="uid://c871fpq28e4kk"]
+
+[ext_resource type="Script" path="res://script/NextTurn.gd" id="1_pss4e"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_og58b"]
+bg_color = Color(0.0156863, 0.0196078, 0.0196078, 0.466667)
+border_width_left = 5
+border_width_top = 5
+border_width_right = 5
+border_width_bottom = 5
+border_color = Color(0, 0.4, 0.545098, 1)
+corner_radius_top_left = 50
+corner_radius_top_right = 50
+corner_radius_bottom_right = 50
+corner_radius_bottom_left = 50
+shadow_color = Color(0.91212, 0.915898, 0.933864, 0.6)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_am3fx"]
+bg_color = Color(0.368627, 0.368627, 0.368627, 1)
+corner_radius_top_left = 15
+corner_radius_top_right = 15
+corner_radius_bottom_right = 15
+corner_radius_bottom_left = 15
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_42f1m"]
+bg_color = Color(0.368627, 0.368627, 0.368627, 1)
+corner_radius_top_left = 15
+corner_radius_top_right = 15
+corner_radius_bottom_right = 15
+corner_radius_bottom_left = 15
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_2k8ii"]
+bg_color = Color(0.368627, 0.368627, 0.368627, 1)
+corner_radius_top_left = 15
+corner_radius_top_right = 15
+corner_radius_bottom_right = 15
+corner_radius_bottom_left = 15
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_uhf0x"]
+bg_color = Color(0.368627, 0.368627, 0.368627, 1)
+corner_radius_top_left = 15
+corner_radius_top_right = 15
+corner_radius_bottom_right = 15
+corner_radius_bottom_left = 15
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_kdri3"]
+bg_color = Color(0.454902, 0.133333, 0.164706, 1)
+corner_radius_top_left = 15
+corner_radius_top_right = 15
+corner_radius_bottom_right = 15
+corner_radius_bottom_left = 15
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_81vyn"]
+bg_color = Color(0.368627, 0.368627, 0.368627, 1)
+corner_radius_top_left = 15
+corner_radius_top_right = 15
+corner_radius_bottom_right = 15
+corner_radius_bottom_left = 15
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_cs5q6"]
+bg_color = Color(0.368627, 0.368627, 0.368627, 1)
+corner_radius_top_left = 15
+corner_radius_top_right = 15
+corner_radius_bottom_right = 15
+corner_radius_bottom_left = 15
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_8trao"]
+bg_color = Color(0.368627, 0.368627, 0.368627, 1)
+corner_radius_top_left = 15
+corner_radius_top_right = 15
+corner_radius_bottom_right = 15
+corner_radius_bottom_left = 15
+
+[node name="NextTurnRecap" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="RecapPanel" type="Panel" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -604.0
+offset_top = -407.0
+offset_right = 604.0
+offset_bottom = 432.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_og58b")
+
+[node name="NbTurnLabel" type="Label" parent="RecapPanel"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -126.0
+offset_right = 126.0
+offset_bottom = 78.0
+grow_horizontal = 2
+theme_override_font_sizes/font_size = 50
+text = "Tour n°1"
+
+[node name="RecapMoneyPopuEcology" type="Label" parent="RecapPanel"]
+layout_mode = 0
+offset_left = 300.0
+offset_top = 73.0
+offset_right = 837.0
+offset_bottom = 112.0
+theme_override_font_sizes/font_size = 20
+text = "Argent restant : n    	       Popuation : n          Écologie : n "
+
+[node name="BuildingsScrollContainer" type="ScrollContainer" parent="RecapPanel"]
+layout_mode = 0
+offset_left = 20.0
+offset_top = 130.0
+offset_right = 320.0
+offset_bottom = 470.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_am3fx")
+
+[node name="Label" type="Label" parent="RecapPanel/BuildingsScrollContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 20
+text = " Bâtiments possédés :"
+
+[node name="RessourceScrollContainer" type="ScrollContainer" parent="RecapPanel"]
+layout_mode = 0
+offset_left = 350.0
+offset_top = 130.0
+offset_right = 540.001
+offset_bottom = 470.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_42f1m")
+
+[node name="Label" type="Label" parent="RecapPanel/RessourceScrollContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 20
+text = " Ressources  :"
+
+[node name="ExportScrollContainer" type="ScrollContainer" parent="RecapPanel"]
+layout_mode = 0
+offset_left = 570.0
+offset_top = 130.0
+offset_right = 870.0
+offset_bottom = 470.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_2k8ii")
+
+[node name="Label" type="Label" parent="RecapPanel/ExportScrollContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 20
+text = " Ressources exportées :"
+
+[node name="ImportScrollContainer" type="ScrollContainer" parent="RecapPanel"]
+layout_mode = 0
+offset_left = 890.0
+offset_top = 130.0
+offset_right = 1190.0
+offset_bottom = 470.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_uhf0x")
+
+[node name="Label" type="Label" parent="RecapPanel/ImportScrollContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 20
+text = " Ressources importées :"
+
+[node name="EchecScrollContainer" type="ScrollContainer" parent="RecapPanel"]
+layout_mode = 0
+offset_left = 21.0
+offset_top = 508.0
+offset_right = 320.0
+offset_bottom = 681.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_kdri3")
+
+[node name="LabelEchec" type="Label" parent="RecapPanel/EchecScrollContainer"]
+layout_mode = 2
+text = " Bâtiments échec de production :"
+
+[node name="PanelProdConso" type="Panel" parent="RecapPanel"]
+layout_mode = 0
+offset_left = 458.0
+offset_top = 502.0
+offset_right = 1191.0
+offset_bottom = 694.0
+
+[node name="ProdBat" type="ScrollContainer" parent="RecapPanel/PanelProdConso"]
+layout_mode = 0
+offset_left = 8.0
+offset_top = 29.0
+offset_right = 358.0
+offset_bottom = 179.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_81vyn")
+
+[node name="Label" type="Label" parent="RecapPanel/PanelProdConso/ProdBat"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 20
+text = " Production :"
+
+[node name="ConsoBat" type="ScrollContainer" parent="RecapPanel/PanelProdConso"]
+layout_mode = 0
+offset_left = 369.0
+offset_top = 29.0
+offset_right = 719.0
+offset_bottom = 179.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_cs5q6")
+
+[node name="Label" type="Label" parent="RecapPanel/PanelProdConso/ConsoBat"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 20
+text = " Consommation :"
+
+[node name="LabelProdConso" type="Label" parent="RecapPanel/PanelProdConso"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -218.0
+offset_right = 218.0
+offset_bottom = 23.0
+grow_horizontal = 2
+text = "Ressources produites ou consommées par les bâtiments :"
+
+[node name="ScrollContainerExode" type="ScrollContainer" parent="RecapPanel"]
+layout_mode = 0
+offset_left = 45.0
+offset_top = 711.0
+offset_right = 647.0
+offset_bottom = 800.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_8trao")
+
+[node name="LabelExode" type="Label" parent="RecapPanel/ScrollContainerExode"]
+layout_mode = 2
+text = "Nombre d'habitants qui ont quitté la ville car ils n'avaient pas de travail : n
+Bâtiments responsables :"
+
+[node name="LabelMoneyGenerate" type="Label" parent="RecapPanel"]
+layout_mode = 0
+offset_left = 20.0
+offset_top = 475.0
+offset_right = 309.0
+offset_bottom = 504.0
+text = "Argent généré par les bâtiments : n"
+
+[node name="LabelCostImport" type="Label" parent="RecapPanel"]
+layout_mode = 0
+offset_left = 927.0
+offset_top = 475.0
+offset_right = 1136.0
+offset_bottom = 498.0
+text = "Coût des importations : n €"
+
+[node name="LabelProfitExport" type="Label" parent="RecapPanel"]
+layout_mode = 0
+offset_left = 599.0
+offset_top = 474.0
+offset_right = 827.0
+offset_bottom = 497.0
+text = "Revenu des exportations : n €"
+
+[node name="CloseButton" type="Button" parent="RecapPanel"]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = 266.0
+offset_top = -93.0
+offset_right = 493.0
+offset_bottom = -44.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_font_sizes/font_size = 25
+text = "Fermer"
+script = ExtResource("1_pss4e")
+
+[connection signal="pressed" from="RecapPanel/CloseButton" to="RecapPanel/CloseButton" method="_on_pressed"]
