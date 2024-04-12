@@ -20,10 +20,13 @@ Pour véhiculer cette notion de re-territorialisation par la matière RETER se b
 
 ## **Lien de téléchargement**
 
+Aller dans les Release : https://github.com/matteorenaud/Jeu-serieux-RETER/releases/tag/v1.0.0
 
-- **Windows (x64) :** https://git.unistra.fr/ungo/han23-t3-d/-/archive/main/han23-t3-d-main.zip?path=Windows_release
+Télécharger la Release pour votre sytème d'exploitation :
 
-- **Linux (x64) :** https://git.unistra.fr/ungo/han23-t3-d/-/archive/main/han23-t3-d-main.zip?path=Linux_release
+- **Windows (x64) :** https://github.com/matteorenaud/Jeu-serieux-RETER/releases/download/v1.0.0/Windows_release.zip
+
+- **Linux (x64) :** https://github.com/matteorenaud/Jeu-serieux-RETER/releases/download/v1.0.0/Linux_release.zip
 
 - **MacOS (ARM) :** Indisponible
 
